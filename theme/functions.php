@@ -157,10 +157,6 @@ function my_script_enqueuer() {
 
 	wp_enqueue_script('jquery');
 
-	$modernizr_url = get_bloginfo('template_directory') . '/js/modernizr.custom.97178.js';
-	wp_enqueue_script('modernizr', $modernizr_url);
-
-	//wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/css/bootstrap.min.css' );
 }
 
 ?>
