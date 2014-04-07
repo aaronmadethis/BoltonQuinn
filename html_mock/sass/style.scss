@@ -1,0 +1,50 @@
+@import "base";
+
+.header {
+  position: fixed;
+  top: 0;
+  @include rem(right, .3rem);
+  @include rem(left, .3rem);
+  @include rem(height, 8rem);
+  padding: 2.9rem 3.5rem 0;
+  background: #fff;
+  border-bottom: 1px solid #404041;
+  z-index: 4;
+}
+
+.header header {
+  margin: 0 auto;
+  width: 100%;
+  @include rem(max-width, 140rem);
+}
+
+.logo {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  @include rem(width, 20.1rem);
+  @include rem(height, 2.8rem);
+  background: transparent url(data:image/png;base64,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) center center no-repeat;
+  text-indent: -99999999em;
+  overflow: hidden;
+}
+
+nav {
+  float: right;
+  @include rem(padding-top, .5rem);
+}
+
+nav a {
+  @include rem(margin-left, 5rem);
+  @include nav_1;
+  text-decoration: none;
+}
+
+h1 {
+  @include head_1;
+}
+
+h2 {
+  @include head_2;
+}

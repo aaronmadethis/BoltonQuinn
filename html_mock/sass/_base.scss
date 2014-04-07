@@ -1,0 +1,146 @@
+@import "compass/css3/box-sizing";
+
+/*
+Theme Name: Bolton Quinn
+Theme URI: 
+Author: Franklyn Creative
+Author URI: http://quitefranklyn.com
+Description: A WordPress theme for Bolton Quinn
+Version: 0.1
+License: GNU General Public License
+License URI: 
+Tags: 
+*/
+
+* {
+  @include box-sizing(border-box);
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* REM Mixin from Hugo Giraudel
+ * http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/ */
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+  $px : ();
+  $rem: ();
+  
+  @each $value in $values {
+   
+    @if $value == 0 or $value == auto {
+      $px : append($px , $value);
+      $rem: append($rem, $value);
+    }
+    
+    @else { 
+      $unit: unit($value);
+      $val: parseInt($value);
+      
+      @if $unit == "px" {
+        $px : append($px, $value);
+        $rem: append($rem, ($val / 10 + rem));
+      }
+      
+      @if $unit == "rem" {
+        $px : append($px, ($val * 10 + px));
+        $rem: append($rem, $value);
+      }
+    }
+  }
+  
+  @if $px == $rem {
+    #{$property}: $px;
+  } @else {
+    #{$property}: $px;
+    #{$property}: $rem;
+  }
+}
+
+/* Define the fonts */
+$tiffany: "ITC Tiffany Demi", Georgia, serif;
+$georgia: Georgia, serif;
+
+@mixin head_1() {
+  font-family: $tiffany;
+  @include rem(font-size, 9.5rem);
+  color: #fff;
+}
+
+@mixin head_2() {
+  font-family: $georgia;
+  @include rem(font-size, 1.45rem);
+  @include rem(letter-spacing, 1rem);
+}
+
+@mixin body_1() {
+  font-family: $georgia;
+  @include rem(font-size, 2.3rem);
+  line-height: 1.7;
+  color: #404041;
+}
+
+@mixin body_2() {
+  font-family: $georgia;
+  @include rem(font-size, 1.6rem);
+  line-height: 1;
+  color: #404041;
+}
+
+@mixin body_3() {
+  font-family: $georgia;
+  @include rem(font-size, 1.4rem);
+  line-height: 1.5;
+  color: #404041;
+}
+
+@mixin caption_1() {
+  font-family: $georgia;
+  @include rem(font-size, 1.1rem);
+  @include rem(letter-spacing, .75rem);
+}
+
+@mixin caption_2() {
+  font-family: $georgia;
+  @include rem(font-size, 1.5rem);
+  font-weight: 700;
+  color: #fff;
+}
+
+@mixin caption_3() {
+  font-family: $georgia;
+  @include rem(font-size, 1.5rem);
+  color: #fff;
+}
+
+@mixin credit_1() {
+  font-family: $georgia;
+  @include rem(font-size, 1.1rem);
+  color: #404041;
+}
+
+@mixin credit_2() {
+  font-family: $tiffany;
+  @include rem(font-size, 3.2rem);
+  line-height: 1.8;
+  @include rem(letter-spacing, .1rem);
+}
+
+@mixin nav_1() {
+  font-family: $georgia;
+  @include rem(font-size, 1.7rem);
+  @include rem(letter-spacing, .1rem);
+  color: #231f20;
+}
+
+@mixin link_1() {
+  font-family: $georgia;
+  @include rem(font-size, 2.3rem);
+  line-height: 1.7;
+  color: #ec1c24;
+}
