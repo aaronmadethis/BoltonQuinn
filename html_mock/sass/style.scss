@@ -94,3 +94,10 @@ h1 {
 h2 {
   @include head_2;
 }
+
+footer {
+  position: relative;
+  @include credit_2;
+  background: #fff;
+  z-index: 5;
+}

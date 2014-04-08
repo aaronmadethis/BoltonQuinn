@@ -158,3 +158,16 @@ h2 {
   letter-spacing: 10px;
   letter-spacing: 1rem;
 }
+
+/* line 98, ../sass/style.scss */
+footer {
+  position: relative;
+  font-family: "ITC Tiffany Demi", Georgia, serif;
+  font-size: 32px;
+  font-size: 3.2rem;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  background: #fff;
+  z-index: 5;
+}
