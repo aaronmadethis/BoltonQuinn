@@ -22,6 +22,12 @@ html {
   font-size: 62.5%;
 }
 
+/* line 24, ../sass/_base.scss */
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
 /* REM Mixin from Hugo Giraudel
  * http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/ */
 /* Define the fonts */
@@ -85,6 +91,58 @@ nav a {
 }
 
 /* line 44, ../sass/style.scss */
+main {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 51, ../sass/style.scss */
+.leading-image {
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+  background: white url(../pulse_spiral.jpg) center center no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+/* line 62, ../sass/style.scss */
+.leading-image[data-index="1"] {
+  background-image: url(../article-olafur-eliasson.jpg);
+  z-index: 2;
+}
+
+/* line 67, ../sass/style.scss */
+.leading-image[data-index="2"] {
+  background-image: url(../london-eye.jpg);
+  z-index: 3;
+}
+
+/* line 72, ../sass/style.scss */
+.sticky {
+  position: fixed;
+  top: 79px !important;
+  bottom: 0;
+}
+
+/* line 78, ../sass/style.scss */
+.about,
+.clients,
+.contact {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 4;
+}
+
+/* line 90, ../sass/style.scss */
 h1 {
   font-family: "ITC Tiffany Demi", Georgia, serif;
   font-size: 95px;
@@ -92,7 +150,7 @@ h1 {
   color: #fff;
 }
 
-/* line 48, ../sass/style.scss */
+/* line 94, ../sass/style.scss */
 h2 {
   font-family: Georgia, serif;
   font-size: 14.5px;

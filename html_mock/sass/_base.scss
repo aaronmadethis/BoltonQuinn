@@ -21,6 +21,11 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
 /* REM Mixin from Hugo Giraudel
  * http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/ */
 @function parseInt($n) {
