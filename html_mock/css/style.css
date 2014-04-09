@@ -9,6 +9,11 @@ License: GNU General Public License
 License URI: 
 Tags: 
 */
+/* line 14, ../sass/_base.scss */
+#mfPreviewBar {
+  display: none;
+}
+
 /* line 15, ../sass/_base.scss */
 * {
   -moz-box-sizing: border-box;
@@ -30,8 +35,9 @@ body {
 
 /* REM Mixin from Hugo Giraudel
  * http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/ */
+/* Define max widths */
 /* Define the fonts */
-/* line 3, ../sass/style.scss */
+/* line 5, ../sass/style.scss */
 .header {
   position: fixed;
   top: 0;
@@ -47,7 +53,7 @@ body {
   z-index: 4;
 }
 
-/* line 15, ../sass/style.scss */
+/* line 17, ../sass/style.scss */
 .header header {
   margin: 0 auto;
   width: 100%;
@@ -55,7 +61,7 @@ body {
   max-width: 140rem;
 }
 
-/* line 21, ../sass/style.scss */
+/* line 23, ../sass/style.scss */
 .logo {
   position: relative;
   display: inline-block;
@@ -70,14 +76,14 @@ body {
   overflow: hidden;
 }
 
-/* line 33, ../sass/style.scss */
+/* line 35, ../sass/style.scss */
 nav {
   float: right;
   padding-top: 5px;
   padding-top: 0.5rem;
 }
 
-/* line 38, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 nav a {
   margin-left: 50px;
   margin-left: 5rem;
@@ -90,7 +96,7 @@ nav a {
   text-decoration: none;
 }
 
-/* line 44, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 main {
   position: relative;
   margin: 0 auto;
@@ -98,7 +104,7 @@ main {
   width: 100%;
 }
 
-/* line 51, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 .leading-image {
   position: absolute;
   right: 0;
@@ -110,26 +116,192 @@ main {
   z-index: 1;
 }
 
-/* line 62, ../sass/style.scss */
+/* line 64, ../sass/style.scss */
 .leading-image[data-index="1"] {
   background-image: url(../article-olafur-eliasson.jpg);
   z-index: 2;
 }
 
-/* line 67, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 .leading-image[data-index="2"] {
   background-image: url(../london-eye.jpg);
   z-index: 3;
 }
 
-/* line 72, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 .sticky {
   position: fixed;
   top: 79px !important;
   bottom: 0;
 }
 
-/* line 78, ../sass/style.scss */
+/* line 80, ../sass/style.scss */
+.leading-image .opening-text {
+  position: absolute;
+  bottom: 55px;
+  bottom: 5.5rem;
+  left: 50%;
+  margin: 0 0 0 -700px;
+  margin: 0 0 0 -70rem;
+  max-width: 1400px;
+  max-width: 140rem;
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAqCAYAAACgLjskAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTBEREEwMjhCODAyMTFFMzgxNDA5NDdGNjI5QjE5OEUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTBEREEwMjlCODAyMTFFMzgxNDA5NDdGNjI5QjE5OEUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyMEJEQzU3NUI4MDIxMUUzODE0MDk0N0Y2MjlCMTk4RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyMEJEQzU3NkI4MDIxMUUzODE0MDk0N0Y2MjlCMTk4RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pi22BNwAAAENSURBVHja7JfhDYIwEIVbwgBuIG6AEwgb4AawCZswgiMwAh3BDXADfGce0RgIWLF/vCaPlpa7L9DXAsZ4lGEYapFPbGQCFwUqUIEKVKACFahABSrwP4H4ZN+FgglL7rBDowwAE0YX43CGWnScrLXVj2ANqgLKI0AcGgcolYEtH7HkIiwVhrAepkHjJnQOtFtAmaNlzpyMp0ulAzqi6QhNvoAlhDnJOcImlwXn0dFMqQdMYjrCqo9cBfVQsfYPGH0ZY0pvK08lmALOXesDTZmongPyvF8zBfHSBWJlJBIHX1Dv3+eFts/oRLeYz8PmV0pKQuWvTjQbL2RZMmNpg+zF3JEan1iLwKCvp7sAAwB8stcF9WS8qgAAAABJRU5ErkJggg==) left bottom no-repeat;
+  -moz-transition-property: bottom;
+  -o-transition-property: bottom;
+  -webkit-transition-property: bottom;
+  transition-property: bottom;
+  -moz-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
+  -webkit-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+/* line 92, ../sass/style.scss */
+.leading-image .opening-text.open {
+  bottom: 160px;
+  bottom: 16rem;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+/* line 97, ../sass/style.scss */
+.leading-image section p {
+  margin: 0 0 60px;
+  margin: 0 0 6rem;
+  max-width: 550px;
+  max-width: 55rem;
+  font-family: "ITC Tiffany Demi", Georgia, serif;
+  font-size: 32px;
+  font-size: 3.2rem;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  color: #fff;
+}
+
+/* line 104, ../sass/style.scss */
+.leading-image aside {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 105px;
+  height: 10.5rem;
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+/* line 115, ../sass/style.scss */
+.leading-image aside section {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: 0 0 0 -700px;
+  margin: 0 0 0 -70rem;
+  width: 100%;
+  max-width: 1400px;
+  max-width: 140rem;
+}
+
+/* line 124, ../sass/style.scss */
+.leading-image .open-button,
+.leading-image .close-button {
+  position: absolute;
+  top: 20px;
+  top: 2rem;
+  right: 0;
+  font-family: Georgia, serif;
+  font-size: 11px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-font-smoothing: auto;
+}
+
+/* line 142, ../sass/style.scss */
+.leading-image section p span,
+.leading-image .open-button span {
+  color: #ec1c24;
+}
+
+/* line 147, ../sass/style.scss */
+.leading-image .open-button.open {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+/* line 151, ../sass/style.scss */
+.leading-image aside section h2,
+.leading-image aside section h3,
+.leading-image aside section cite,
+.leading-image .close-button {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+/* line 161, ../sass/style.scss */
+.leading-image aside.open {
+  background: white;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* line 166, ../sass/style.scss */
+.leading-image aside section.open h2,
+.leading-image aside section.open h3,
+.leading-image aside section.open cite,
+.leading-image section.open .close-button {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+
+/* line 173, ../sass/style.scss */
 .about,
 .clients,
 .contact {
@@ -142,32 +314,14 @@ main {
   z-index: 4;
 }
 
-/* line 90, ../sass/style.scss */
-h1 {
-  font-family: "ITC Tiffany Demi", Georgia, serif;
-  font-size: 95px;
-  font-size: 9.5rem;
-  color: #fff;
-}
-
-/* line 94, ../sass/style.scss */
-h2 {
-  font-family: Georgia, serif;
-  font-size: 14.5px;
-  font-size: 1.45rem;
-  letter-spacing: 10px;
-  letter-spacing: 1rem;
-}
-
-/* line 98, ../sass/style.scss */
+/* line 185, ../sass/style.scss */
 footer {
   position: relative;
-  font-family: "ITC Tiffany Demi", Georgia, serif;
-  font-size: 32px;
-  font-size: 3.2rem;
-  line-height: 1.8;
-  letter-spacing: 1px;
-  letter-spacing: 0.1rem;
+  font-size: Georgia, serif;
+  font-size: 10px;
+  font-size: 1rem;
+  letter-spacing: 10px;
+  letter-spacing: 1rem;
   background: #fff;
   z-index: 5;
 }

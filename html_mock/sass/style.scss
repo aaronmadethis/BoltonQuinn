@@ -1,4 +1,6 @@
 @import "base";
+@import "compass/css3/opacity";
+@import "compass/css3/transition";
 
 .header {
   position: fixed;
@@ -15,7 +17,7 @@
 .header header {
   margin: 0 auto;
   width: 100%;
-  @include rem(max-width, 140rem);
+  @include max_width("desktop");
 }
 
 .logo {
@@ -75,6 +77,99 @@ main {
   bottom: 0;
 }
 
+.leading-image .opening-text {
+  position: absolute;
+  @include rem(bottom, 5.5rem);
+  left: 50%;
+  @include rem(margin, 0 0 0 -70rem);
+  @include max_width("desktop");
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAqCAYAAACgLjskAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTBEREEwMjhCODAyMTFFMzgxNDA5NDdGNjI5QjE5OEUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTBEREEwMjlCODAyMTFFMzgxNDA5NDdGNjI5QjE5OEUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyMEJEQzU3NUI4MDIxMUUzODE0MDk0N0Y2MjlCMTk4RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyMEJEQzU3NkI4MDIxMUUzODE0MDk0N0Y2MjlCMTk4RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pi22BNwAAAENSURBVHja7JfhDYIwEIVbwgBuIG6AEwgb4AawCZswgiMwAh3BDXADfGce0RgIWLF/vCaPlpa7L9DXAsZ4lGEYapFPbGQCFwUqUIEKVKACFahABSrwP4H4ZN+FgglL7rBDowwAE0YX43CGWnScrLXVj2ANqgLKI0AcGgcolYEtH7HkIiwVhrAepkHjJnQOtFtAmaNlzpyMp0ulAzqi6QhNvoAlhDnJOcImlwXn0dFMqQdMYjrCqo9cBfVQsfYPGH0ZY0pvK08lmALOXesDTZmongPyvF8zBfHSBWJlJBIHX1Dv3+eFts/oRLeYz8PmV0pKQuWvTjQbL2RZMmNpg+zF3JEan1iLwKCvp7sAAwB8stcF9WS8qgAAAABJRU5ErkJggg==) left bottom no-repeat;
+  @include transition-property(bottom);
+  @include transition-duration(.6s);
+  @include transition-timing-function(ease-in-out);
+}
+
+.leading-image .opening-text.open {
+  @include rem(bottom, 16rem);
+  @include transition-duration(.3s);
+}
+
+.leading-image section p {
+  @include rem(margin, 0 0 6rem);
+  @include rem(max-width, 55rem);
+  @include bold_1;
+  color: #fff;
+}
+
+.leading-image aside {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  @include rem(height, 10.5rem);
+  @include transition-property(background);
+  @include transition-duration(.5s);
+  @include transition-timing-function(ease-in-out);
+}
+
+.leading-image aside section {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  @include rem(margin, 0 0 0 -70rem);
+  width: 100%;
+  @include max_width("desktop");
+}
+
+.leading-image .open-button,
+.leading-image .close-button {
+  position: absolute;
+  @include rem(top, 2rem);
+  right: 0;
+  @include caption_1;
+  color: #fff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  @include opaque;
+  @include transition-property(opacity);
+  @include transition-duration(.2s);
+  @include transition-timing-function(ease-in-out);
+  -webkit-font-smoothing: auto;
+}
+
+.leading-image section p span,
+.leading-image .open-button span {
+  color: #ec1c24;
+}
+
+.leading-image .open-button.open {
+  @include transparent;
+}
+
+.leading-image aside section h2,
+.leading-image aside section h3,
+.leading-image aside section cite,
+.leading-image .close-button {
+  @include transparent;
+  @include transition-property(opacity);
+  @include transition-duration(.5s);
+  @include transition-timing-function(ease-in-out);
+}
+
+.leading-image aside.open {
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, .7);
+}
+
+.leading-image aside section.open h2,
+.leading-image aside section.open h3,
+.leading-image aside section.open cite,
+.leading-image section.open .close-button {
+  @include opaque;
+}
+
 .about,
 .clients,
 .contact {
@@ -85,14 +180,6 @@ main {
   height: 100%;
   background: #fff;
   z-index: 4;
-}
-
-h1 {
-  @include head_1;
-}
-
-h2 {
-  @include head_2;
 }
 
 footer {

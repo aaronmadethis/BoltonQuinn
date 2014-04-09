@@ -8,6 +8,7 @@
 
   var $window = $(window);
   var $document = $(document);
+  var $body = $("body");
   var $leadingImages = $(".leading-image");
   var height = $window.height();
   
@@ -31,6 +32,35 @@
     });
     $leadingImages.parent().css("padding-top", height * $leadingImages.length);
   };
+
+  /**
+    * Logic for opening the captions
+    * @param{Object} self The clicked caption
+    */
+  var openCaption = function(self) {
+    self.addClass("open").parent().addClass("open").parent().addClass("open").parent().find(".opening-text").addClass("open");
+  };
+
+  /**
+    * Logic for closing the captions
+    * @param{Object} self The clicked caption
+    */
+  var closeCaption = function(self) {
+    self.parent().removeClass("open").find(".open-button").removeClass("open").end().parent().removeClass("open")
+      .parent().find(".opening-text").removeClass("open");
+  };
+
+  $body.on("click.captionClick touchend.captionTouch", ".open-button", function(evt) {
+    if (evt.preventDefault) {
+      evt.preventDefault();
+    }
+    openCaption($(this));
+  }).on("click.captionCloseClick touchend.captionCloseTouch", ".close-button", function(evt) {
+    if (evt.preventDefault) {
+      evt.preventDefault();
+    }
+    closeCaption($(this));
+  });
 
   /**
     * Checks if the next image should be made sticky and fixes it, if so

@@ -9,16 +9,16 @@
   <link rel="dns-prefetch" href="http://ajax.googleapis.com" />
   <link rel="dns-prefetch" href="http://easy.myfonts.com" />
   <script type="text/javascript">
-    // (function() {
-    //   var path = '//easy.myfonts.net/v2/js?sid=2937(font-family=ITC+Tiffany+Demi)&sid=2943(font-family=ITC+Tiffany+Regular)&sid=216212(font-family=ITC+Tiffany+Std)&sid=216213(font-family=ITC+Tiffany+Std+Light)&key=7XHcBH28NG',
-    //       protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
-    //       trial = document.createElement('script');
-    //   trial.type = 'text/javascript';
-    //   trial.async = true;
-    //   trial.src = protocol + path;
-    //   var head = document.getElementsByTagName("head")[0];
-    //   head.appendChild(trial);
-    // })();
+    (function() {
+      var path = '//easy.myfonts.net/v2/js?sid=2937(font-family=ITC+Tiffany+Demi)&sid=2943(font-family=ITC+Tiffany+Regular)&sid=216212(font-family=ITC+Tiffany+Std)&sid=216213(font-family=ITC+Tiffany+Std+Light)&key=7XHcBH28NG',
+          protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
+          trial = document.createElement('script');
+      trial.type = 'text/javascript';
+      trial.async = true;
+      trial.src = protocol + path;
+      var head = document.getElementsByTagName("head")[0];
+      head.appendChild(trial);
+    })();
   </script>
 </head>
 <body>
@@ -36,29 +36,41 @@
 
   <main role="main">
     <article class="leading-image sticky" data-index="0">
-      <section>
+      <section class="opening-text">
         <p><span>Bolton &amp; Quinn</span> is an international communications consultancy for arts and culture.</p>
       </section>
       <aside>
-        <h2>The weather project <span>by Olafur Eliasson</span></h2>
-        <h3>Tate Modern. London, UK | 2003</h3>
-        <button type="button" class="close-button" title="Close the caption">x</button>
+        <section>
+          <h2>The weather project <span>by Olafur Eliasson</span></h2>
+          <h3>Tate Modern. London, UK | 2003</h3>
+          <cite>Photo: Donec Non/Vitae Neque</cite>
+          <button type="button" class="open-button" title="Read the caption"><span>+</span> Caption</button>
+          <button type="button" class="close-button" title="Close the caption">x</button>
+        </section>
       </aside>
     </article>
 
     <article class="leading-image" data-index="1">
       <aside>
-        <h2>The weather project <span>by Olafur Eliasson</span></h2>
-        <h3>Tate Modern. London, UK | 2003</h3>
-        <button type="button" class="close-button" title="Close the caption">x</button>
+        <button type="button" class="open-button" title="Read the caption"><span>+</span> Caption</button>
+        <section>
+          <h2>The weather project <span>by Olafur Eliasson</span></h2>
+          <h3>Tate Modern. London, UK | 2003</h3>
+          <cite>Photo: Donec Non/Vitae Neque</cite>
+          <button type="button" class="close-button" title="Close the caption">x</button>
+        </section>
       </aside>
     </article>
 
     <article class="leading-image" data-index="2">
       <aside>
-        <h2>The weather project <span>by Olafur Eliasson</span></h2>
-        <h3>Tate Modern. London, UK | 2003</h3>
-        <button type="button" class="close-button" title="Close the caption">x</button>
+        <button type="button" class="open-button" title="Read the caption"><span>+</span> Caption</button>
+        <section>
+          <h2>The weather project <span>by Olafur Eliasson</span></h2>
+          <h3>Tate Modern. London, UK | 2003</h3>
+          <cite>Photo: Donec Non/Vitae Neque</cite>
+          <button type="button" class="close-button" title="Close the caption">x</button>
+        </section>
       </aside>
     </article>
 

@@ -11,7 +11,7 @@ License: GNU General Public License
 License URI: 
 Tags: 
 */
-
+#mfPreviewBar { display: none; }
 * {
   @include box-sizing(border-box);
   -webkit-font-smoothing: antialiased;
@@ -67,6 +67,19 @@ body {
   }
 }
 
+/* Define max widths */
+@mixin page_width($viewport) {
+  @if $viewport == "desktop" {
+    @include rem(width, 140rem);
+  }
+}
+
+@mixin max_width($viewport) {
+  @if $viewport == "desktop" {
+    @include rem(max-width, 140rem);
+  }
+}
+
 /* Define the fonts */
 $tiffany: "ITC Tiffany Demi", Georgia, serif;
 $georgia: Georgia, serif;
@@ -107,7 +120,7 @@ $georgia: Georgia, serif;
 @mixin caption_1() {
   font-family: $georgia;
   @include rem(font-size, 1.1rem);
-  @include rem(letter-spacing, .75rem);
+  @include rem(letter-spacing, .1rem);
 }
 
 @mixin caption_2() {
@@ -130,6 +143,12 @@ $georgia: Georgia, serif;
 }
 
 @mixin credit_2() {
+  font-size: $georgia;
+  @include rem(font-size, 1rem);
+  @include rem(letter-spacing, 1rem);
+}
+
+@mixin bold_1() {
   font-family: $tiffany;
   @include rem(font-size, 3.2rem);
   line-height: 1.8;
