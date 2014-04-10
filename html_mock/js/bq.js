@@ -10,6 +10,8 @@
   var $document = $(document);
   var $body = $("body");
   var $leadingImages = $(".leading-image");
+  var $clients = $("[name='clients'] span");
+  var width = $window.width();
   var height = $window.height();
   
   /**
@@ -19,7 +21,7 @@
     var navOffset = 79;
     $leadingImages.each(function() {
       var self = $(this);
-      var index = +self.data("index");
+      var index = +self.attr("data-index");
       if (index === 0) {
         self.css("height", height - navOffset).attr("data-top", height * index + navOffset);
       }
@@ -68,8 +70,8 @@
   var checkForSticky = function() {
     $leadingImages.each(function() {
       var self = $(this);
-      if (self.data("index") !== 0) {
-        if ($window.scrollTop() >= +self.data("top") - 79) {
+      if (self.attr("data-index") !== 0) {
+        if ($window.scrollTop() >= +self.attr("data-top") - 79) {
           self.addClass("sticky");
         }
         else {
@@ -79,7 +81,50 @@
     });
   };
 
-  $window.on("scroll.stickyScroll", checkForSticky);
+  /**
+    * Adjusts the height of the images, if the user scales the window
+    */
+  var adjustHeight = function() {
+    height = $window.height();
+    setImageHeights();
+    checkForSticky();
+  };
+
+  /**
+    * Calculate the number of columns the client list can have
+    */
+  var calcClientCols = function() {
+    var modifier;
+    var clients = $clients.length;
+    var cols;
+    if (1200 <= width) {
+      modifier = 4;
+    }
+    else if ((800 <= width) && (width < 1200)) {
+      modifier = 3;
+    }
+    else {
+      modifier = 2;
+    }
+    cols = Math.ceil(clients / cols);
+    $clients.each(function() {
+      var self = $(this);
+
+    })
+  };
+
+  $window.on("scroll.stickyScroll", checkForSticky)
+    .on("resize.heightResizing", adjustHeight);
+
+  $body.on("click.navClick touchend.navTouch", "nav a", function(evt) {
+    if (evt.preventDefault) {
+      evt.preventDefault();
+    }
+    var self = $(this);
+    console.log($("[name='" + self.attr("href").replace(/\#/, "") + "']").offset().top);
+    // $window.animate({ "scrollTo": $("[name='" + self.attr("href").replace(/\#/, "") + "']").offset().top }, "slow");
+    window.scroll(0, $("[name='" + self.attr("href").replace(/\#/, "") + "']").offset().top);
+  });
 
   setImageHeights();
 })();
