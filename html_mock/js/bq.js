@@ -116,7 +116,7 @@
   $window.on("scroll.stickyScroll", checkForSticky)
     .on("resize.heightResizing", adjustHeight);
 
-  $body.on("click.navClick touchend.navTouch", "nav a", function(evt) {
+  /*$body.on("click.navClick touchend.navTouch", "nav a", function(evt) {
     if (evt.preventDefault) {
       evt.preventDefault();
     }
@@ -124,7 +124,7 @@
     console.log($("[name='" + self.attr("href").replace(/\#/, "") + "']").offset().top);
     // $window.animate({ "scrollTo": $("[name='" + self.attr("href").replace(/\#/, "") + "']").offset().top }, "slow");
     window.scroll(0, $("[name='" + self.attr("href").replace(/\#/, "") + "']").offset().top);
-  });
+  });*/
 
   setImageHeights();
 })();

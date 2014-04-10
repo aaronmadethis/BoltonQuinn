@@ -236,7 +236,7 @@ main {
   @include head_1;
 }
 
-.content[name="about"] h1 {
+.content.about h1 {
   @include rem(margin-left, .6rem);
 }
 
@@ -273,7 +273,7 @@ main {
   @include rem(margin, 4.5rem 0 0);
 }
 
-.content[name="clients"] span {
+.content.clients span {
   display: block;
   float: left;
   @include rem(width, 40rem);
@@ -290,7 +290,7 @@ main {
   clear: both;
 }
 
-.content[name="contact"] {
+.content.contact {
   @include rem(padding-bottom, 24rem);
 }
 

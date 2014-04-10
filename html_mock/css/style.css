@@ -403,7 +403,7 @@ main {
 }
 
 /* line 239, ../sass/style.scss */
-.content[name="about"] h1 {
+.content.about h1 {
   margin-left: 6px;
   margin-left: 0.6rem;
 }
@@ -468,7 +468,7 @@ main {
 }
 
 /* line 276, ../sass/style.scss */
-.content[name="clients"] span {
+.content.clients span {
   display: block;
   float: left;
   width: 400px;
@@ -501,7 +501,7 @@ main {
 }
 
 /* line 293, ../sass/style.scss */
-.content[name="contact"] {
+.content.contact {
   padding-bottom: 240px;
   padding-bottom: 24rem;
 }
