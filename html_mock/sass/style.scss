@@ -55,6 +55,7 @@ main {
   position: absolute;
   right: 0;
   left: 0;
+  @include rem(padding, 0 2rem);
   width: auto;
   height: 100%;
   background: #fff url(../pulse_spiral.jpg) center center no-repeat;
@@ -79,11 +80,11 @@ main {
 }
 
 .leading-image .opening-text {
-  position: absolute;
+  position: relative;
   @include rem(bottom, 5.5rem);
-  left: 50%;
-  @include rem(margin, 0 0 0 -70rem);
+  margin: 0 auto;
   @include max_width("desktop");
+  height: 100%;
   background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAqCAYAAACgLjskAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTBEREEwMjhCODAyMTFFMzgxNDA5NDdGNjI5QjE5OEUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTBEREEwMjlCODAyMTFFMzgxNDA5NDdGNjI5QjE5OEUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyMEJEQzU3NUI4MDIxMUUzODE0MDk0N0Y2MjlCMTk4RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyMEJEQzU3NkI4MDIxMUUzODE0MDk0N0Y2MjlCMTk4RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pi22BNwAAAENSURBVHja7JfhDYIwEIVbwgBuIG6AEwgb4AawCZswgiMwAh3BDXADfGce0RgIWLF/vCaPlpa7L9DXAsZ4lGEYapFPbGQCFwUqUIEKVKACFahABSrwP4H4ZN+FgglL7rBDowwAE0YX43CGWnScrLXVj2ANqgLKI0AcGgcolYEtH7HkIiwVhrAepkHjJnQOtFtAmaNlzpyMp0ulAzqi6QhNvoAlhDnJOcImlwXn0dFMqQdMYjrCqo9cBfVQsfYPGH0ZY0pvK08lmALOXesDTZmongPyvF8zBfHSBWJlJBIHX1Dv3+eFts/oRLeYz8PmV0pKQuWvTjQbL2RZMmNpg+zF3JEan1iLwKCvp7sAAwB8stcF9WS8qgAAAABJRU5ErkJggg==) left bottom no-repeat;
   @include transition-property(bottom);
   @include transition-duration(.6s);
@@ -96,6 +97,8 @@ main {
 }
 
 .leading-image section p {
+  position: absolute;
+  bottom: 0;
   @include rem(margin, 0 0 6rem);
   @include rem(max-width, 55rem);
   @include bold_1;
@@ -210,7 +213,7 @@ main {
 .content {
   position: relative;
   margin: 0 auto;
-  padding: 0;
+  @include rem(padding, 0 2rem);
   width: 100%;
   height: 100%;
   background: #fff;
@@ -332,4 +335,17 @@ footer p {
   @include rem(max-width, 140rem);
   @include credit_2;
   color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+  .leading-image aside section {
+    @include rem(margin, 0 0 0 -60rem);
+    @include rem(max-width, 120rem);
+  }
+
+  .leading-image .opening-text,
+  .content > section,
+  footer p {
+    @include rem(max-width, 120rem);
+  }
 }
