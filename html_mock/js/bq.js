@@ -13,6 +13,7 @@
   var $clients = $("[name='clients'] span");
   var width = $window.width();
   var height = $window.height();
+  var scrolling = false;
   
   /**
     * Sets the heights of the large images to that of the user's screen, minus nav
@@ -51,18 +52,6 @@
     self.parent().removeClass("open").find(".open-button").removeClass("open").end().parent().removeClass("open")
       .parent().find(".opening-text").removeClass("open");
   };
-
-  $body.on("click.captionClick touchend.captionTouch", ".open-button", function(evt) {
-    if (evt.preventDefault) {
-      evt.preventDefault();
-    }
-    openCaption($(this));
-  }).on("click.captionCloseClick touchend.captionCloseTouch", ".close-button", function(evt) {
-    if (evt.preventDefault) {
-      evt.preventDefault();
-    }
-    closeCaption($(this));
-  });
 
   /**
     * Checks if the next image should be made sticky and fixes it, if so
@@ -116,15 +105,37 @@
   $window.on("scroll.stickyScroll", checkForSticky)
     .on("resize.heightResizing", adjustHeight);
 
-  /*$body.on("click.navClick touchend.navTouch", "nav a", function(evt) {
+  // Smooth scroll to the different nav points
+  $("nav a, #top").on("click.navClick touchend.navTouch", function(evt) {
     if (evt.preventDefault) {
       evt.preventDefault();
     }
     var self = $(this);
-    console.log($("[name='" + self.attr("href").replace(/\#/, "") + "']").offset().top);
-    // $window.animate({ "scrollTo": $("[name='" + self.attr("href").replace(/\#/, "") + "']").offset().top }, "slow");
-    window.scroll(0, $("[name='" + self.attr("href").replace(/\#/, "") + "']").offset().top);
-  });*/
+    var hash = self.attr("href");
+    if (!scrolling) {
+      scrolling = true;
+      $body.animate({
+        "scrollTop": $("." + hash.replace(/\#/, "")).offset().top
+      }, 500);
+    }
+    setTimeout(function() {
+      window.location.hash = hash;
+      scrolling = false;
+    }, 500);
+  });
+
+  // Attach click and touch handlers to caption fields
+  $body.on("click.captionClick touchend.captionTouch", ".open-button", function(evt) {
+    if (evt.preventDefault) {
+      evt.preventDefault();
+    }
+    openCaption($(this));
+  }).on("click.captionCloseClick touchend.captionCloseTouch", ".close-button", function(evt) {
+    if (evt.preventDefault) {
+      evt.preventDefault();
+    }
+    closeCaption($(this));
+  });
 
   setImageHeights();
 })();
