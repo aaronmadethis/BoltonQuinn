@@ -6,10 +6,10 @@
 .header {
   position: fixed;
   top: 0;
-  @include rem(right, .3rem);
-  @include rem(left, .3rem);
+  right: 0;
+  left: 0;
   @include rem(height, 8rem);
-  padding: 2.9rem 3.5rem 0;
+  @include rem(padding, 2.9rem 0 0);
   background: #fff;
   border-bottom: 1px solid #404041;
   z-index: 10;
@@ -17,8 +17,10 @@
 
 .header header {
   margin: 0 auto;
+  @include rem(padding, 0 10rem);
   width: 100%;
   @include max_width("desktop");
+  @include box-sizing("content-box");
 }
 
 .logo {
@@ -59,7 +61,7 @@ main {
   position: absolute;
   right: 0;
   left: 0;
-  @include rem(padding, 0 2rem);
+  @include rem(padding, 0 10rem);
   width: auto;
   height: 100%;
   background: #fff url(../pulse_spiral.jpg) center center no-repeat;
@@ -121,10 +123,10 @@ main {
 }
 
 .leading-image aside section {
-  position: absolute;
+  position: relative;
   bottom: 0;
-  left: 50%;
-  @include rem(margin, 0 0 0 -70rem);
+  margin: 0 auto;
+  @include rem(padding, 0 10rem);
   width: 100%;
   height: 100%;
   @include max_width("desktop");
@@ -133,8 +135,8 @@ main {
 .leading-image .open-button,
 .leading-image .close-button {
   position: absolute;
-  @include rem(top, 2rem);
-  right: 0;
+  @include rem(top, 1rem);
+  @include rem(right, 10rem);
   @include caption_1;
   color: #fff;
   background: transparent;
@@ -205,8 +207,7 @@ main {
 
 .leading-image .close-button {
   position: absolute;
-  @include rem(top, 2.8rem);
-  right: 0;
+  @include rem(top, -.9rem);
   padding: 0;
   @include rem(width, 2.4rem);
   @include rem(height, 2.6rem);
@@ -217,7 +218,7 @@ main {
 .content {
   position: relative;
   margin: 0 auto;
-  @include rem(padding, 0 2rem);
+  @include rem(padding, 0 10rem);
   width: 100%;
   height: 100%;
   background: #fff;
@@ -343,15 +344,11 @@ footer p {
   color: #fff;
 }
 
-@media screen and (max-width: 1200px) {
-  .leading-image aside section {
-    @include rem(margin, 0 0 0 -60rem);
-    @include rem(max-width, 120rem);
-  }
-
+@media screen and (max-width: 800px) {
+  .leading-image aside section,
   .leading-image .opening-text,
   .content > section,
   footer p {
-    @include rem(max-width, 120rem);
+    @include rem(max-width, 80rem);
   }
 }
