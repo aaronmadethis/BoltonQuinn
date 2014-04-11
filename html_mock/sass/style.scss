@@ -44,6 +44,10 @@ nav a {
   text-decoration: none;
 }
 
+nav a:hover {
+  color: #ec1c24;
+}
+
 main {
   position: relative;
   margin: 0 auto;
@@ -308,17 +312,19 @@ main {
   @include rem(margin, 1.3rem 0 .5rem);
   @include rem(padding-bottom, .5rem);
   @include body_1;
+  color: #ec1c24;
   text-decoration: none;
-  border-bottom: 1px solid #404041;
+  border-bottom: 1px solid #ec1c24;
 }
 
 .content a.tel {
+  color: #404041;
   border-bottom: none;
 }
 
 .content a:hover {
-  color: #ec1c24;
-  border-color: #ec1c24;
+  color: #404041;
+  border-color: #404041;
 }
 
 footer {

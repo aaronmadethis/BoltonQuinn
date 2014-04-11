@@ -97,6 +97,11 @@ nav a {
 }
 
 /* line 47, ../sass/style.scss */
+nav a:hover {
+  color: #ec1c24;
+}
+
+/* line 51, ../sass/style.scss */
 main {
   position: relative;
   margin: 0 auto;
@@ -104,7 +109,7 @@ main {
   width: 100%;
 }
 
-/* line 54, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 .leading-image {
   position: absolute;
   right: 0;
@@ -118,26 +123,26 @@ main {
   z-index: 1;
 }
 
-/* line 66, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 .leading-image[data-index="1"] {
   background-image: url(../article-olafur-eliasson.jpg);
   z-index: 2;
 }
 
-/* line 71, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 .leading-image[data-index="2"] {
   background-image: url(../london-eye.jpg);
   z-index: 3;
 }
 
-/* line 76, ../sass/style.scss */
+/* line 80, ../sass/style.scss */
 .sticky {
   position: fixed;
   top: 79px !important;
   bottom: 0;
 }
 
-/* line 82, ../sass/style.scss */
+/* line 86, ../sass/style.scss */
 .leading-image .opening-text {
   position: relative;
   bottom: 55px;
@@ -161,7 +166,7 @@ main {
   transition-timing-function: ease-in-out;
 }
 
-/* line 94, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 .leading-image .opening-text.open {
   bottom: 160px;
   bottom: 16rem;
@@ -171,7 +176,7 @@ main {
   transition-duration: 0.3s;
 }
 
-/* line 99, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
 .leading-image section p {
   position: absolute;
   bottom: 0;
@@ -188,7 +193,7 @@ main {
   color: #fff;
 }
 
-/* line 108, ../sass/style.scss */
+/* line 112, ../sass/style.scss */
 .leading-image aside {
   position: absolute;
   right: 0;
@@ -210,7 +215,7 @@ main {
   transition-timing-function: ease-in-out;
 }
 
-/* line 119, ../sass/style.scss */
+/* line 123, ../sass/style.scss */
 .leading-image aside section {
   position: absolute;
   bottom: 0;
@@ -223,7 +228,7 @@ main {
   max-width: 140rem;
 }
 
-/* line 129, ../sass/style.scss */
+/* line 133, ../sass/style.scss */
 .leading-image .open-button,
 .leading-image .close-button {
   position: absolute;
@@ -257,19 +262,19 @@ main {
   -webkit-font-smoothing: auto;
 }
 
-/* line 147, ../sass/style.scss */
+/* line 151, ../sass/style.scss */
 .leading-image section p span,
 .leading-image .open-button span {
   color: #ec1c24;
 }
 
-/* line 152, ../sass/style.scss */
+/* line 156, ../sass/style.scss */
 .leading-image .open-button.open {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
 
-/* line 156, ../sass/style.scss */
+/* line 160, ../sass/style.scss */
 .leading-image h2,
 .leading-image h3,
 .leading-image cite,
@@ -290,13 +295,13 @@ main {
   transition-timing-function: ease-in-out;
 }
 
-/* line 166, ../sass/style.scss */
+/* line 170, ../sass/style.scss */
 .leading-image aside.open {
   background: white;
   background: rgba(255, 255, 255, 0.8);
 }
 
-/* line 171, ../sass/style.scss */
+/* line 175, ../sass/style.scss */
 .leading-image .open h2,
 .leading-image .open h3,
 .leading-image .open cite,
@@ -305,7 +310,7 @@ main {
   opacity: 1;
 }
 
-/* line 178, ../sass/style.scss */
+/* line 182, ../sass/style.scss */
 .leading-image h2 {
   position: relative;
   margin: 34px 0 0;
@@ -318,12 +323,12 @@ main {
   font-style: italic;
 }
 
-/* line 185, ../sass/style.scss */
+/* line 189, ../sass/style.scss */
 .leading-image h2 span {
   font-style: normal;
 }
 
-/* line 189, ../sass/style.scss */
+/* line 193, ../sass/style.scss */
 .leading-image h3 {
   margin: 13px 0 0;
   margin: 1.3rem 0 0;
@@ -334,7 +339,7 @@ main {
   color: #404041;
 }
 
-/* line 194, ../sass/style.scss */
+/* line 198, ../sass/style.scss */
 .leading-image cite {
   position: absolute;
   right: 0;
@@ -347,7 +352,7 @@ main {
   font-style: normal;
 }
 
-/* line 202, ../sass/style.scss */
+/* line 206, ../sass/style.scss */
 .leading-image .close-button {
   position: absolute;
   top: 28px;
@@ -364,7 +369,7 @@ main {
   border-radius: 50%;
 }
 
-/* line 213, ../sass/style.scss */
+/* line 217, ../sass/style.scss */
 .content {
   position: relative;
   margin: 0 auto;
@@ -376,7 +381,7 @@ main {
   z-index: 4;
 }
 
-/* line 223, ../sass/style.scss */
+/* line 227, ../sass/style.scss */
 .content > section {
   position: relative;
   margin: 0 auto;
@@ -385,14 +390,14 @@ main {
   max-width: 140rem;
 }
 
-/* line 230, ../sass/style.scss */
+/* line 234, ../sass/style.scss */
 .content header {
   width: 75px;
   width: 7.5rem;
   border-bottom: 3px solid #ec1c24;
 }
 
-/* line 235, ../sass/style.scss */
+/* line 239, ../sass/style.scss */
 .content h1 {
   position: relative;
   margin: 0;
@@ -406,13 +411,13 @@ main {
   color: #231f20;
 }
 
-/* line 242, ../sass/style.scss */
+/* line 246, ../sass/style.scss */
 .content.about h1 {
   margin-left: 6px;
   margin-left: 0.6rem;
 }
 
-/* line 246, ../sass/style.scss */
+/* line 250, ../sass/style.scss */
 .content p {
   margin: 43px 0 0;
   margin: 4.3rem 0 0;
@@ -425,7 +430,7 @@ main {
   color: #404041;
 }
 
-/* line 253, ../sass/style.scss */
+/* line 257, ../sass/style.scss */
 .content h2 {
   margin: 45px 0 0;
   margin: 4.5rem 0 0;
@@ -438,7 +443,7 @@ main {
   color: #ec1c24;
 }
 
-/* line 258, ../sass/style.scss */
+/* line 262, ../sass/style.scss */
 .content h2 + p,
 .content li {
   margin: 19px 0 0;
@@ -451,19 +456,19 @@ main {
   color: #404041;
 }
 
-/* line 264, ../sass/style.scss */
+/* line 268, ../sass/style.scss */
 .content ul {
   margin: 0;
   padding: 0 0 0 20px;
   padding: 0 0 0 2rem;
 }
 
-/* line 269, ../sass/style.scss */
+/* line 273, ../sass/style.scss */
 .content li {
   margin: 0;
 }
 
-/* line 273, ../sass/style.scss */
+/* line 277, ../sass/style.scss */
 .content p + section {
   position: relative;
   display: table;
@@ -471,7 +476,7 @@ main {
   margin: 4.5rem 0 0;
 }
 
-/* line 279, ../sass/style.scss */
+/* line 283, ../sass/style.scss */
 .content.clients span {
   display: block;
   float: left;
@@ -486,7 +491,7 @@ main {
   color: #404041;
 }
 
-/* line 286, ../sass/style.scss */
+/* line 290, ../sass/style.scss */
 .content cite {
   position: relative;
   display: block;
@@ -504,20 +509,20 @@ main {
   clear: both;
 }
 
-/* line 296, ../sass/style.scss */
+/* line 300, ../sass/style.scss */
 .content.contact {
   padding-bottom: 240px;
   padding-bottom: 24rem;
 }
 
-/* line 300, ../sass/style.scss */
+/* line 304, ../sass/style.scss */
 .content .org,
 .content .street-address,
 .content .country-name {
   display: block;
 }
 
-/* line 306, ../sass/style.scss */
+/* line 310, ../sass/style.scss */
 .content a {
   display: table;
   margin: 13px 0 5px;
@@ -529,22 +534,24 @@ main {
   font-size: 2.3rem;
   line-height: 1.7;
   color: #404041;
+  color: #ec1c24;
   text-decoration: none;
-  border-bottom: 1px solid #404041;
+  border-bottom: 1px solid #ec1c24;
 }
 
-/* line 315, ../sass/style.scss */
+/* line 320, ../sass/style.scss */
 .content a.tel {
+  color: #404041;
   border-bottom: none;
 }
 
-/* line 319, ../sass/style.scss */
+/* line 325, ../sass/style.scss */
 .content a:hover {
-  color: #ec1c24;
-  border-color: #ec1c24;
+  color: #404041;
+  border-color: #404041;
 }
 
-/* line 324, ../sass/style.scss */
+/* line 330, ../sass/style.scss */
 footer {
   position: relative;
   height: 65px;
@@ -553,7 +560,7 @@ footer {
   z-index: 5;
 }
 
-/* line 331, ../sass/style.scss */
+/* line 337, ../sass/style.scss */
 footer p {
   position: relative;
   margin: 0 auto;
@@ -572,7 +579,7 @@ footer p {
 }
 
 @media screen and (max-width: 1200px) {
-  /* line 341, ../sass/style.scss */
+  /* line 347, ../sass/style.scss */
   .leading-image aside section {
     margin: 0 0 0 -600px;
     margin: 0 0 0 -60rem;
@@ -580,7 +587,7 @@ footer p {
     max-width: 120rem;
   }
 
-  /* line 346, ../sass/style.scss */
+  /* line 352, ../sass/style.scss */
   .leading-image .opening-text,
   .content > section,
   footer p {
