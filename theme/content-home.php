@@ -9,6 +9,14 @@
 <section id="home-wrapper">
 
 	<section id="hero-wrapper">
+		<div>
+		<?php
+			if(get_field('home_intro', $home->ID)){
+				the_field('home_intro', $home->ID);
+			}
+		?>
+		</div>
+
 		<?php if(get_field('i_and_c', $home->ID)): ?>
 
 			<?php $loop_counter = 1; ?>
