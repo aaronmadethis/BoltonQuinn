@@ -64,18 +64,18 @@ main {
   @include rem(padding, 0 10rem);
   width: auto;
   height: 100%;
-  background: #fff url(../pulse_spiral.jpg) center center no-repeat;
+  background: #fff url(../1_GarageMoscow.jpg) center center no-repeat;
   background-size: cover;
   z-index: 1;
 }
 
 .leading-image[data-index="1"] {
-  background-image: url(../article-olafur-eliasson.jpg);
+  background-image: url(../2_Rijksmuseum.jpg);
   z-index: 2;
 }
 
 .leading-image[data-index="2"] {
-  background-image: url(../london-eye.jpg);
+  background-image: url(../3_LondonEye.jpg);
   z-index: 3;
 }
 
@@ -87,7 +87,7 @@ main {
 
 .leading-image .opening-text {
   position: relative;
-  @include rem(bottom, 5.5rem);
+  @include rem(bottom, 6.5rem);
   margin: 0 auto;
   @include max_width("desktop");
   height: 100%;
@@ -106,7 +106,7 @@ main {
   position: absolute;
   bottom: 0;
   @include rem(margin, 0 0 6rem);
-  @include rem(max-width, 55rem);
+  @include rem(max-width, 60rem);
   @include bold_1;
   color: #fff;
 }
@@ -129,13 +129,13 @@ main {
   @include rem(padding, 0 10rem);
   width: 100%;
   height: 100%;
-  @include max_width("desktop");
+  @include rem(max-width, 160rem);
 }
 
 .leading-image .open-button,
 .leading-image .close-button {
   position: absolute;
-  @include rem(top, 1rem);
+  @include rem(top, .3rem);
   @include rem(right, 10rem);
   @include caption_1;
   color: #fff;
@@ -183,7 +183,7 @@ main {
 
 .leading-image h2 {
   position: relative;
-  @include rem(margin, 3.4rem 0 0);
+  @include rem(margin, 3.2rem 0 0);
   @include caption_2;
   font-style: italic;
 }
@@ -199,8 +199,8 @@ main {
 
 .leading-image cite {
   position: absolute;
-  right: 0;
-  @include rem(bottom, 2.3rem);
+  @include rem(right, 10rem);
+  @include rem(top, 3.4rem);
   @include credit_1;
   font-style: normal;
 }
@@ -213,6 +213,13 @@ main {
   @include rem(height, 2.6rem);
   background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAaCAYAAACtv5zzAAAB7klEQVRIx2NgoAH4//8/IxDrA3EFA60A0HA2IBZlGFDwZG4f27d5C6d+rm+Z9EbfrPu1jPJUGP5cWNL1bfb8lWQb/n3xsmokQ//jwGDLvs+Ys4Mkw790980hYDCGRe8DQosmVUsw0sJwhCW+wbn4g2X2nAQyDYdgaeV5P/qnVmM1/MPcmfxvdIw7yDYcgfdiD5rps2dgc/17d5//H5Mz/hMrDsIfK6onYVjwqbSyDqtioCEg8LmwDMXwfx8//v82Zz5WC97qmOzDsOCNlsEGXN4GGQ6zBGb4176JuINJTu3Yv7ZKFhQLgBKH8IUtzBKQ4ci+wYW/LF+qC1TOgWzBYXwaYC5HDy5c+Pu2HVpApfzIQbSTkOEgg5GDC3cQqS77d+SEJFAZH9yC937B7YQMxxYn2PS8UVRvxojkb9391kDJmdhSETaDQGK4IvpjSUU8hgUT5BkY3+iadFKc0eRVS35u2qaPvaiYPB1kwQwKLCj6EJPgiLc8+hCV0ANUuJIcC96o6yUQrmSWTGZ97xeyGqhhCwmGF4MM/7ftIPFV5Jf6ZlBQLSdk+CtppbKPKRmeZNVqX2fP1/jS1dvxzsa5+pW4bC8Ig4NCWqkU5OL3pZWG3+cs4qBK/Xx6TgHT91nzwkH469z5kgzDHkAbX6IAR5wuIf8vsUgAAAAASUVORK5CYII=) center center no-repeat;
   @include border-radius(50%);
+  @include transition-property(background);
+  @include transition-duration(.2s);
+  @include transition-timing-function(ease-in-out);
+}
+
+.leading-image .close-button:hover {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAaCAYAAACtv5zzAAAAoUlEQVRIx2NgGAWUAAcHRwUg7gfi80D8Hw2fh8opoOv7//+/GCGDBaCa/xOJQWoFiHW1AA4XE8LnCVpCgeHEWUJisOAMLnwR+p9KWIFo13d0dIAxseI4fYEr7EGGgACyYdjE0OMCmwU4vYxsIBGGgzFJFiBbQozhg88CagURzSOZ5smUthmN5kUFXQo7mhfXdKlwqFFlogB1TS2m0dYHPgAANYGB1iy3OyoAAAAASUVORK5CYII=);
 }
 
 .content {
@@ -240,7 +247,7 @@ main {
 .content h1 {
   position: relative;
   margin: 0;
-  @include rem(padding, 13rem 0 4.2rem);
+  @include rem(padding, 13rem 0 4rem);
   @include head_1;
 }
 
@@ -278,7 +285,7 @@ main {
 .content p + section {
   position: relative;
   display: table;
-  @include rem(margin, 4.5rem 0 0);
+  @include rem(margin, 3.7rem 0 0);
 }
 
 .content.clients span {

@@ -122,20 +122,20 @@ main {
   padding: 0 10rem;
   width: auto;
   height: 100%;
-  background: white url(../pulse_spiral.jpg) center center no-repeat;
+  background: white url(../1_GarageMoscow.jpg) center center no-repeat;
   background-size: cover;
   z-index: 1;
 }
 
 /* line 72, ../sass/style.scss */
 .leading-image[data-index="1"] {
-  background-image: url(../article-olafur-eliasson.jpg);
+  background-image: url(../2_Rijksmuseum.jpg);
   z-index: 2;
 }
 
 /* line 77, ../sass/style.scss */
 .leading-image[data-index="2"] {
-  background-image: url(../london-eye.jpg);
+  background-image: url(../3_LondonEye.jpg);
   z-index: 3;
 }
 
@@ -149,8 +149,8 @@ main {
 /* line 88, ../sass/style.scss */
 .leading-image .opening-text {
   position: relative;
-  bottom: 55px;
-  bottom: 5.5rem;
+  bottom: 65px;
+  bottom: 6.5rem;
   margin: 0 auto;
   max-width: 1400px;
   max-width: 140rem;
@@ -186,12 +186,13 @@ main {
   bottom: 0;
   margin: 0 0 60px;
   margin: 0 0 6rem;
-  max-width: 550px;
-  max-width: 55rem;
+  max-width: 600px;
+  max-width: 60rem;
   font-family: "ITC Tiffany Demi", Georgia, serif;
-  font-size: 32px;
-  font-size: 3.2rem;
-  line-height: 1.8;
+  font-size: 35px;
+  font-size: 3.5rem;
+  line-height: 57.6px;
+  line-height: 5.76rem;
   letter-spacing: 1px;
   letter-spacing: 0.1rem;
   color: #fff;
@@ -228,23 +229,23 @@ main {
   padding: 0 10rem;
   width: 100%;
   height: 100%;
-  max-width: 1400px;
-  max-width: 140rem;
+  max-width: 1600px;
+  max-width: 160rem;
 }
 
 /* line 135, ../sass/style.scss */
 .leading-image .open-button,
 .leading-image .close-button {
   position: absolute;
-  top: 10px;
-  top: 1rem;
+  top: 3px;
+  top: 0.3rem;
   right: 100px;
   right: 10rem;
   font-family: Georgia, serif;
   font-size: 11px;
   font-size: 1.1rem;
-  letter-spacing: 1px;
-  letter-spacing: 0.1rem;
+  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
   color: #fff;
   background: transparent;
   border: none;
@@ -318,11 +319,13 @@ main {
 /* line 184, ../sass/style.scss */
 .leading-image h2 {
   position: relative;
-  margin: 34px 0 0;
-  margin: 3.4rem 0 0;
+  margin: 32px 0 0;
+  margin: 3.2rem 0 0;
   font-family: Georgia, serif;
   font-size: 15px;
   font-size: 1.5rem;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
   font-weight: 700;
   color: #404041;
   font-style: italic;
@@ -340,6 +343,8 @@ main {
   font-family: Georgia, serif;
   font-size: 15px;
   font-size: 1.5rem;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
   font-weight: 400;
   color: #404041;
 }
@@ -347,9 +352,10 @@ main {
 /* line 200, ../sass/style.scss */
 .leading-image cite {
   position: absolute;
-  right: 0;
-  bottom: 23px;
-  bottom: 2.3rem;
+  right: 100px;
+  right: 10rem;
+  top: 34px;
+  top: 3.4rem;
   font-family: Georgia, serif;
   font-size: 11px;
   font-size: 1.1rem;
@@ -371,9 +377,26 @@ main {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 
-/* line 218, ../sass/style.scss */
+/* line 221, ../sass/style.scss */
+.leading-image .close-button:hover {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAaCAYAAACtv5zzAAAAoUlEQVRIx2NgGAWUAAcHRwUg7gfi80D8Hw2fh8opoOv7//+/GCGDBaCa/xOJQWoFiHW1AA4XE8LnCVpCgeHEWUJisOAMLnwR+p9KWIFo13d0dIAxseI4fYEr7EGGgACyYdjE0OMCmwU4vYxsIBGGgzFJFiBbQozhg88CagURzSOZ5smUthmN5kUFXQo7mhfXdKlwqFFlogB1TS2m0dYHPgAANYGB1iy3OyoAAAAASUVORK5CYII=);
+}
+
+/* line 225, ../sass/style.scss */
 .content {
   position: relative;
   margin: 0 auto;
@@ -385,7 +408,7 @@ main {
   z-index: 4;
 }
 
-/* line 228, ../sass/style.scss */
+/* line 235, ../sass/style.scss */
 .content > section {
   position: relative;
   margin: 0 auto;
@@ -394,19 +417,19 @@ main {
   max-width: 140rem;
 }
 
-/* line 235, ../sass/style.scss */
+/* line 242, ../sass/style.scss */
 .content header {
   width: 75px;
   width: 7.5rem;
   border-bottom: 3px solid #ec1c24;
 }
 
-/* line 240, ../sass/style.scss */
+/* line 247, ../sass/style.scss */
 .content h1 {
   position: relative;
   margin: 0;
-  padding: 130px 0 42px;
-  padding: 13rem 0 4.2rem;
+  padding: 130px 0 40px;
+  padding: 13rem 0 4rem;
   font-family: "ITC Tiffany Demi", Georgia, serif;
   font-size: 95px;
   font-size: 9.5rem;
@@ -415,13 +438,13 @@ main {
   color: #231f20;
 }
 
-/* line 247, ../sass/style.scss */
+/* line 254, ../sass/style.scss */
 .content.about h1 {
   margin-left: 6px;
   margin-left: 0.6rem;
 }
 
-/* line 251, ../sass/style.scss */
+/* line 258, ../sass/style.scss */
 .content p {
   margin: 43px 0 0;
   margin: 4.3rem 0 0;
@@ -434,53 +457,55 @@ main {
   color: #404041;
 }
 
-/* line 258, ../sass/style.scss */
+/* line 265, ../sass/style.scss */
 .content h2 {
   margin: 45px 0 0;
   margin: 4.5rem 0 0;
   font-family: Georgia, serif;
-  font-size: 14.5px;
-  font-size: 1.45rem;
+  font-size: 15.5px;
+  font-size: 1.55rem;
   letter-spacing: 1px;
   letter-spacing: 0.1rem;
   font-weight: 400;
+  line-height: 34px;
+  line-height: 3.4rem;
   color: #ec1c24;
 }
 
-/* line 263, ../sass/style.scss */
+/* line 270, ../sass/style.scss */
 .content h2 + p,
 .content li {
   margin: 19px 0 0;
   margin: 1.9rem 0 0;
   font-family: Georgia, serif;
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 17px;
+  font-size: 1.7rem;
   line-height: 2;
   font-weight: 400;
   color: #404041;
 }
 
-/* line 269, ../sass/style.scss */
+/* line 276, ../sass/style.scss */
 .content ul {
   margin: 0;
   padding: 0 0 0 20px;
   padding: 0 0 0 2rem;
 }
 
-/* line 274, ../sass/style.scss */
+/* line 281, ../sass/style.scss */
 .content li {
   margin: 0;
 }
 
-/* line 278, ../sass/style.scss */
+/* line 285, ../sass/style.scss */
 .content p + section {
   position: relative;
   display: table;
-  margin: 45px 0 0;
-  margin: 4.5rem 0 0;
+  margin: 37px 0 0;
+  margin: 3.7rem 0 0;
 }
 
-/* line 284, ../sass/style.scss */
+/* line 291, ../sass/style.scss */
 .content.clients span {
   display: block;
   float: left;
@@ -495,15 +520,15 @@ main {
   color: #404041;
 }
 
-/* line 291, ../sass/style.scss */
+/* line 298, ../sass/style.scss */
 .content cite {
   position: relative;
   display: block;
   margin: 56px 0 0;
   margin: 5.6rem 0 0;
   font-size: Georgia, serif;
-  font-size: 10px;
-  font-size: 1rem;
+  font-size: 10.5px;
+  font-size: 1.05rem;
   letter-spacing: 1px;
   letter-spacing: 0.1rem;
   font-weight: 400;
@@ -513,20 +538,20 @@ main {
   clear: both;
 }
 
-/* line 301, ../sass/style.scss */
+/* line 308, ../sass/style.scss */
 .content.contact {
   padding-bottom: 240px;
   padding-bottom: 24rem;
 }
 
-/* line 305, ../sass/style.scss */
+/* line 312, ../sass/style.scss */
 .content .org,
 .content .street-address,
 .content .country-name {
   display: block;
 }
 
-/* line 311, ../sass/style.scss */
+/* line 318, ../sass/style.scss */
 .content a {
   display: table;
   margin: 13px 0 5px;
@@ -543,19 +568,19 @@ main {
   border-bottom: 1px solid #ec1c24;
 }
 
-/* line 321, ../sass/style.scss */
+/* line 328, ../sass/style.scss */
 .content a.tel {
   color: #404041;
   border-bottom: none;
 }
 
-/* line 326, ../sass/style.scss */
+/* line 333, ../sass/style.scss */
 .content a:hover {
   color: #404041;
   border-color: #404041;
 }
 
-/* line 331, ../sass/style.scss */
+/* line 338, ../sass/style.scss */
 footer {
   position: relative;
   height: 65px;
@@ -564,7 +589,7 @@ footer {
   z-index: 5;
 }
 
-/* line 338, ../sass/style.scss */
+/* line 345, ../sass/style.scss */
 footer p {
   position: relative;
   margin: 0 auto;
@@ -573,8 +598,8 @@ footer p {
   max-width: 1400px;
   max-width: 140rem;
   font-size: Georgia, serif;
-  font-size: 10px;
-  font-size: 1rem;
+  font-size: 10.5px;
+  font-size: 1.05rem;
   letter-spacing: 1px;
   letter-spacing: 0.1rem;
   font-weight: 400;
@@ -583,7 +608,7 @@ footer p {
 }
 
 @media screen and (max-width: 800px) {
-  /* line 348, ../sass/style.scss */
+  /* line 355, ../sass/style.scss */
   .leading-image aside section,
   .leading-image .opening-text,
   .content > section,

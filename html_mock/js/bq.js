@@ -20,6 +20,7 @@
     */
   var setImageHeights = function() {
     var navOffset = 79;
+    var delay = 1000;
     $leadingImages.each(function() {
       var self = $(this);
       var index = +self.attr("data-index");
@@ -28,12 +29,12 @@
       }
       else {
         self.css({
-          "top": height * index + navOffset,
+          "top": height * index + navOffset + (index * delay),
           "height": height - navOffset
-        }).attr("data-top", height * index + navOffset);
+        }).attr("data-top", height * index + navOffset + (index * delay));
       }
     });
-    $leadingImages.parent().css("padding-top", height * $leadingImages.length);
+    $leadingImages.parent().css("padding-top", height * $leadingImages.length + ($leadingImages.length * delay));
   };
 
   /**

@@ -94,9 +94,10 @@ $georgia: Georgia, serif;
 
 @mixin head_2() {
   font-family: $georgia;
-  @include rem(font-size, 1.45rem);
+  @include rem(font-size, 1.55rem);
   @include rem(letter-spacing, .1rem);
   font-weight: 400;
+  @include rem(line-height, 3.4rem);
   color: #ec1c24;
 }
 
@@ -109,7 +110,7 @@ $georgia: Georgia, serif;
 
 @mixin body_2() {
   font-family: $georgia;
-  @include rem(font-size, 1.6rem);
+  @include rem(font-size, 1.7rem);
   line-height: 2;
   font-weight: 400;
   color: #404041;
@@ -126,12 +127,13 @@ $georgia: Georgia, serif;
 @mixin caption_1() {
   font-family: $georgia;
   @include rem(font-size, 1.1rem);
-  @include rem(letter-spacing, .1rem);
+  @include rem(letter-spacing, .2rem);
 }
 
 @mixin caption_2() {
   font-family: $georgia;
   @include rem(font-size, 1.5rem);
+  @include rem(letter-spacing, .1rem);
   font-weight: 700;
   color: #404041;
 }
@@ -139,6 +141,7 @@ $georgia: Georgia, serif;
 @mixin caption_3() {
   font-family: $georgia;
   @include rem(font-size, 1.5rem);
+  @include rem(letter-spacing, .1rem);
   font-weight: 400;
   color: #404041;
 }
@@ -151,7 +154,7 @@ $georgia: Georgia, serif;
 
 @mixin credit_2() {
   font-size: $georgia;
-  @include rem(font-size, 1rem);
+  @include rem(font-size, 1.05rem);
   @include rem(letter-spacing, .1rem);
   font-weight: 400;
   color: #404041;
@@ -159,8 +162,8 @@ $georgia: Georgia, serif;
 
 @mixin bold_1() {
   font-family: $tiffany;
-  @include rem(font-size, 3.2rem);
-  line-height: 1.8;
+  @include rem(font-size, 3.5rem);
+  @include rem(line-height, 5.76rem);
   @include rem(letter-spacing, .1rem);
 }
 
