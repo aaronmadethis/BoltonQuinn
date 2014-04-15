@@ -18,7 +18,6 @@
 .header header {
   margin: 0 auto;
   @include rem(padding, 0 10rem);
-  width: 100%;
   @include max_width("desktop");
   @include box-sizing("content-box");
 }
@@ -82,6 +81,7 @@ main {
 .sticky {
   position: fixed;
   top: 79px !important;
+  top: 7.9rem !important;
   bottom: 0;
 }
 
@@ -337,6 +337,7 @@ main {
 
 footer {
   position: relative;
+  @include rem(padding, 0 10rem);
   @include rem(height, 6.5rem);
   background: #231f20;
   z-index: 5;
@@ -351,11 +352,24 @@ footer p {
   color: #fff;
 }
 
-@media screen and (max-width: 800px) {
-  .leading-image aside section,
-  .leading-image .opening-text,
-  .content > section,
-  footer p {
-    @include rem(max-width, 80rem);
+/* Mobile Landscape */
+@media screen and (max-width: 900px) {
+
+  .leading-image {
+    position: relative;
+    right: 0;
+    left: 0;
+    @include rem(height, 21.8rem);
+    @include rem(padding, 0 3rem);
+    background-image: url(../1_GarageMoscow.jpg);
   }
+
+  .sticky {
+    position: relative;
+    top: 0 !important;
+    bottom: auto;
+    @include rem(margin-top, 5rem);
+    @include rem(height, 20.8rem);
+  }
+
 }

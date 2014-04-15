@@ -58,26 +58,30 @@
     * Checks if the next image should be made sticky and fixes it, if so
     */
   var checkForSticky = function() {
-    $leadingImages.each(function() {
-      var self = $(this);
-      if (self.attr("data-index") !== 0) {
-        if ($window.scrollTop() >= +self.attr("data-top") - 79) {
-          self.addClass("sticky");
+    if (width >= 1024) {
+      $leadingImages.each(function() {
+        var self = $(this);
+        if (self.attr("data-index") !== 0) {
+          if ($window.scrollTop() >= +self.attr("data-top") - 79) {
+            self.addClass("sticky");
+          }
+          else {
+            self.removeClass("sticky");
+          }
         }
-        else {
-          self.removeClass("sticky");
-        }
-      }
-    });
+      });
+    }
   };
 
   /**
     * Adjusts the height of the images, if the user scales the window
     */
   var adjustHeight = function() {
-    height = $window.height();
-    setImageHeights();
-    checkForSticky();
+    if (width >= 1024) {
+      height = $window.height();
+      setImageHeights();
+      checkForSticky();
+    }
   };
 
   /**
@@ -138,5 +142,8 @@
     closeCaption($(this));
   });
 
-  setImageHeights();
+  // Only set the image heights for desktop/tablet
+  if (width >= 1024) {
+    setImageHeights();
+  }
 })();

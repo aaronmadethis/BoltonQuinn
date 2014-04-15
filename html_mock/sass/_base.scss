@@ -180,3 +180,69 @@ $georgia: Georgia, serif;
   line-height: 1.7;
   color: #ec1c24;
 }
+
+/* Mobile Mixins */
+@mixin head_1m() {
+  font-family: $tiffany;
+  @include rem(font-size, 5.5rem);
+  font-weight: 400;
+  color: #231f20;
+}
+
+@mixin head_2m() {
+  font-family: $georgia;
+  @include rem(font-size, 1.45rem);
+  @include rem(line-height, .95rem);
+  @include rem(letter-spacing, .1rem);
+  font-weight: 400;
+  color: #ec1c24;
+}
+
+@mixin body_1m() {
+  font-family: $georgia;
+  @include rem(font-size, 1.6rem);
+  @include rem(line-height, 1.4rem);
+  font-weight: 400;
+  color: #404041;
+}
+
+@mixin body_2m() {
+  font-family: $georgia;
+  @include rem(font-size, 1.4rem);
+  @include rem(line-height, 1.6rem);
+  font-weight: 400;
+  color: #404041;
+}
+
+@mixin credit_2m() {
+  font-family: $georgia;
+  @include rem(font-size, .8rem);
+  @include rem(line-height, .7rem);
+  @include rem(letter-spacing, .1rem);
+  font-weight: 400;
+}
+
+@mixin bold_1m() {
+  font-family: $tiffany;
+  @include rem(font-size, 2.7rem);
+  @include rem(line-height, .9rem);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+@mixin nav_1m() {
+  font-family: $georgia;
+  @include rem(font-size, 1.6rem);
+  line-height: .5;
+  font-weight: 700;
+  @include rem(letter-spacing, .03rem);
+  color: #231f20;
+}
+
+@mixin link_1m() {
+  font-family: $georgia;
+  @include rem(font-size, 1.6rem);
+  @include rem(line-height, 1.4rem);
+  font-weight: 400;
+  color: #ec1c24;
+}
