@@ -10,11 +10,11 @@
 
 	<section id="hero-wrapper">
 		<div>
-		<?php
-			if(get_field('home_intro', $home->ID)){
-				the_field('home_intro', $home->ID);
-			}
-		?>
+			<?php
+				if(get_field('home_intro', $home->ID)){
+					the_field('home_intro', $home->ID);
+				}
+			?>
 		</div>
 
 		<?php if(get_field('i_and_c', $home->ID)): ?>
