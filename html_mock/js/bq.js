@@ -6,21 +6,24 @@
 (function() {
   "use strict";
 
-  var $window = $(window);
   var $document = $(document);
   var $body = $("body");
   var $leadingImages = $(".leading-image");
-  var $clients = $("[name='clients'] span");
-  var width = $window.width();
-  var height = $window.height();
+  var $clients = $(".clients ul");
+  var $client = $clients.find("li");
+  var $leadingImage = $(".leading-image");
+  var width = $(window).width();
+  var height = $(window).height();
   var scrolling = false;
+  var desktopColumn = true;
+  var mobileColumn = false;
   
   /**
     * Sets the heights of the large images to that of the user's screen, minus nav
     */
   var setImageHeights = function() {
     var navOffset = 79;
-    var delay = 1000;
+    var delay = 500;
     $leadingImages.each(function() {
       var self = $(this);
       var index = +self.attr("data-index");
@@ -58,11 +61,11 @@
     * Checks if the next image should be made sticky and fixes it, if so
     */
   var checkForSticky = function() {
-    if (width >= 1024) {
+    if ((width >= 1024) && ($(window).scrollTop() > 0)) {
       $leadingImages.each(function() {
         var self = $(this);
         if (self.attr("data-index") !== 0) {
-          if ($window.scrollTop() >= +self.attr("data-top") - 79) {
+          if ($(window).scrollTop() >= +self.attr("data-top") - 79) {
             self.addClass("sticky");
           }
           else {
@@ -77,8 +80,9 @@
     * Adjusts the height of the images, if the user scales the window
     */
   var adjustHeight = function() {
+    width = $(window).width();
     if (width >= 1024) {
-      height = $window.height();
+      height = $(window).height();
       setImageHeights();
       checkForSticky();
     }
@@ -88,27 +92,48 @@
     * Calculate the number of columns the client list can have
     */
   var calcClientCols = function() {
-    var modifier;
-    var clients = $clients.length;
-    var cols;
-    if (1200 <= width) {
-      modifier = 4;
-    }
-    else if ((800 <= width) && (width < 1200)) {
-      modifier = 3;
-    }
-    else {
-      modifier = 2;
-    }
-    cols = Math.ceil(clients / cols);
-    $clients.each(function() {
-      var self = $(this);
+    var clients = $client.length;
+    var clientHeight = $client.height();
+    var column3;
+    var column2;
+    var items = document.createDocumentFragment();
+    var item;
+    var i = 0;
+    var length;
+    // desktop
+    if (1400 <= width && !desktopColumn) {
+      desktopColumn = true;
+      mobileColumn = false;
 
-    })
+      var splitList = $clients.eq(0).children();
+      var secondaryList = splitList.slice(Math.ceil((splitList.length / 3) * 2));
+      var children = $clients.eq(1).children();
+
+      $clients.eq(0).html(splitList.slice(0, Math.ceil((splitList.length / 3) * 2)));
+      $clients.eq(1).html(secondaryList).append(children.slice(0, Math.floor(children.length / 3)));
+      $clients.eq(2).html(children.slice(Math.floor(children.length / 3)));
+
+      $clients.removeClass("hidden");
+    }
+    // tablet/mobile
+    else if (width < 1400 && !mobileColumn) {
+      desktopColumn = false;
+      mobileColumn = true;
+      var splitList = $clients.eq(1).children();
+      var secondaryList = splitList.slice(Math.floor(splitList.length / 2));
+      var children = $clients.eq(2).children();
+
+      $clients.eq(0).append(splitList.slice(0, Math.ceil(splitList.length / 2)));
+      $clients.eq(1).html(secondaryList).append(children);
+
+      $clients.eq(2).addClass("hidden");
+    }
   };
 
-  $window.on("scroll.stickyScroll", checkForSticky)
-    .on("resize.heightResizing", adjustHeight);
+  // Attach event handlers to user actions
+  $(window).on("scroll.stickyScroll", checkForSticky)
+    .on("resize.heightResizing", adjustHeight)
+    .on("resize.clientCols", calcClientCols);
 
   // Smooth scroll to the different nav points
   $("nav a, #top").on("click.navClick touchend.navTouch", function(evt) {
@@ -140,10 +165,27 @@
       evt.preventDefault();
     }
     closeCaption($(this));
+  })
+  // And to the slide advance buttons
+  .on("click.slideClick touchend.slideTouch", ".opening-text button", function(evt) {
+    if (evt.preventDefault) {
+      evt.preventDefault();
+    }
+    var self = $(this);
+    if (0 < self.index() < 3) {
+      $body.animate({
+        "scrollTop": self.parents(".leading-image").next().offset().top
+      }, 300);
+    }
+    else if (self.index() === 3) {
+      $("nav a").eq(0).click();
+    }
   });
 
   // Only set the image heights for desktop/tablet
   if (width >= 1024) {
     setImageHeights();
   }
+
+  calcClientCols();
 })();
