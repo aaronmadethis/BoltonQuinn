@@ -12,6 +12,7 @@
   var $clients = $(".clients ul");
   var $client = $clients.find("li");
   var $leadingImage = $(".leading-image");
+  var $nav = $("nav");
   var width = $(window).width();
   var height = $(window).height();
   var scrolling = false;
@@ -48,7 +49,7 @@
           "top": "auto",
           "height": ""
         }).removeAttr("data-top");
-      }).parent().css("padding-top", navOffset);
+      }).parent().css("padding-top", 0);
     }
   };
 
@@ -73,7 +74,7 @@
     * Checks if the next image should be made sticky and fixes it, if so
     */
   var checkForSticky = function() {
-    if ((width >= 1024) && ($(window).scrollTop() > 0)) {
+    if ((width >= 900) && ($(window).scrollTop() > 0)) {
       $leadingImages.each(function() {
         var self = $(this);
         if (self.attr("data-index") !== 0) {
@@ -85,6 +86,9 @@
           }
         }
       });
+    }
+    else {
+      $leadingImages.eq(1).removeClass("sticky").end().eq(2).removeClass("sticky").end().eq(0).addClass("sticky");
     }
   };
 
@@ -159,7 +163,7 @@
     }
     var self = $(this);
     var hash = self.attr("href");
-    if (!scrolling) {
+    if (!scrolling && (hash !== "#top")) {
       scrolling = true;
       $body.animate({
         "scrollTop": $("." + hash.replace(/\#/, "")).offset().top
@@ -168,6 +172,9 @@
     setTimeout(function() {
       window.location.hash = hash;
       scrolling = false;
+      if ((width < 900) && (hash !== "#top")) {
+        $nav.removeClass("reveal-menu");
+      }
     }, 500);
   });
 

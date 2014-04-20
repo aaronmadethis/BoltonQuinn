@@ -192,7 +192,7 @@ $georgia: Georgia, serif;
 @mixin head_2m() {
   font-family: $georgia;
   @include rem(font-size, 1.45rem);
-  @include rem(line-height, .95rem);
+  @include rem(line-height, 2.4rem);
   @include rem(letter-spacing, .1rem);
   font-weight: 400;
   color: #ec1c24;
@@ -201,9 +201,8 @@ $georgia: Georgia, serif;
 @mixin body_1m() {
   font-family: $georgia;
   @include rem(font-size, 1.6rem);
-  @include rem(line-height, 1.4rem);
+  @include rem(line-height, 3rem);
   font-weight: 400;
-  color: #404041;
 }
 
 @mixin body_2m() {
@@ -225,7 +224,7 @@ $georgia: Georgia, serif;
 @mixin bold_1m() {
   font-family: $tiffany;
   @include rem(font-size, 2.7rem);
-  @include rem(line-height, .9rem);
+  line-height: 1.4;
   font-weight: 400;
   letter-spacing: 0;
 }

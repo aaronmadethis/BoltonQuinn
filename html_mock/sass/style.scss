@@ -403,7 +403,7 @@ footer p {
     z-index: 2;
   }
 
-  #top::after {
+  #top:after {
     content: '';
     position: absolute;
     @include rem(top, 1.5rem);
@@ -463,18 +463,124 @@ footer p {
     background-image: url(../1_GarageMoscow_1800.jpg);
   }
 
+  .leading-image[data-index="1"] {
+    background-image: url(../2_Rijksmuseum_1800.jpg);
+  }
+
+  .leading-image[data-index="2"] {
+    background-image: url(../3_LondonEye_1800.jpg);
+  }
+
   .sticky {
     position: relative;
     top: 0 !important;
     bottom: auto;
-    @include rem(margin-top, 5rem);
-    @include rem(height, 20.8rem);
+    @include rem(margin-top, 26.8rem);
+    @include rem(height, 20rem);
+  }
+
+  .leading-image .first-text {
+    position: absolute;
+    @include rem(top, -21.8rem);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include rem(height, 21.8rem);
+    background: #000;
+  }
+
+  .leading-image section p {
+    position: relative;
+    @include bold_1m;
+    @include rem(padding, 2.6rem 2rem 0);
+  }
+
+  .leading-image section button {
+    display: none;
+  }
+
+  .content {
+    @include rem(padding, 0 2rem);
+  }
+
+  .content header {
+    @include rem(width, 3.5rem);
+  }
+
+  .content h1 {
+    @include rem(padding, 5rem 0 2.7rem);
+    @include head_1m;
+  }
+
+  .content.about h1 {
+    margin-left: 0;
+  }
+
+  .content p {
+    @include rem(margin, 3rem 0 0);
+    width: 100%;
+    @include body_1m;
+  }
+
+  .content h2 {
+    @include rem(margin-top, 2.4rem);
+    @include rem(padding-top, 2.4rem);
+    @include head_2m;
+    border-top: 1px solid #404041;
+    border-top: 1px solid rgba(64, 64, 65, .5);
+  }
+
+  .content.clients {
+    @include rem(margin-bottom, -1.8rem);
+  }
+
+  .content.clients ul {
+    @include rem(margin-top, 2.8rem);
+    width: 100%;
   }
 
   .content.clients ul:nth-of-type(2) {
     margin-top: 0;
   }
 
+  .content.clients li {
+    @include body_2m;
+  }
+
+  .content cite {
+    padding: 0;
+  }
+
+  .content.contact {
+    @include rem(padding-bottom, 5.9rem);
+  }
+
+  .content.contact h1 {
+    @include rem(margin-left, -.2rem);
+  }
+
+  .content a {
+    @include body_1m;
+    @include rem(line-height, 2.9rem);
+  }
+
+  footer {
+    @include rem(padding, 0 2rem);
+    @include rem(height, 7rem);
+  }
+
+  footer p {
+    @include rem(padding-top, 2.7rem);
+    @include credit_2m;
+    @include rem(line-height, 1.7rem);
+  }
+
+}
+
+@media screen and (max-width: 350px) {
+  footer p {
+    @include rem(padding-top, 1rem);
+  }
 }
 
 .hidden {
