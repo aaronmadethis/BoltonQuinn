@@ -17,27 +17,39 @@
   var scrolling = false;
   var desktopColumn = true;
   var mobileColumn = false;
+  var mobileView = false;
   
   /**
     * Sets the heights of the large images to that of the user's screen, minus nav
+    * @param{boolean} mobile Whether this is mobile view
     */
-  var setImageHeights = function() {
+  var setImageHeights = function(mobile) {
     var navOffset = 79;
     var delay = 500;
-    $leadingImages.each(function() {
-      var self = $(this);
-      var index = +self.attr("data-index");
-      if (index === 0) {
-        self.css("height", height - navOffset).attr("data-top", height * index + navOffset);
-      }
-      else {
+    if (!mobile) {
+      $leadingImages.each(function() {
+        var self = $(this);
+        var index = +self.attr("data-index");
+        if (index === 0) {
+          self.css("height", height - navOffset).attr("data-top", height * index + navOffset);
+        }
+        else {
+          self.css({
+            "top": height * index + navOffset + (index * delay),
+            "height": height - navOffset
+          }).attr("data-top", height * index + navOffset + (index * delay));
+        }
+      }).parent().css("padding-top", height * $leadingImages.length + ($leadingImages.length * delay));
+    }
+    else {
+      $leadingImages.each(function() {
+        var self = $(this);
         self.css({
-          "top": height * index + navOffset + (index * delay),
-          "height": height - navOffset
-        }).attr("data-top", height * index + navOffset + (index * delay));
-      }
-    });
-    $leadingImages.parent().css("padding-top", height * $leadingImages.length + ($leadingImages.length * delay));
+          "top": "auto",
+          "height": ""
+        }).removeAttr("data-top");
+      }).parent().css("padding-top", navOffset);
+    }
   };
 
   /**
@@ -81,10 +93,15 @@
     */
   var adjustHeight = function() {
     width = $(window).width();
-    if (width >= 1024) {
+    if (width >= 900) {
+      mobileView = false;
       height = $(window).height();
-      setImageHeights();
+      setImageHeights(false);
       checkForSticky();
+    }
+    else if ((width < 900) && !mobileView) {
+      mobileView = true;
+      setImageHeights(true);
     }
   };
 
@@ -180,11 +197,19 @@
     else if (self.index() === 3) {
       $("nav a").eq(0).click();
     }
+  }).on("click.headerClick touchend.headerTouch", "#top", function(evt) {
+    var self = $(this);
+    if (width < 900) {
+      if (evt.preventDefault) {
+        evt.preventDefault();
+      }
+      self.next().toggleClass("reveal-menu");
+    }
   });
 
   // Only set the image heights for desktop/tablet
-  if (width >= 1024) {
-    setImageHeights();
+  if (width >= 900) {
+    setImageHeights(false);
   }
 
   calcClientCols();

@@ -2,6 +2,7 @@
 @import "compass/css3/opacity";
 @import "compass/css3/transition";
 @import "compass/css3/border-radius";
+@import "compass/css3/transform";
 
 .header {
   position: fixed;
@@ -377,13 +378,89 @@ footer p {
 /* Mobile Landscape */
 @media screen and (max-width: 900px) {
 
+  .header {
+    @include rem(padding, 1.1rem 2rem 0);
+    @include rem(height, 5rem);
+    border-bottom: none;
+  }
+
+  .header header {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include rem(padding, 1.1rem 2rem 0);
+    background: #fff;
+    border-bottom: 1px solid #404041;
+    border-bottom: 1px solid rgba(64, 64, 65, .5);
+    z-index: 2;
+  }
+
+  #top::after {
+    content: '';
+    position: absolute;
+    @include rem(top, 1.5rem);
+    @include rem(right, 2rem);
+    @include rem(width, 2.5rem);
+    @include rem(height, 1.6rem);
+    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAgAQMAAABq77liAAAABlBMVEX////rHCO0ZcAQAAAAAXRSTlMAQObYZgAAABpJREFUeAFjZIAAnLT9ASD5lwUXja5+qJkHABTIGCF3bUsAAAAAAElFTkSuQmCC) center center no-repeat;
+    background-size: contain;
+  }
+
+  .logo {
+    @include rem(width, 16.8rem);
+    @include rem(height, 3rem);
+    background-image: url(data:image/png;base64,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);
+    background-position: -6px center;
+    background-position: -.6rem center;
+    background-size: contain;
+  }
+
+  nav {
+    float: none;
+    @include rem(padding-top, 3.9rem);
+    @include translateY(-200px);
+    @include transition-property(all);
+    @include transition-duration(.3s);
+    @include transition-timing-function(ease-in-out);
+    z-index: -1;
+  }
+
+  nav.reveal-menu {
+    @include translateY(0);
+  }
+
+  nav a {
+    display: block;
+    @include rem(margin, 0 0 0 -2rem);
+    @include rem(padding, 2rem 0 2rem 2rem);
+    width: 150%;
+    @include nav_1m;
+    background: #fff;
+    border-bottom: 1px solid #404041;
+    border-bottom: 1px solid rgba(64, 64, 65, .5);
+  }
+
+  nav a:hover,
+  nav a:active {
+    color: #fff;
+    background-color: #ec1c24;
+  }
+
   .leading-image {
     position: relative;
     right: 0;
     left: 0;
-    @include rem(height, 21.8rem);
-    @include rem(padding, 0 3rem);
-    background-image: url(../1_GarageMoscow.jpg);
+    @include rem(height, 20rem);
+    @include rem(padding, 0 2rem);
+    background-image: url(../1_GarageMoscow_1800.jpg);
   }
 
   .sticky {
