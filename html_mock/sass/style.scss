@@ -13,6 +13,7 @@
   @include rem(padding, 2.9rem 0 0);
   background: #fff;
   border-bottom: 1px solid #404041;
+  border-bottom: 1px solid rgba(64, 64, 65, .5);
   z-index: 10;
 }
 
@@ -24,6 +25,7 @@
 }
 
 #top {
+  float: left;
   outline: none;
 }
 
@@ -282,6 +284,7 @@ main {
 .content h2 {
   @include rem(margin, 4.5rem 0 0);
   @include head_2;
+  text-transform: uppercase;
 }
 
 .content h2 + p,
@@ -375,6 +378,92 @@ footer p {
   text-transform: uppercase;
 }
 
+/* Client Listings */
+.client-listing main {
+  @include rem(padding-top, 7.9rem);
+}
+
+.client-listing aside {
+  position: relative;
+  margin: 0 auto;
+  @include rem(padding, 5.5rem 10rem 0);
+  width: 100%;
+  @include rem(max-width, 160rem);
+}
+
+.client-listing aside a {
+  @include rem(margin-right, 4.5rem);
+}
+
+.client-listing aside a:last-of-type {
+  margin-right: 0;
+}
+
+.client-listing main h1 {
+  @include rem(padding, 8rem 0 4rem);
+  width: 1000%;
+  @include rem(font-size, 2.3rem);
+  line-height: 1.8;
+}
+
+.client-listing main h1 span {
+  display: block;
+}
+
+.client-listing main h2 {
+  @include rem(margin, 4rem 0 -.3rem);
+}
+
+.client-listing p {
+  margin: 0;
+  padding: 0;
+}
+
+.client-listing .ancillary-p {
+  width: 90%;
+  @include rem(margin-top, 3.2rem);
+  @include body_2;
+}
+
+.client-listing a {
+  margin: 0;
+  @include body_2;
+  border: none;
+}
+
+.client-listing a:hover {
+  color: #ec1c24;
+}
+
+.client-listing a.email {
+  line-height: 1.7;
+  color: #ec1c24;
+  border-bottom: 1px solid #ec1c24;
+}
+
+.client-listing a.email:hover {
+  color: #404041;
+  border-color: #404041;
+}
+
+.client-listing aside a {
+  text-decoration: none;
+  border: none;
+}
+
+.client-listing footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.client-listing footer p {
+  margin: 0 auto;
+  @include rem(padding-top, 2.7rem);
+}
+/* End Client Listings */
+
 /* Mobile Landscape */
 @media screen and (max-width: 900px) {
 
@@ -452,6 +541,10 @@ footer p {
   nav a:active {
     color: #fff;
     background-color: #ec1c24;
+  }
+
+  nav.hidden-nav {
+    display: none;
   }
 
   .leading-image {
@@ -575,10 +668,50 @@ footer p {
     @include rem(line-height, 1.7rem);
   }
 
+  /* Client Listings */
+  .client-listing #top:after {
+    display: none;
+  }
+
+  .client-listing aside {
+    @include rem(padding, 5rem 2rem 0);
+  }
+
+  .client-listing aside a {
+    display: block;
+    @include rem(margin, 0 0 2rem);
+  }
+
+  .client-listing main h1 {
+    @include rem(padding-top, 5rem);
+    width: 800%;
+    @include rem(font-size, 2rem);
+  }
+
+  .client-listing main h2 {
+    @include rem(margin, 4rem 0 -0.3rem);
+    padding: 0;
+    border: none;
+  }
+
+  .client-listing p {
+    @include rem(margin-top, 1rem);
+  }
+
+  .client-listing footer {
+    position: relative;
+  }
+
+  .client-listing footer p {
+    @include rem(padding-top, 2.7rem)
+  }
+  /* End Client Listings */
+
 }
 
 @media screen and (max-width: 350px) {
-  footer p {
+  footer p,
+  .client-listing footer p {
     @include rem(padding-top, 1rem);
   }
 }

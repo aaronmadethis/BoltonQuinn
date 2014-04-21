@@ -19,6 +19,7 @@
   var desktopColumn = true;
   var mobileColumn = false;
   var mobileView = false;
+  var revealingMenu = false;
   
   /**
     * Sets the heights of the large images to that of the user's screen, minus nav
@@ -163,7 +164,7 @@
     }
     var self = $(this);
     var hash = self.attr("href");
-    if (!scrolling && (hash !== "#top")) {
+    if (!scrolling && (((width < 900) && (hash !== "#top")) || (width >= 900))) {
       scrolling = true;
       $body.animate({
         "scrollTop": $("." + hash.replace(/\#/, "")).offset().top
@@ -174,6 +175,9 @@
       scrolling = false;
       if ((width < 900) && (hash !== "#top")) {
         $nav.removeClass("reveal-menu");
+        setTimeout(function() {
+          $nav.addClass("hidden-nav");
+        }, 301);
       }
     }, 500);
   });
@@ -210,7 +214,14 @@
       if (evt.preventDefault) {
         evt.preventDefault();
       }
-      self.next().toggleClass("reveal-menu");
+      if (!revealingMenu) {
+        revealingMenu = true;
+        self.next().removeClass("hidden-nav");
+        setTimeout(function () {
+          revealingMenu = false;
+          self.next().toggleClass("reveal-menu");
+        }, 100);
+      }
     }
   });
 
