@@ -39,6 +39,11 @@ body {
 /* Define the fonts */
 /* Mobile Mixins */
 /* line 7, ../sass/style.scss */
+.nav-mobile-button {
+  display: none;
+}
+
+/* line 11, ../sass/style.scss */
 .header {
   position: fixed;
   top: 0;
@@ -54,7 +59,7 @@ body {
   z-index: 10;
 }
 
-/* line 20, ../sass/style.scss */
+/* line 24, ../sass/style.scss */
 .header header {
   margin: 0 auto;
   padding: 0 100px;
@@ -66,13 +71,13 @@ body {
   box-sizing: content-box;
 }
 
-/* line 27, ../sass/style.scss */
+/* line 31, ../sass/style.scss */
 #top {
   float: left;
   outline: none;
 }
 
-/* line 32, ../sass/style.scss */
+/* line 36, ../sass/style.scss */
 .logo {
   position: relative;
   display: inline-block;
@@ -87,14 +92,14 @@ body {
   overflow: hidden;
 }
 
-/* line 44, ../sass/style.scss */
+/* line 48, ../sass/style.scss */
 nav {
   float: right;
   padding-top: 5px;
   padding-top: 0.5rem;
 }
 
-/* line 49, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 nav a {
   margin-left: 50px;
   margin-left: 5rem;
@@ -107,12 +112,12 @@ nav a {
   text-decoration: none;
 }
 
-/* line 55, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 nav a:hover {
   color: #ec1c24;
 }
 
-/* line 59, ../sass/style.scss */
+/* line 63, ../sass/style.scss */
 main {
   position: relative;
   margin: 0 auto;
@@ -120,7 +125,7 @@ main {
   width: 100%;
 }
 
-/* line 66, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 .leading-image {
   position: absolute;
   right: 0;
@@ -134,19 +139,19 @@ main {
   z-index: 1;
 }
 
-/* line 78, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 .leading-image[data-index="1"] {
   background-image: url(../2_Rijksmuseum.jpg);
   z-index: 2;
 }
 
-/* line 83, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 .leading-image[data-index="2"] {
   background-image: url(../3_LondonEye.jpg);
   z-index: 3;
 }
 
-/* line 88, ../sass/style.scss */
+/* line 92, ../sass/style.scss */
 .sticky {
   position: fixed;
   top: 79px !important;
@@ -154,7 +159,7 @@ main {
   bottom: 0;
 }
 
-/* line 95, ../sass/style.scss */
+/* line 99, ../sass/style.scss */
 .leading-image .opening-text {
   position: relative;
   bottom: 65px;
@@ -177,7 +182,7 @@ main {
   transition-timing-function: ease-in-out;
 }
 
-/* line 106, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 .opening-text button {
   position: absolute;
   bottom: 0;
@@ -191,7 +196,7 @@ main {
   outline: none;
 }
 
-/* line 119, ../sass/style.scss */
+/* line 123, ../sass/style.scss */
 .leading-image .opening-text.open {
   bottom: 160px;
   bottom: 16rem;
@@ -201,7 +206,7 @@ main {
   transition-duration: 0.3s;
 }
 
-/* line 124, ../sass/style.scss */
+/* line 128, ../sass/style.scss */
 .leading-image section p {
   position: absolute;
   bottom: 0;
@@ -212,14 +217,14 @@ main {
   font-family: "ITC Tiffany Demi", Georgia, serif;
   font-size: 35px;
   font-size: 3.5rem;
-  line-height: 57.6px;
-  line-height: 5.76rem;
+  line-height: 50px;
+  line-height: 5rem;
   letter-spacing: 1px;
   letter-spacing: 0.1rem;
   color: #fff;
 }
 
-/* line 133, ../sass/style.scss */
+/* line 137, ../sass/style.scss */
 .leading-image aside {
   position: absolute;
   right: 0;
@@ -241,7 +246,7 @@ main {
   transition-timing-function: ease-in-out;
 }
 
-/* line 144, ../sass/style.scss */
+/* line 148, ../sass/style.scss */
 .leading-image aside section {
   position: relative;
   bottom: 0;
@@ -254,7 +259,7 @@ main {
   max-width: 160rem;
 }
 
-/* line 154, ../sass/style.scss */
+/* line 158, ../sass/style.scss */
 .leading-image .open-button,
 .leading-image .close-button {
   position: absolute;
@@ -289,19 +294,19 @@ main {
   -webkit-font-smoothing: auto;
 }
 
-/* line 172, ../sass/style.scss */
+/* line 176, ../sass/style.scss */
 .leading-image section p span,
 .leading-image .open-button span {
   color: #ec1c24;
 }
 
-/* line 177, ../sass/style.scss */
+/* line 181, ../sass/style.scss */
 .leading-image .open-button.open {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
 
-/* line 181, ../sass/style.scss */
+/* line 185, ../sass/style.scss */
 .leading-image h2,
 .leading-image h3,
 .leading-image cite,
@@ -322,13 +327,13 @@ main {
   transition-timing-function: ease-in-out;
 }
 
-/* line 191, ../sass/style.scss */
+/* line 195, ../sass/style.scss */
 .leading-image aside.open {
   background: white;
   background: rgba(255, 255, 255, 0.8);
 }
 
-/* line 196, ../sass/style.scss */
+/* line 200, ../sass/style.scss */
 .leading-image .open h2,
 .leading-image .open h3,
 .leading-image .open cite,
@@ -337,7 +342,7 @@ main {
   opacity: 1;
 }
 
-/* line 203, ../sass/style.scss */
+/* line 207, ../sass/style.scss */
 .leading-image h2 {
   position: relative;
   margin: 32px 0 0;
@@ -352,12 +357,12 @@ main {
   font-style: italic;
 }
 
-/* line 210, ../sass/style.scss */
+/* line 214, ../sass/style.scss */
 .leading-image h2 span {
   font-style: normal;
 }
 
-/* line 214, ../sass/style.scss */
+/* line 218, ../sass/style.scss */
 .leading-image h3 {
   margin: 13px 0 0;
   margin: 1.3rem 0 0;
@@ -370,7 +375,7 @@ main {
   color: #404041;
 }
 
-/* line 219, ../sass/style.scss */
+/* line 223, ../sass/style.scss */
 .leading-image cite {
   position: absolute;
   right: 100px;
@@ -384,7 +389,7 @@ main {
   font-style: normal;
 }
 
-/* line 227, ../sass/style.scss */
+/* line 231, ../sass/style.scss */
 .leading-image .close-button {
   position: absolute;
   top: -9px;
@@ -412,12 +417,12 @@ main {
   transition-timing-function: ease-in-out;
 }
 
-/* line 240, ../sass/style.scss */
+/* line 244, ../sass/style.scss */
 .leading-image .close-button:hover {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAaCAYAAACtv5zzAAAAoUlEQVRIx2NgGAWUAAcHRwUg7gfi80D8Hw2fh8opoOv7//+/GCGDBaCa/xOJQWoFiHW1AA4XE8LnCVpCgeHEWUJisOAMLnwR+p9KWIFo13d0dIAxseI4fYEr7EGGgACyYdjE0OMCmwU4vYxsIBGGgzFJFiBbQozhg88CagURzSOZ5smUthmN5kUFXQo7mhfXdKlwqFFlogB1TS2m0dYHPgAANYGB1iy3OyoAAAAASUVORK5CYII=);
 }
 
-/* line 244, ../sass/style.scss */
+/* line 248, ../sass/style.scss */
 .content {
   position: relative;
   margin: 0 auto;
@@ -429,7 +434,7 @@ main {
   z-index: 4;
 }
 
-/* line 254, ../sass/style.scss */
+/* line 258, ../sass/style.scss */
 .content > section {
   position: relative;
   margin: 0 auto;
@@ -438,14 +443,14 @@ main {
   max-width: 140rem;
 }
 
-/* line 261, ../sass/style.scss */
+/* line 265, ../sass/style.scss */
 .content header {
   width: 75px;
   width: 7.5rem;
   border-bottom: 3px solid #ec1c24;
 }
 
-/* line 266, ../sass/style.scss */
+/* line 270, ../sass/style.scss */
 .content h1 {
   position: relative;
   margin: 0;
@@ -459,13 +464,13 @@ main {
   color: #231f20;
 }
 
-/* line 273, ../sass/style.scss */
+/* line 277, ../sass/style.scss */
 .content.about h1 {
   margin-left: 6px;
   margin-left: 0.6rem;
 }
 
-/* line 277, ../sass/style.scss */
+/* line 281, ../sass/style.scss */
 .content p {
   margin: 43px 0 0;
   margin: 4.3rem 0 0;
@@ -478,7 +483,7 @@ main {
   color: #404041;
 }
 
-/* line 284, ../sass/style.scss */
+/* line 288, ../sass/style.scss */
 .content h2 {
   margin: 45px 0 0;
   margin: 4.5rem 0 0;
@@ -494,7 +499,7 @@ main {
   text-transform: uppercase;
 }
 
-/* line 290, ../sass/style.scss */
+/* line 294, ../sass/style.scss */
 .content h2 + p,
 .content.about li {
   margin: 7px 0 0;
@@ -507,19 +512,19 @@ main {
   color: #404041;
 }
 
-/* line 296, ../sass/style.scss */
+/* line 300, ../sass/style.scss */
 .content.about ul {
   margin: 0;
   padding: 0 0 0 20px;
   padding: 0 0 0 2rem;
 }
 
-/* line 301, ../sass/style.scss */
+/* line 305, ../sass/style.scss */
 .content.about li {
   margin: 0;
 }
 
-/* line 305, ../sass/style.scss */
+/* line 309, ../sass/style.scss */
 .content.clients ul {
   position: relative;
   display: block;
@@ -532,7 +537,7 @@ main {
   list-style: none;
 }
 
-/* line 315, ../sass/style.scss */
+/* line 319, ../sass/style.scss */
 .content.clients li {
   margin-bottom: 15px;
   margin-bottom: 1.5rem;
@@ -544,7 +549,7 @@ main {
   color: #404041;
 }
 
-/* line 320, ../sass/style.scss */
+/* line 324, ../sass/style.scss */
 .content cite {
   position: relative;
   display: block;
@@ -563,20 +568,20 @@ main {
   clear: both;
 }
 
-/* line 331, ../sass/style.scss */
+/* line 335, ../sass/style.scss */
 .content.contact {
   padding-bottom: 240px;
   padding-bottom: 24rem;
 }
 
-/* line 335, ../sass/style.scss */
+/* line 339, ../sass/style.scss */
 .content .org,
 .content .street-address,
 .content .country-name {
   display: block;
 }
 
-/* line 341, ../sass/style.scss */
+/* line 345, ../sass/style.scss */
 .content a {
   display: table;
   margin: 13px 0 5px;
@@ -593,7 +598,7 @@ main {
   border-bottom: 1px solid #ec1c24;
 }
 
-/* line 352, ../sass/style.scss */
+/* line 356, ../sass/style.scss */
 .content a.tel {
   margin-bottom: 21px;
   margin-bottom: 2.1rem;
@@ -601,13 +606,13 @@ main {
   border-bottom: none;
 }
 
-/* line 358, ../sass/style.scss */
+/* line 362, ../sass/style.scss */
 .content a:hover {
   color: #404041;
   border-color: #404041;
 }
 
-/* line 363, ../sass/style.scss */
+/* line 367, ../sass/style.scss */
 footer {
   position: relative;
   padding: 0 100px;
@@ -618,7 +623,7 @@ footer {
   z-index: 5;
 }
 
-/* line 371, ../sass/style.scss */
+/* line 375, ../sass/style.scss */
 footer p {
   position: relative;
   margin: 0 auto;
@@ -638,13 +643,13 @@ footer p {
 }
 
 /* Client Listings */
-/* line 382, ../sass/style.scss */
+/* line 386, ../sass/style.scss */
 .client-listing main {
   padding-top: 79px;
   padding-top: 7.9rem;
 }
 
-/* line 386, ../sass/style.scss */
+/* line 390, ../sass/style.scss */
 .client-listing aside {
   position: relative;
   margin: 0 auto;
@@ -655,45 +660,46 @@ footer p {
   max-width: 160rem;
 }
 
-/* line 394, ../sass/style.scss */
+/* line 398, ../sass/style.scss */
 .client-listing aside a {
   margin-right: 45px;
   margin-right: 4.5rem;
 }
 
-/* line 398, ../sass/style.scss */
+/* line 402, ../sass/style.scss */
 .client-listing aside a:last-of-type {
   margin-right: 0;
 }
 
-/* line 402, ../sass/style.scss */
+/* line 406, ../sass/style.scss */
 .client-listing main h1 {
   padding: 80px 0 40px;
   padding: 8rem 0 4rem;
   width: 1000%;
-  font-size: 23px;
-  font-size: 2.3rem;
-  line-height: 1.8;
+  font-size: 25px;
+  font-size: 2.5rem;
+  line-height: 45px;
+  line-height: 4.5rem;
 }
 
-/* line 409, ../sass/style.scss */
+/* line 413, ../sass/style.scss */
 .client-listing main h1 span {
   display: block;
 }
 
-/* line 413, ../sass/style.scss */
+/* line 417, ../sass/style.scss */
 .client-listing main h2 {
   margin: 40px 0 -3px;
   margin: 4rem 0 -0.3rem;
 }
 
-/* line 417, ../sass/style.scss */
+/* line 421, ../sass/style.scss */
 .client-listing p {
   margin: 0;
   padding: 0;
 }
 
-/* line 422, ../sass/style.scss */
+/* line 426, ../sass/style.scss */
 .client-listing .ancillary-p {
   width: 90%;
   margin-top: 32px;
@@ -706,51 +712,60 @@ footer p {
   color: #404041;
 }
 
-/* line 428, ../sass/style.scss */
-.client-listing a {
-  margin: 0;
+/* line 432, ../sass/style.scss */
+.client-listing .content a {
+  margin: 0 0 13px;
+  margin: 0 0 1.3rem;
   font-family: Georgia, serif;
   font-size: 17px;
   font-size: 1.7rem;
   line-height: 2;
   font-weight: 400;
   color: #404041;
-  border: none;
+  line-height: 1.8;
+  border-bottom: 1px solid #404041;
 }
 
-/* line 434, ../sass/style.scss */
+/* line 439, ../sass/style.scss */
 .client-listing a:hover {
   color: #ec1c24;
+  border-bottom: 1px solid #ec1c24;
 }
 
-/* line 438, ../sass/style.scss */
+/* line 444, ../sass/style.scss */
 .client-listing a.email {
   line-height: 1.7;
   color: #ec1c24;
   border-bottom: 1px solid #ec1c24;
 }
 
-/* line 444, ../sass/style.scss */
+/* line 450, ../sass/style.scss */
 .client-listing a.email:hover {
   color: #404041;
   border-color: #404041;
 }
 
-/* line 449, ../sass/style.scss */
+/* line 455, ../sass/style.scss */
 .client-listing aside a {
+  display: inline-block;
+  width: 200px;
+  width: 20rem;
+  height: 200px;
+  height: 20rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
   text-decoration: none;
   border: none;
 }
 
-/* line 454, ../sass/style.scss */
+/* line 466, ../sass/style.scss */
 .client-listing footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  margin: 200px 0 0;
+  margin: 20rem 0 0;
 }
 
-/* line 461, ../sass/style.scss */
+/* line 470, ../sass/style.scss */
 .client-listing footer p {
   margin: 0 auto;
   padding-top: 27px;
@@ -760,7 +775,24 @@ footer p {
 /* End Client Listings */
 /* Mobile Landscape */
 @media screen and (max-width: 900px) {
-  /* line 470, ../sass/style.scss */
+  /* line 479, ../sass/style.scss */
+  .nav-mobile-button {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 70px;
+    width: 7rem;
+    height: 50px;
+    height: 5rem;
+    background: transparent;
+    outline: none;
+    border: none;
+    z-index: 99;
+  }
+
+  /* line 493, ../sass/style.scss */
   .header {
     padding: 11px 20px 0;
     padding: 1.1rem 2rem 0;
@@ -769,14 +801,14 @@ footer p {
     border-bottom: none;
   }
 
-  /* line 476, ../sass/style.scss */
+  /* line 499, ../sass/style.scss */
   .header header {
     padding: 0;
     width: 100%;
     height: 100%;
   }
 
-  /* line 482, ../sass/style.scss */
+  /* line 505, ../sass/style.scss */
   #top {
     position: absolute;
     top: 0;
@@ -791,7 +823,7 @@ footer p {
     z-index: 2;
   }
 
-  /* line 495, ../sass/style.scss */
+  /* line 518, ../sass/style.scss */
   #top:after {
     content: '';
     position: absolute;
@@ -799,15 +831,15 @@ footer p {
     top: 1.5rem;
     right: 20px;
     right: 2rem;
-    width: 25px;
-    width: 2.5rem;
-    height: 16px;
-    height: 1.6rem;
+    width: 29px;
+    width: 2.9rem;
+    height: 20px;
+    height: 2rem;
     background: white url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAgAQMAAABq77liAAAABlBMVEX////rHCO0ZcAQAAAAAXRSTlMAQObYZgAAABpJREFUeAFjZIAAnLT9ASD5lwUXja5+qJkHABTIGCF3bUsAAAAAAElFTkSuQmCC) center center no-repeat;
     background-size: contain;
   }
 
-  /* line 506, ../sass/style.scss */
+  /* line 529, ../sass/style.scss */
   .logo {
     width: 168px;
     width: 16.8rem;
@@ -819,7 +851,7 @@ footer p {
     background-size: contain;
   }
 
-  /* line 515, ../sass/style.scss */
+  /* line 538, ../sass/style.scss */
   nav {
     float: none;
     padding-top: 39px;
@@ -843,7 +875,7 @@ footer p {
     z-index: -1;
   }
 
-  /* line 525, ../sass/style.scss */
+  /* line 548, ../sass/style.scss */
   nav.reveal-menu {
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -851,7 +883,7 @@ footer p {
     transform: translateY(0);
   }
 
-  /* line 529, ../sass/style.scss */
+  /* line 552, ../sass/style.scss */
   nav a {
     display: block;
     margin: 0 0 0 -20px;
@@ -872,19 +904,19 @@ footer p {
     border-bottom: 1px solid rgba(64, 64, 65, 0.5);
   }
 
-  /* line 540, ../sass/style.scss */
+  /* line 563, ../sass/style.scss */
   nav a:hover,
   nav a:active {
     color: #fff;
     background-color: #ec1c24;
   }
 
-  /* line 546, ../sass/style.scss */
+  /* line 569, ../sass/style.scss */
   nav.hidden-nav {
     display: none;
   }
 
-  /* line 550, ../sass/style.scss */
+  /* line 573, ../sass/style.scss */
   .leading-image {
     position: relative;
     right: 0;
@@ -896,17 +928,17 @@ footer p {
     background-image: url(../1_GarageMoscow_1800.jpg);
   }
 
-  /* line 559, ../sass/style.scss */
+  /* line 582, ../sass/style.scss */
   .leading-image[data-index="1"] {
     background-image: url(../2_Rijksmuseum_1800.jpg);
   }
 
-  /* line 563, ../sass/style.scss */
+  /* line 586, ../sass/style.scss */
   .leading-image[data-index="2"] {
     background-image: url(../3_LondonEye_1800.jpg);
   }
 
-  /* line 567, ../sass/style.scss */
+  /* line 590, ../sass/style.scss */
   .sticky {
     position: relative;
     top: 0 !important;
@@ -917,7 +949,7 @@ footer p {
     height: 20rem;
   }
 
-  /* line 575, ../sass/style.scss */
+  /* line 598, ../sass/style.scss */
   .leading-image .first-text {
     position: absolute;
     top: -218px;
@@ -930,7 +962,7 @@ footer p {
     background: #000;
   }
 
-  /* line 585, ../sass/style.scss */
+  /* line 608, ../sass/style.scss */
   .leading-image section p {
     position: relative;
     font-family: "ITC Tiffany Demi", Georgia, serif;
@@ -943,24 +975,24 @@ footer p {
     padding: 2.6rem 2rem 0;
   }
 
-  /* line 591, ../sass/style.scss */
+  /* line 614, ../sass/style.scss */
   .leading-image section button {
     display: none;
   }
 
-  /* line 595, ../sass/style.scss */
+  /* line 618, ../sass/style.scss */
   .content {
     padding: 0 20px;
     padding: 0 2rem;
   }
 
-  /* line 599, ../sass/style.scss */
+  /* line 622, ../sass/style.scss */
   .content header {
-    width: 35px;
-    width: 3.5rem;
+    width: 65px;
+    width: 6.5rem;
   }
 
-  /* line 603, ../sass/style.scss */
+  /* line 626, ../sass/style.scss */
   .content h1 {
     padding: 50px 0 27px;
     padding: 5rem 0 2.7rem;
@@ -971,12 +1003,12 @@ footer p {
     color: #231f20;
   }
 
-  /* line 608, ../sass/style.scss */
+  /* line 631, ../sass/style.scss */
   .content.about h1 {
     margin-left: 0;
   }
 
-  /* line 612, ../sass/style.scss */
+  /* line 635, ../sass/style.scss */
   .content p {
     margin: 30px 0 0;
     margin: 3rem 0 0;
@@ -989,7 +1021,7 @@ footer p {
     font-weight: 400;
   }
 
-  /* line 618, ../sass/style.scss */
+  /* line 641, ../sass/style.scss */
   .content h2 {
     margin-top: 24px;
     margin-top: 2.4rem;
@@ -1008,25 +1040,25 @@ footer p {
     border-top: 1px solid rgba(64, 64, 65, 0.5);
   }
 
-  /* line 626, ../sass/style.scss */
+  /* line 649, ../sass/style.scss */
   .content.clients {
     margin-bottom: -18px;
     margin-bottom: -1.8rem;
   }
 
-  /* line 630, ../sass/style.scss */
+  /* line 653, ../sass/style.scss */
   .content.clients ul {
     margin-top: 28px;
     margin-top: 2.8rem;
     width: 100%;
   }
 
-  /* line 635, ../sass/style.scss */
+  /* line 658, ../sass/style.scss */
   .content.clients ul:nth-of-type(2) {
     margin-top: 0;
   }
 
-  /* line 639, ../sass/style.scss */
+  /* line 662, ../sass/style.scss */
   .content.clients li {
     font-family: Georgia, serif;
     font-size: 14px;
@@ -1037,24 +1069,24 @@ footer p {
     color: #404041;
   }
 
-  /* line 643, ../sass/style.scss */
+  /* line 666, ../sass/style.scss */
   .content cite {
     padding: 0;
   }
 
-  /* line 647, ../sass/style.scss */
+  /* line 670, ../sass/style.scss */
   .content.contact {
     padding-bottom: 59px;
     padding-bottom: 5.9rem;
   }
 
-  /* line 651, ../sass/style.scss */
+  /* line 674, ../sass/style.scss */
   .content.contact h1 {
     margin-left: -2px;
     margin-left: -0.2rem;
   }
 
-  /* line 655, ../sass/style.scss */
+  /* line 678, ../sass/style.scss */
   .content a {
     font-family: Georgia, serif;
     font-size: 16px;
@@ -1066,7 +1098,7 @@ footer p {
     line-height: 2.9rem;
   }
 
-  /* line 660, ../sass/style.scss */
+  /* line 683, ../sass/style.scss */
   footer {
     padding: 0 20px;
     padding: 0 2rem;
@@ -1074,7 +1106,7 @@ footer p {
     height: 7rem;
   }
 
-  /* line 665, ../sass/style.scss */
+  /* line 688, ../sass/style.scss */
   footer p {
     padding-top: 27px;
     padding-top: 2.7rem;
@@ -1091,25 +1123,25 @@ footer p {
   }
 
   /* Client Listings */
-  /* line 672, ../sass/style.scss */
+  /* line 695, ../sass/style.scss */
   .client-listing #top:after {
     display: none;
   }
 
-  /* line 676, ../sass/style.scss */
+  /* line 699, ../sass/style.scss */
   .client-listing aside {
     padding: 50px 20px 0;
     padding: 5rem 2rem 0;
   }
 
-  /* line 680, ../sass/style.scss */
+  /* line 703, ../sass/style.scss */
   .client-listing aside a {
     display: block;
     margin: 0 0 20px;
     margin: 0 0 2rem;
   }
 
-  /* line 685, ../sass/style.scss */
+  /* line 708, ../sass/style.scss */
   .client-listing main h1 {
     padding-top: 50px;
     padding-top: 5rem;
@@ -1118,7 +1150,7 @@ footer p {
     font-size: 2rem;
   }
 
-  /* line 691, ../sass/style.scss */
+  /* line 714, ../sass/style.scss */
   .client-listing main h2 {
     margin: 40px 0 -3px;
     margin: 4rem 0 -0.3rem;
@@ -1126,18 +1158,18 @@ footer p {
     border: none;
   }
 
-  /* line 697, ../sass/style.scss */
+  /* line 720, ../sass/style.scss */
   .client-listing p {
     margin-top: 10px;
     margin-top: 1rem;
   }
 
-  /* line 701, ../sass/style.scss */
+  /* line 724, ../sass/style.scss */
   .client-listing footer {
     position: relative;
   }
 
-  /* line 705, ../sass/style.scss */
+  /* line 728, ../sass/style.scss */
   .client-listing footer p {
     padding-top: 27px;
     padding-top: 2.7rem;
@@ -1146,14 +1178,22 @@ footer p {
   /* End Client Listings */
 }
 @media screen and (max-width: 350px) {
-  /* line 713, ../sass/style.scss */
+  /* line 736, ../sass/style.scss */
+  .leading-image section p {
+    padding-top: 14px;
+    padding-top: 1.4rem;
+    font-size: 28px;
+    font-size: 2.8rem;
+  }
+
+  /* line 741, ../sass/style.scss */
   footer p,
   .client-listing footer p {
     padding-top: 10px;
     padding-top: 1rem;
   }
 }
-/* line 719, ../sass/style.scss */
+/* line 747, ../sass/style.scss */
 .hidden {
   display: none !important;
 }

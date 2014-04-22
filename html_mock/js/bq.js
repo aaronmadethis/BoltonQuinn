@@ -164,16 +164,25 @@
     }
     var self = $(this);
     var hash = self.attr("href");
-    if (!scrolling && (((width < 900) && (hash !== "#top")) || (width >= 900))) {
+    var mobileOffset = 0;
+    if (!scrolling) {
       scrolling = true;
+      if (width < 900) {
+        if (self.prop("id") === "top") {
+          mobileOffset = 280;
+        }
+        else {
+          mobileOffset = 50;
+        }
+      }
       $body.animate({
-        "scrollTop": $("." + hash.replace(/\#/, "")).offset().top
+        "scrollTop": $("." + hash.replace(/\#/, "")).offset().top - mobileOffset
       }, 500);
     }
     setTimeout(function() {
       window.location.hash = hash;
       scrolling = false;
-      if ((width < 900) && (hash !== "#top")) {
+      if (width < 900) {
         $nav.removeClass("reveal-menu");
         setTimeout(function() {
           $nav.addClass("hidden-nav");
@@ -208,7 +217,7 @@
     else if (self.index() === 3) {
       $("nav a").eq(0).click();
     }
-  }).on("click.headerClick touchend.headerTouch", "#top", function(evt) {
+  }).on("click.headerClick touchend.headerTouch", ".nav-mobile-button", function(evt) {
     var self = $(this);
     if (width < 900) {
       if (evt.preventDefault) {
@@ -216,10 +225,10 @@
       }
       if (!revealingMenu) {
         revealingMenu = true;
-        self.next().removeClass("hidden-nav");
+        $nav.removeClass("hidden-nav");
         setTimeout(function () {
           revealingMenu = false;
-          self.next().toggleClass("reveal-menu");
+          $nav.toggleClass("reveal-menu");
         }, 100);
       }
     }

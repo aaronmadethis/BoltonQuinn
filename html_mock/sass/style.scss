@@ -4,6 +4,10 @@
 @import "compass/css3/border-radius";
 @import "compass/css3/transform";
 
+.nav-mobile-button {
+  display: none;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -402,8 +406,8 @@ footer p {
 .client-listing main h1 {
   @include rem(padding, 8rem 0 4rem);
   width: 1000%;
-  @include rem(font-size, 2.3rem);
-  line-height: 1.8;
+  @include rem(font-size, 2.5rem);
+  @include rem(line-height, 4.5rem);
 }
 
 .client-listing main h1 span {
@@ -425,14 +429,16 @@ footer p {
   @include body_2;
 }
 
-.client-listing a {
-  margin: 0;
+.client-listing .content a {
+  @include rem(margin, 0 0 1.3rem);
   @include body_2;
-  border: none;
+  line-height: 1.8;
+  border-bottom: 1px solid #404041;
 }
 
 .client-listing a:hover {
   color: #ec1c24;
+  border-bottom: 1px solid #ec1c24;
 }
 
 .client-listing a.email {
@@ -447,15 +453,18 @@ footer p {
 }
 
 .client-listing aside a {
+  display: inline-block;
+  @include rem(width, 20rem);
+  @include rem(height, 20rem);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
   text-decoration: none;
   border: none;
 }
 
 .client-listing footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  @include rem(margin, 20rem 0 0);
 }
 
 .client-listing footer p {
@@ -466,6 +475,20 @@ footer p {
 
 /* Mobile Landscape */
 @media screen and (max-width: 900px) {
+
+  .nav-mobile-button {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    @include rem(width, 7rem);
+    @include rem(height, 5rem);
+    background: transparent;
+    outline: none;
+    border: none;
+    z-index: 99;
+  }
 
   .header {
     @include rem(padding, 1.1rem 2rem 0);
@@ -497,8 +520,8 @@ footer p {
     position: absolute;
     @include rem(top, 1.5rem);
     @include rem(right, 2rem);
-    @include rem(width, 2.5rem);
-    @include rem(height, 1.6rem);
+    @include rem(width, 2.9rem);
+    @include rem(height, 2rem);
     background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAgAQMAAABq77liAAAABlBMVEX////rHCO0ZcAQAAAAAXRSTlMAQObYZgAAABpJREFUeAFjZIAAnLT9ASD5lwUXja5+qJkHABTIGCF3bUsAAAAAAElFTkSuQmCC) center center no-repeat;
     background-size: contain;
   }
@@ -597,7 +620,7 @@ footer p {
   }
 
   .content header {
-    @include rem(width, 3.5rem);
+    @include rem(width, 6.5rem);
   }
 
   .content h1 {
@@ -710,6 +733,11 @@ footer p {
 }
 
 @media screen and (max-width: 350px) {
+  .leading-image section p {
+    @include rem(padding-top, 1.4rem);
+    @include rem(font-size, 2.8rem);
+  }
+
   footer p,
   .client-listing footer p {
     @include rem(padding-top, 1rem);
