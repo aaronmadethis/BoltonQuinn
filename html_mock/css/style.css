@@ -31,6 +31,18 @@ html {
 body {
   margin: 0 auto;
   padding: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 30, ../sass/_base.scss */
+main,
+section,
+article,
+nav,
+header,
+footer,
+aside {
+  display: block;
 }
 
 /* REM Mixin from Hugo Giraudel
@@ -187,9 +199,9 @@ main {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 28px;
-  height: 42px;
-  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAqCAYAAACgLjskAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTBEREEwMjhCODAyMTFFMzgxNDA5NDdGNjI5QjE5OEUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTBEREEwMjlCODAyMTFFMzgxNDA5NDdGNjI5QjE5OEUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyMEJEQzU3NUI4MDIxMUUzODE0MDk0N0Y2MjlCMTk4RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyMEJEQzU3NkI4MDIxMUUzODE0MDk0N0Y2MjlCMTk4RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pi22BNwAAAENSURBVHja7JfhDYIwEIVbwgBuIG6AEwgb4AawCZswgiMwAh3BDXADfGce0RgIWLF/vCaPlpa7L9DXAsZ4lGEYapFPbGQCFwUqUIEKVKACFahABSrwP4H4ZN+FgglL7rBDowwAE0YX43CGWnScrLXVj2ANqgLKI0AcGgcolYEtH7HkIiwVhrAepkHjJnQOtFtAmaNlzpyMp0ulAzqi6QhNvoAlhDnJOcImlwXn0dFMqQdMYjrCqo9cBfVQsfYPGH0ZY0pvK08lmALOXesDTZmongPyvF8zBfHSBWJlJBIHX1Dv3+eFts/oRLeYz8PmV0pKQuWvTjQbL2RZMmNpg+zF3JEan1iLwKCvp7sAAwB8stcF9WS8qgAAAABJRU5ErkJggg==) left bottom no-repeat;
+  width: 35px;
+  height: 34px;
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAiCAQAAAB/jKh3AAABOElEQVR4Ae3UIU4DQRjF8deGNClmVd0ayNpJ6jAoHIbgSIpAEi4APUJ7gmougOgB6gHZpAqBwBBUBSsamj9PQCDNsrPbKpLu5Etm3vf6k1Xs4xQ8Kj/NWKHa14zst8x/ZrbMltlRX0EX+thAuNW0qT31dKfWmkjLv+1pXzQYAWPaqOCU//u1GQMjGsIQQ2DCbj3G/QkwpIG+owE4TGowifswQAj9xH3gnqQik7gLfbTKiBvgkU6ccecB3FcRI66AKZ0I03EHd/UXIy5ZMiMtYVLvl+6pjBHnLj25XMyk3i3dUYwRZyx4JitgMucL71WFEScuv5CtMJmzhXeqyohjcl4Jv5jgd+5cdRhxRM4b4YsJvufOVJcRh8x9rsHjm99ahxEHzHkHz9x3rcuIrgE8XbQJIwIzT6T1CeSMs2JYApeeAAAAAElFTkSuQmCC) left bottom no-repeat;
   border: none;
   z-index: 999;
   cursor: pointer;
@@ -210,8 +222,8 @@ main {
 .leading-image section p {
   position: absolute;
   bottom: 0;
-  margin: 0 0 60px;
-  margin: 0 0 6rem;
+  margin: 0 0 62px;
+  margin: 0 0 6.2rem;
   max-width: 600px;
   max-width: 60rem;
   font-family: "ITC Tiffany Demi", Georgia, serif;
@@ -760,12 +772,17 @@ footer p {
 }
 
 /* line 466, ../sass/style.scss */
+.client-listing aside a:hover {
+  border-bottom: none;
+}
+
+/* line 470, ../sass/style.scss */
 .client-listing footer {
   margin: 200px 0 0;
   margin: 20rem 0 0;
 }
 
-/* line 470, ../sass/style.scss */
+/* line 474, ../sass/style.scss */
 .client-listing footer p {
   margin: 0 auto;
   padding-top: 27px;
@@ -775,7 +792,7 @@ footer p {
 /* End Client Listings */
 /* Mobile Landscape */
 @media screen and (max-width: 900px) {
-  /* line 479, ../sass/style.scss */
+  /* line 483, ../sass/style.scss */
   .nav-mobile-button {
     display: block;
     position: absolute;
@@ -792,7 +809,7 @@ footer p {
     z-index: 99;
   }
 
-  /* line 493, ../sass/style.scss */
+  /* line 497, ../sass/style.scss */
   .header {
     padding: 11px 20px 0;
     padding: 1.1rem 2rem 0;
@@ -801,14 +818,14 @@ footer p {
     border-bottom: none;
   }
 
-  /* line 499, ../sass/style.scss */
+  /* line 503, ../sass/style.scss */
   .header header {
     padding: 0;
     width: 100%;
     height: 100%;
   }
 
-  /* line 505, ../sass/style.scss */
+  /* line 509, ../sass/style.scss */
   #top {
     position: absolute;
     top: 0;
@@ -823,7 +840,7 @@ footer p {
     z-index: 2;
   }
 
-  /* line 518, ../sass/style.scss */
+  /* line 522, ../sass/style.scss */
   #top:after {
     content: '';
     position: absolute;
@@ -839,7 +856,7 @@ footer p {
     background-size: contain;
   }
 
-  /* line 529, ../sass/style.scss */
+  /* line 533, ../sass/style.scss */
   .logo {
     width: 168px;
     width: 16.8rem;
@@ -851,7 +868,7 @@ footer p {
     background-size: contain;
   }
 
-  /* line 538, ../sass/style.scss */
+  /* line 542, ../sass/style.scss */
   nav {
     float: none;
     padding-top: 39px;
@@ -875,7 +892,7 @@ footer p {
     z-index: -1;
   }
 
-  /* line 548, ../sass/style.scss */
+  /* line 552, ../sass/style.scss */
   nav.reveal-menu {
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -883,7 +900,7 @@ footer p {
     transform: translateY(0);
   }
 
-  /* line 552, ../sass/style.scss */
+  /* line 556, ../sass/style.scss */
   nav a {
     display: block;
     margin: 0 0 0 -20px;
@@ -904,52 +921,52 @@ footer p {
     border-bottom: 1px solid rgba(64, 64, 65, 0.5);
   }
 
-  /* line 563, ../sass/style.scss */
+  /* line 567, ../sass/style.scss */
   nav a:hover,
   nav a:active {
     color: #fff;
     background-color: #ec1c24;
   }
 
-  /* line 569, ../sass/style.scss */
+  /* line 573, ../sass/style.scss */
   nav.hidden-nav {
     display: none;
   }
 
-  /* line 573, ../sass/style.scss */
+  /* line 577, ../sass/style.scss */
   .leading-image {
     position: relative;
     right: 0;
     left: 0;
-    height: 200px;
-    height: 20rem;
+    height: 500px;
+    height: 50rem;
     padding: 0 20px;
     padding: 0 2rem;
     background-image: url(../1_GarageMoscow_1800.jpg);
   }
 
-  /* line 582, ../sass/style.scss */
+  /* line 586, ../sass/style.scss */
   .leading-image[data-index="1"] {
     background-image: url(../2_Rijksmuseum_1800.jpg);
   }
 
-  /* line 586, ../sass/style.scss */
+  /* line 590, ../sass/style.scss */
   .leading-image[data-index="2"] {
     background-image: url(../3_LondonEye_1800.jpg);
   }
 
-  /* line 590, ../sass/style.scss */
+  /* line 594, ../sass/style.scss */
   .sticky {
     position: relative;
     top: 0 !important;
     bottom: auto;
     margin-top: 268px;
     margin-top: 26.8rem;
-    height: 200px;
-    height: 20rem;
+    height: 500px;
+    height: 50rem;
   }
 
-  /* line 598, ../sass/style.scss */
+  /* line 602, ../sass/style.scss */
   .leading-image .first-text {
     position: absolute;
     top: -218px;
@@ -962,37 +979,41 @@ footer p {
     background: #000;
   }
 
-  /* line 608, ../sass/style.scss */
+  /* line 612, ../sass/style.scss */
   .leading-image section p {
     position: relative;
+    margin-bottom: 60px;
+    margin-bottom: 6rem;
+    padding: 26px 20px 0;
+    padding: 2.6rem 2rem 0;
     font-family: "ITC Tiffany Demi", Georgia, serif;
     font-size: 27px;
     font-size: 2.7rem;
     line-height: 1.4;
     font-weight: 400;
     letter-spacing: 0;
-    padding: 26px 20px 0;
-    padding: 2.6rem 2rem 0;
+    font-size: 35px;
+    font-size: 3.5rem;
   }
 
-  /* line 614, ../sass/style.scss */
+  /* line 620, ../sass/style.scss */
   .leading-image section button {
     display: none;
   }
 
-  /* line 618, ../sass/style.scss */
+  /* line 624, ../sass/style.scss */
   .content {
     padding: 0 20px;
     padding: 0 2rem;
   }
 
-  /* line 622, ../sass/style.scss */
+  /* line 628, ../sass/style.scss */
   .content header {
     width: 65px;
     width: 6.5rem;
   }
 
-  /* line 626, ../sass/style.scss */
+  /* line 632, ../sass/style.scss */
   .content h1 {
     padding: 50px 0 27px;
     padding: 5rem 0 2.7rem;
@@ -1003,16 +1024,16 @@ footer p {
     color: #231f20;
   }
 
-  /* line 631, ../sass/style.scss */
+  /* line 637, ../sass/style.scss */
   .content.about h1 {
     margin-left: 0;
   }
 
-  /* line 635, ../sass/style.scss */
+  /* line 641, ../sass/style.scss */
   .content p {
     margin: 30px 0 0;
     margin: 3rem 0 0;
-    width: 100%;
+    width: 75%;
     font-family: Georgia, serif;
     font-size: 16px;
     font-size: 1.6rem;
@@ -1021,12 +1042,10 @@ footer p {
     font-weight: 400;
   }
 
-  /* line 641, ../sass/style.scss */
+  /* line 647, ../sass/style.scss */
   .content h2 {
     margin-top: 24px;
     margin-top: 2.4rem;
-    padding-top: 24px;
-    padding-top: 2.4rem;
     font-family: Georgia, serif;
     font-size: 14.5px;
     font-size: 1.45rem;
@@ -1036,29 +1055,32 @@ footer p {
     letter-spacing: 0.1rem;
     font-weight: 400;
     color: #ec1c24;
-    border-top: 1px solid #404041;
-    border-top: 1px solid rgba(64, 64, 65, 0.5);
   }
 
-  /* line 649, ../sass/style.scss */
+  /* line 652, ../sass/style.scss */
   .content.clients {
     margin-bottom: -18px;
     margin-bottom: -1.8rem;
   }
 
-  /* line 653, ../sass/style.scss */
-  .content.clients ul {
-    margin-top: 28px;
-    margin-top: 2.8rem;
-    width: 100%;
+  /* line 656, ../sass/style.scss */
+  .content.clients p {
+    margin-bottom: 28px;
+    margin-bottom: 2.8rem;
   }
 
-  /* line 658, ../sass/style.scss */
+  /* line 660, ../sass/style.scss */
+  .content.clients ul {
+    margin-top: 0;
+    width: 50%;
+  }
+
+  /* line 665, ../sass/style.scss */
   .content.clients ul:nth-of-type(2) {
     margin-top: 0;
   }
 
-  /* line 662, ../sass/style.scss */
+  /* line 669, ../sass/style.scss */
   .content.clients li {
     font-family: Georgia, serif;
     font-size: 14px;
@@ -1069,24 +1091,24 @@ footer p {
     color: #404041;
   }
 
-  /* line 666, ../sass/style.scss */
+  /* line 673, ../sass/style.scss */
   .content cite {
     padding: 0;
   }
 
-  /* line 670, ../sass/style.scss */
+  /* line 677, ../sass/style.scss */
   .content.contact {
-    padding-bottom: 59px;
-    padding-bottom: 5.9rem;
+    padding-bottom: 480px;
+    padding-bottom: 48rem;
   }
 
-  /* line 674, ../sass/style.scss */
+  /* line 681, ../sass/style.scss */
   .content.contact h1 {
     margin-left: -2px;
     margin-left: -0.2rem;
   }
 
-  /* line 678, ../sass/style.scss */
+  /* line 685, ../sass/style.scss */
   .content a {
     font-family: Georgia, serif;
     font-size: 16px;
@@ -1098,7 +1120,7 @@ footer p {
     line-height: 2.9rem;
   }
 
-  /* line 683, ../sass/style.scss */
+  /* line 690, ../sass/style.scss */
   footer {
     padding: 0 20px;
     padding: 0 2rem;
@@ -1106,7 +1128,7 @@ footer p {
     height: 7rem;
   }
 
-  /* line 688, ../sass/style.scss */
+  /* line 695, ../sass/style.scss */
   footer p {
     padding-top: 27px;
     padding-top: 2.7rem;
@@ -1123,25 +1145,25 @@ footer p {
   }
 
   /* Client Listings */
-  /* line 695, ../sass/style.scss */
+  /* line 702, ../sass/style.scss */
   .client-listing #top:after {
     display: none;
   }
 
-  /* line 699, ../sass/style.scss */
+  /* line 706, ../sass/style.scss */
   .client-listing aside {
     padding: 50px 20px 0;
     padding: 5rem 2rem 0;
   }
 
-  /* line 703, ../sass/style.scss */
+  /* line 710, ../sass/style.scss */
   .client-listing aside a {
     display: block;
     margin: 0 0 20px;
     margin: 0 0 2rem;
   }
 
-  /* line 708, ../sass/style.scss */
+  /* line 715, ../sass/style.scss */
   .client-listing main h1 {
     padding-top: 50px;
     padding-top: 5rem;
@@ -1150,7 +1172,7 @@ footer p {
     font-size: 2rem;
   }
 
-  /* line 714, ../sass/style.scss */
+  /* line 721, ../sass/style.scss */
   .client-listing main h2 {
     margin: 40px 0 -3px;
     margin: 4rem 0 -0.3rem;
@@ -1158,18 +1180,18 @@ footer p {
     border: none;
   }
 
-  /* line 720, ../sass/style.scss */
+  /* line 727, ../sass/style.scss */
   .client-listing p {
     margin-top: 10px;
     margin-top: 1rem;
   }
 
-  /* line 724, ../sass/style.scss */
+  /* line 731, ../sass/style.scss */
   .client-listing footer {
     position: relative;
   }
 
-  /* line 728, ../sass/style.scss */
+  /* line 735, ../sass/style.scss */
   .client-listing footer p {
     padding-top: 27px;
     padding-top: 2.7rem;
@@ -1177,8 +1199,75 @@ footer p {
 
   /* End Client Listings */
 }
+@media screen and (max-width: 600px) {
+  /* line 744, ../sass/style.scss */
+  .leading-image,
+  .sticky {
+    height: 280px;
+    height: 28rem;
+  }
+
+  /* line 749, ../sass/style.scss */
+  .leading-image section p {
+    padding-top: 36px;
+    padding-top: 3.6rem;
+    font-size: 33px;
+    font-size: 3.3rem;
+  }
+
+  /* line 754, ../sass/style.scss */
+  .content p {
+    width: 100%;
+  }
+
+  /* line 758, ../sass/style.scss */
+  .content.about li {
+    margin: 0 0 9px;
+    margin: 0 0 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* line 763, ../sass/style.scss */
+  .content.about li:first-child {
+    margin-top: 5px;
+    margin-top: 0.5rem;
+  }
+
+  /* line 767, ../sass/style.scss */
+  .content.clients ul {
+    width: 100%;
+  }
+
+  /* line 771, ../sass/style.scss */
+  .content.contact {
+    padding-bottom: 59px;
+    padding-bottom: 5.9rem;
+  }
+}
 @media screen and (max-width: 350px) {
-  /* line 736, ../sass/style.scss */
+  /* line 779, ../sass/style.scss */
+  .leading-image {
+    height: 200px;
+    height: 20rem;
+  }
+
+  /* line 783, ../sass/style.scss */
+  .sticky {
+    margin-top: 268px;
+    margin-top: 26.8rem;
+    height: 200px;
+    height: 20rem;
+  }
+
+  /* line 788, ../sass/style.scss */
+  .leading-image .first-text {
+    top: -218px;
+    top: -21.8rem;
+    height: 218px;
+    height: 21.8rem;
+  }
+
+  /* line 793, ../sass/style.scss */
   .leading-image section p {
     padding-top: 14px;
     padding-top: 1.4rem;
@@ -1186,14 +1275,19 @@ footer p {
     font-size: 2.8rem;
   }
 
-  /* line 741, ../sass/style.scss */
+  /* line 798, ../sass/style.scss */
   footer p,
   .client-listing footer p {
     padding-top: 10px;
     padding-top: 1rem;
   }
+
+  /* line 803, ../sass/style.scss */
+  footer p span {
+    display: block;
+  }
 }
-/* line 747, ../sass/style.scss */
+/* line 809, ../sass/style.scss */
 .hidden {
   display: none !important;
 }

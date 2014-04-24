@@ -111,9 +111,9 @@ main {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 28px;
-  height: 42px;
-  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAqCAYAAACgLjskAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTBEREEwMjhCODAyMTFFMzgxNDA5NDdGNjI5QjE5OEUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTBEREEwMjlCODAyMTFFMzgxNDA5NDdGNjI5QjE5OEUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyMEJEQzU3NUI4MDIxMUUzODE0MDk0N0Y2MjlCMTk4RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyMEJEQzU3NkI4MDIxMUUzODE0MDk0N0Y2MjlCMTk4RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pi22BNwAAAENSURBVHja7JfhDYIwEIVbwgBuIG6AEwgb4AawCZswgiMwAh3BDXADfGce0RgIWLF/vCaPlpa7L9DXAsZ4lGEYapFPbGQCFwUqUIEKVKACFahABSrwP4H4ZN+FgglL7rBDowwAE0YX43CGWnScrLXVj2ANqgLKI0AcGgcolYEtH7HkIiwVhrAepkHjJnQOtFtAmaNlzpyMp0ulAzqi6QhNvoAlhDnJOcImlwXn0dFMqQdMYjrCqo9cBfVQsfYPGH0ZY0pvK08lmALOXesDTZmongPyvF8zBfHSBWJlJBIHX1Dv3+eFts/oRLeYz8PmV0pKQuWvTjQbL2RZMmNpg+zF3JEan1iLwKCvp7sAAwB8stcF9WS8qgAAAABJRU5ErkJggg==) left bottom no-repeat;
+  width: 35px;
+  height: 34px;
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAiCAQAAAB/jKh3AAABOElEQVR4Ae3UIU4DQRjF8deGNClmVd0ayNpJ6jAoHIbgSIpAEi4APUJ7gmougOgB6gHZpAqBwBBUBSsamj9PQCDNsrPbKpLu5Etm3vf6k1Xs4xQ8Kj/NWKHa14zst8x/ZrbMltlRX0EX+thAuNW0qT31dKfWmkjLv+1pXzQYAWPaqOCU//u1GQMjGsIQQ2DCbj3G/QkwpIG+owE4TGowifswQAj9xH3gnqQik7gLfbTKiBvgkU6ccecB3FcRI66AKZ0I03EHd/UXIy5ZMiMtYVLvl+6pjBHnLj25XMyk3i3dUYwRZyx4JitgMucL71WFEScuv5CtMJmzhXeqyohjcl4Jv5jgd+5cdRhxRM4b4YsJvufOVJcRh8x9rsHjm99ahxEHzHkHz9x3rcuIrgE8XbQJIwIzT6T1CeSMs2JYApeeAAAAAElFTkSuQmCC) left bottom no-repeat;
   border: none;
   z-index: 999;
   cursor: pointer;
@@ -128,7 +128,7 @@ main {
 .leading-image section p {
   position: absolute;
   bottom: 0;
-  @include rem(margin, 0 0 6rem);
+  @include rem(margin, 0 0 6.2rem);
   @include rem(max-width, 60rem);
   @include bold_1;
   color: #fff;
@@ -463,6 +463,10 @@ footer p {
   border: none;
 }
 
+.client-listing aside a:hover {
+  border-bottom: none;
+}
+
 .client-listing footer {
   @include rem(margin, 20rem 0 0);
 }
@@ -574,7 +578,7 @@ footer p {
     position: relative;
     right: 0;
     left: 0;
-    @include rem(height, 20rem);
+    @include rem(height, 50rem);
     @include rem(padding, 0 2rem);
     background-image: url(../1_GarageMoscow_1800.jpg);
   }
@@ -592,7 +596,7 @@ footer p {
     top: 0 !important;
     bottom: auto;
     @include rem(margin-top, 26.8rem);
-    @include rem(height, 20rem);
+    @include rem(height, 50rem);
   }
 
   .leading-image .first-text {
@@ -607,8 +611,10 @@ footer p {
 
   .leading-image section p {
     position: relative;
-    @include bold_1m;
+    @include rem(margin-bottom, 6rem);
     @include rem(padding, 2.6rem 2rem 0);
+    @include bold_1m;
+    @include rem(font-size, 3.5rem);
   }
 
   .leading-image section button {
@@ -634,25 +640,26 @@ footer p {
 
   .content p {
     @include rem(margin, 3rem 0 0);
-    width: 100%;
+    width: 75%;
     @include body_1m;
   }
 
   .content h2 {
     @include rem(margin-top, 2.4rem);
-    @include rem(padding-top, 2.4rem);
     @include head_2m;
-    border-top: 1px solid #404041;
-    border-top: 1px solid rgba(64, 64, 65, .5);
   }
 
   .content.clients {
     @include rem(margin-bottom, -1.8rem);
   }
 
+  .content.clients p {
+    @include rem(margin-bottom, 2.8rem);
+  }
+
   .content.clients ul {
-    @include rem(margin-top, 2.8rem);
-    width: 100%;
+    margin-top: 0;
+    width: 50%;
   }
 
   .content.clients ul:nth-of-type(2) {
@@ -668,7 +675,7 @@ footer p {
   }
 
   .content.contact {
-    @include rem(padding-bottom, 5.9rem);
+    @include rem(padding-bottom, 48rem);
   }
 
   .content.contact h1 {
@@ -732,7 +739,57 @@ footer p {
 
 }
 
+@media screen and (max-width: 600px) {
+
+  .leading-image,
+  .sticky {
+    @include rem(height, 28rem);
+  }
+
+  .leading-image section p {
+    @include rem(padding-top, 3.6rem);
+    @include rem(font-size, 3.3rem);
+  }
+
+  .content p {
+    width: 100%;
+  }
+
+  .content.about li {
+    @include rem(margin, 0 0 .9rem);
+    line-height: 1.5;
+  }
+
+  .content.about li:first-child {
+    @include rem(margin-top, .5rem);
+  }
+
+  .content.clients ul {
+    width: 100%;
+  }
+
+  .content.contact {
+    @include rem(padding-bottom, 5.9rem);
+  }
+
+}
+
 @media screen and (max-width: 350px) {
+
+  .leading-image {
+    @include rem(height, 20rem);
+  }
+
+  .sticky {
+    @include rem(margin-top, 26.8rem);
+    @include rem(height, 20rem);
+  }
+
+  .leading-image .first-text {
+    @include rem(top, -21.8rem);
+    @include rem(height, 21.8rem);
+  }
+
   .leading-image section p {
     @include rem(padding-top, 1.4rem);
     @include rem(font-size, 2.8rem);
@@ -742,6 +799,11 @@ footer p {
   .client-listing footer p {
     @include rem(padding-top, 1rem);
   }
+
+  footer p span {
+    display: block;
+  }
+
 }
 
 .hidden {

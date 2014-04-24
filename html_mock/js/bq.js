@@ -41,6 +41,7 @@
             "height": height - navOffset
           }).attr("data-top", height * index + navOffset + (index * delay));
         }
+      console.log("IMAGE HEIGHTS: " + self.css("top"));
       }).parent().css("padding-top", height * $leadingImages.length + ($leadingImages.length * delay));
     }
     else {
@@ -153,7 +154,7 @@
   };
 
   // Attach event handlers to user actions
-  $(window).on("scroll.stickyScroll", checkForSticky)
+  $(window).on("scroll.stickyScroll touchmove.stickyTouching", checkForSticky)
     .on("resize.heightResizing", adjustHeight)
     .on("resize.clientCols", calcClientCols);
 

@@ -24,6 +24,17 @@ html {
 body {
   margin: 0 auto;
   padding: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+main,
+section,
+article,
+nav,
+header,
+footer,
+aside {
+  display: block;
 }
 
 /* REM Mixin from Hugo Giraudel
