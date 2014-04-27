@@ -477,6 +477,24 @@ footer p {
 }
 /* End Client Listings */
 
+/* Tablet Landscape and Lower */
+@media screen and (max-width: 1024px) {
+
+  .leading-image {
+    background-image: url(../1_GarageMoscow_1800.jpg);
+  }
+
+  .leading-image[data-index="1"] {
+    background-image: url(../2_Rijksmuseum_1800.jpg);
+  }
+
+  .leading-image[data-index="2"] {
+    background-image: url(../3_LondonEye_1800.jpg);
+  }
+
+}
+/* End Tablet Landscape and Lower */
+
 /* Mobile Landscape */
 @media screen and (max-width: 900px) {
 
@@ -580,15 +598,6 @@ footer p {
     left: 0;
     @include rem(height, 50rem);
     @include rem(padding, 0 2rem);
-    background-image: url(../1_GarageMoscow_1800.jpg);
-  }
-
-  .leading-image[data-index="1"] {
-    background-image: url(../2_Rijksmuseum_1800.jpg);
-  }
-
-  .leading-image[data-index="2"] {
-    background-image: url(../3_LondonEye_1800.jpg);
   }
 
   .sticky {
@@ -612,7 +621,7 @@ footer p {
   .leading-image section p {
     position: relative;
     @include rem(margin-bottom, 6rem);
-    @include rem(padding, 2.6rem 2rem 0);
+    @include rem(padding, 3.5rem 2rem 0);
     @include bold_1m;
     @include rem(font-size, 3.5rem);
   }
@@ -650,7 +659,7 @@ footer p {
   }
 
   .content.clients {
-    @include rem(margin-bottom, -1.8rem);
+    @include rem(margin-bottom, -.7rem);
   }
 
   .content.clients p {

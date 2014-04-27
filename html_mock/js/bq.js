@@ -182,13 +182,15 @@
       }, 500);
     }
     setTimeout(function() {
-      window.location.hash = hash;
       scrolling = false;
       if (width < 900) {
         $nav.removeClass("reveal-menu");
         setTimeout(function() {
           $nav.addClass("hidden-nav");
         }, 301);
+      }
+      else {
+        window.location.hash = hash;
       }
     }, 500);
   });

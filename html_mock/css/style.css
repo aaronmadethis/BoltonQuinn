@@ -790,9 +790,27 @@ footer p {
 }
 
 /* End Client Listings */
+/* Tablet Landscape and Lower */
+@media screen and (max-width: 1024px) {
+  /* line 483, ../sass/style.scss */
+  .leading-image {
+    background-image: url(../1_GarageMoscow_1800.jpg);
+  }
+
+  /* line 487, ../sass/style.scss */
+  .leading-image[data-index="1"] {
+    background-image: url(../2_Rijksmuseum_1800.jpg);
+  }
+
+  /* line 491, ../sass/style.scss */
+  .leading-image[data-index="2"] {
+    background-image: url(../3_LondonEye_1800.jpg);
+  }
+}
+/* End Tablet Landscape and Lower */
 /* Mobile Landscape */
 @media screen and (max-width: 900px) {
-  /* line 483, ../sass/style.scss */
+  /* line 501, ../sass/style.scss */
   .nav-mobile-button {
     display: block;
     position: absolute;
@@ -809,7 +827,7 @@ footer p {
     z-index: 99;
   }
 
-  /* line 497, ../sass/style.scss */
+  /* line 515, ../sass/style.scss */
   .header {
     padding: 11px 20px 0;
     padding: 1.1rem 2rem 0;
@@ -818,14 +836,14 @@ footer p {
     border-bottom: none;
   }
 
-  /* line 503, ../sass/style.scss */
+  /* line 521, ../sass/style.scss */
   .header header {
     padding: 0;
     width: 100%;
     height: 100%;
   }
 
-  /* line 509, ../sass/style.scss */
+  /* line 527, ../sass/style.scss */
   #top {
     position: absolute;
     top: 0;
@@ -840,7 +858,7 @@ footer p {
     z-index: 2;
   }
 
-  /* line 522, ../sass/style.scss */
+  /* line 540, ../sass/style.scss */
   #top:after {
     content: '';
     position: absolute;
@@ -856,7 +874,7 @@ footer p {
     background-size: contain;
   }
 
-  /* line 533, ../sass/style.scss */
+  /* line 551, ../sass/style.scss */
   .logo {
     width: 168px;
     width: 16.8rem;
@@ -868,7 +886,7 @@ footer p {
     background-size: contain;
   }
 
-  /* line 542, ../sass/style.scss */
+  /* line 560, ../sass/style.scss */
   nav {
     float: none;
     padding-top: 39px;
@@ -892,7 +910,7 @@ footer p {
     z-index: -1;
   }
 
-  /* line 552, ../sass/style.scss */
+  /* line 570, ../sass/style.scss */
   nav.reveal-menu {
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -900,7 +918,7 @@ footer p {
     transform: translateY(0);
   }
 
-  /* line 556, ../sass/style.scss */
+  /* line 574, ../sass/style.scss */
   nav a {
     display: block;
     margin: 0 0 0 -20px;
@@ -921,19 +939,19 @@ footer p {
     border-bottom: 1px solid rgba(64, 64, 65, 0.5);
   }
 
-  /* line 567, ../sass/style.scss */
+  /* line 585, ../sass/style.scss */
   nav a:hover,
   nav a:active {
     color: #fff;
     background-color: #ec1c24;
   }
 
-  /* line 573, ../sass/style.scss */
+  /* line 591, ../sass/style.scss */
   nav.hidden-nav {
     display: none;
   }
 
-  /* line 577, ../sass/style.scss */
+  /* line 595, ../sass/style.scss */
   .leading-image {
     position: relative;
     right: 0;
@@ -942,20 +960,9 @@ footer p {
     height: 50rem;
     padding: 0 20px;
     padding: 0 2rem;
-    background-image: url(../1_GarageMoscow_1800.jpg);
   }
 
-  /* line 586, ../sass/style.scss */
-  .leading-image[data-index="1"] {
-    background-image: url(../2_Rijksmuseum_1800.jpg);
-  }
-
-  /* line 590, ../sass/style.scss */
-  .leading-image[data-index="2"] {
-    background-image: url(../3_LondonEye_1800.jpg);
-  }
-
-  /* line 594, ../sass/style.scss */
+  /* line 603, ../sass/style.scss */
   .sticky {
     position: relative;
     top: 0 !important;
@@ -966,7 +973,7 @@ footer p {
     height: 50rem;
   }
 
-  /* line 602, ../sass/style.scss */
+  /* line 611, ../sass/style.scss */
   .leading-image .first-text {
     position: absolute;
     top: -218px;
@@ -979,13 +986,13 @@ footer p {
     background: #000;
   }
 
-  /* line 612, ../sass/style.scss */
+  /* line 621, ../sass/style.scss */
   .leading-image section p {
     position: relative;
     margin-bottom: 60px;
     margin-bottom: 6rem;
-    padding: 26px 20px 0;
-    padding: 2.6rem 2rem 0;
+    padding: 35px 20px 0;
+    padding: 3.5rem 2rem 0;
     font-family: "ITC Tiffany Demi", Georgia, serif;
     font-size: 27px;
     font-size: 2.7rem;
@@ -996,24 +1003,24 @@ footer p {
     font-size: 3.5rem;
   }
 
-  /* line 620, ../sass/style.scss */
+  /* line 629, ../sass/style.scss */
   .leading-image section button {
     display: none;
   }
 
-  /* line 624, ../sass/style.scss */
+  /* line 633, ../sass/style.scss */
   .content {
     padding: 0 20px;
     padding: 0 2rem;
   }
 
-  /* line 628, ../sass/style.scss */
+  /* line 637, ../sass/style.scss */
   .content header {
     width: 65px;
     width: 6.5rem;
   }
 
-  /* line 632, ../sass/style.scss */
+  /* line 641, ../sass/style.scss */
   .content h1 {
     padding: 50px 0 27px;
     padding: 5rem 0 2.7rem;
@@ -1024,12 +1031,12 @@ footer p {
     color: #231f20;
   }
 
-  /* line 637, ../sass/style.scss */
+  /* line 646, ../sass/style.scss */
   .content.about h1 {
     margin-left: 0;
   }
 
-  /* line 641, ../sass/style.scss */
+  /* line 650, ../sass/style.scss */
   .content p {
     margin: 30px 0 0;
     margin: 3rem 0 0;
@@ -1042,7 +1049,7 @@ footer p {
     font-weight: 400;
   }
 
-  /* line 647, ../sass/style.scss */
+  /* line 656, ../sass/style.scss */
   .content h2 {
     margin-top: 24px;
     margin-top: 2.4rem;
@@ -1057,30 +1064,30 @@ footer p {
     color: #ec1c24;
   }
 
-  /* line 652, ../sass/style.scss */
+  /* line 661, ../sass/style.scss */
   .content.clients {
-    margin-bottom: -18px;
-    margin-bottom: -1.8rem;
+    margin-bottom: -7px;
+    margin-bottom: -0.7rem;
   }
 
-  /* line 656, ../sass/style.scss */
+  /* line 665, ../sass/style.scss */
   .content.clients p {
     margin-bottom: 28px;
     margin-bottom: 2.8rem;
   }
 
-  /* line 660, ../sass/style.scss */
+  /* line 669, ../sass/style.scss */
   .content.clients ul {
     margin-top: 0;
     width: 50%;
   }
 
-  /* line 665, ../sass/style.scss */
+  /* line 674, ../sass/style.scss */
   .content.clients ul:nth-of-type(2) {
     margin-top: 0;
   }
 
-  /* line 669, ../sass/style.scss */
+  /* line 678, ../sass/style.scss */
   .content.clients li {
     font-family: Georgia, serif;
     font-size: 14px;
@@ -1091,24 +1098,24 @@ footer p {
     color: #404041;
   }
 
-  /* line 673, ../sass/style.scss */
+  /* line 682, ../sass/style.scss */
   .content cite {
     padding: 0;
   }
 
-  /* line 677, ../sass/style.scss */
+  /* line 686, ../sass/style.scss */
   .content.contact {
     padding-bottom: 480px;
     padding-bottom: 48rem;
   }
 
-  /* line 681, ../sass/style.scss */
+  /* line 690, ../sass/style.scss */
   .content.contact h1 {
     margin-left: -2px;
     margin-left: -0.2rem;
   }
 
-  /* line 685, ../sass/style.scss */
+  /* line 694, ../sass/style.scss */
   .content a {
     font-family: Georgia, serif;
     font-size: 16px;
@@ -1120,7 +1127,7 @@ footer p {
     line-height: 2.9rem;
   }
 
-  /* line 690, ../sass/style.scss */
+  /* line 699, ../sass/style.scss */
   footer {
     padding: 0 20px;
     padding: 0 2rem;
@@ -1128,7 +1135,7 @@ footer p {
     height: 7rem;
   }
 
-  /* line 695, ../sass/style.scss */
+  /* line 704, ../sass/style.scss */
   footer p {
     padding-top: 27px;
     padding-top: 2.7rem;
@@ -1145,25 +1152,25 @@ footer p {
   }
 
   /* Client Listings */
-  /* line 702, ../sass/style.scss */
+  /* line 711, ../sass/style.scss */
   .client-listing #top:after {
     display: none;
   }
 
-  /* line 706, ../sass/style.scss */
+  /* line 715, ../sass/style.scss */
   .client-listing aside {
     padding: 50px 20px 0;
     padding: 5rem 2rem 0;
   }
 
-  /* line 710, ../sass/style.scss */
+  /* line 719, ../sass/style.scss */
   .client-listing aside a {
     display: block;
     margin: 0 0 20px;
     margin: 0 0 2rem;
   }
 
-  /* line 715, ../sass/style.scss */
+  /* line 724, ../sass/style.scss */
   .client-listing main h1 {
     padding-top: 50px;
     padding-top: 5rem;
@@ -1172,7 +1179,7 @@ footer p {
     font-size: 2rem;
   }
 
-  /* line 721, ../sass/style.scss */
+  /* line 730, ../sass/style.scss */
   .client-listing main h2 {
     margin: 40px 0 -3px;
     margin: 4rem 0 -0.3rem;
@@ -1180,18 +1187,18 @@ footer p {
     border: none;
   }
 
-  /* line 727, ../sass/style.scss */
+  /* line 736, ../sass/style.scss */
   .client-listing p {
     margin-top: 10px;
     margin-top: 1rem;
   }
 
-  /* line 731, ../sass/style.scss */
+  /* line 740, ../sass/style.scss */
   .client-listing footer {
     position: relative;
   }
 
-  /* line 735, ../sass/style.scss */
+  /* line 744, ../sass/style.scss */
   .client-listing footer p {
     padding-top: 27px;
     padding-top: 2.7rem;
@@ -1200,14 +1207,14 @@ footer p {
   /* End Client Listings */
 }
 @media screen and (max-width: 600px) {
-  /* line 744, ../sass/style.scss */
+  /* line 753, ../sass/style.scss */
   .leading-image,
   .sticky {
     height: 280px;
     height: 28rem;
   }
 
-  /* line 749, ../sass/style.scss */
+  /* line 758, ../sass/style.scss */
   .leading-image section p {
     padding-top: 36px;
     padding-top: 3.6rem;
@@ -1215,43 +1222,43 @@ footer p {
     font-size: 3.3rem;
   }
 
-  /* line 754, ../sass/style.scss */
+  /* line 763, ../sass/style.scss */
   .content p {
     width: 100%;
   }
 
-  /* line 758, ../sass/style.scss */
+  /* line 767, ../sass/style.scss */
   .content.about li {
     margin: 0 0 9px;
     margin: 0 0 0.9rem;
     line-height: 1.5;
   }
 
-  /* line 763, ../sass/style.scss */
+  /* line 772, ../sass/style.scss */
   .content.about li:first-child {
     margin-top: 5px;
     margin-top: 0.5rem;
   }
 
-  /* line 767, ../sass/style.scss */
+  /* line 776, ../sass/style.scss */
   .content.clients ul {
     width: 100%;
   }
 
-  /* line 771, ../sass/style.scss */
+  /* line 780, ../sass/style.scss */
   .content.contact {
     padding-bottom: 59px;
     padding-bottom: 5.9rem;
   }
 }
 @media screen and (max-width: 350px) {
-  /* line 779, ../sass/style.scss */
+  /* line 788, ../sass/style.scss */
   .leading-image {
     height: 200px;
     height: 20rem;
   }
 
-  /* line 783, ../sass/style.scss */
+  /* line 792, ../sass/style.scss */
   .sticky {
     margin-top: 268px;
     margin-top: 26.8rem;
@@ -1259,7 +1266,7 @@ footer p {
     height: 20rem;
   }
 
-  /* line 788, ../sass/style.scss */
+  /* line 797, ../sass/style.scss */
   .leading-image .first-text {
     top: -218px;
     top: -21.8rem;
@@ -1267,7 +1274,7 @@ footer p {
     height: 21.8rem;
   }
 
-  /* line 793, ../sass/style.scss */
+  /* line 802, ../sass/style.scss */
   .leading-image section p {
     padding-top: 14px;
     padding-top: 1.4rem;
@@ -1275,19 +1282,19 @@ footer p {
     font-size: 2.8rem;
   }
 
-  /* line 798, ../sass/style.scss */
+  /* line 807, ../sass/style.scss */
   footer p,
   .client-listing footer p {
     padding-top: 10px;
     padding-top: 1rem;
   }
 
-  /* line 803, ../sass/style.scss */
+  /* line 812, ../sass/style.scss */
   footer p span {
     display: block;
   }
 }
-/* line 809, ../sass/style.scss */
+/* line 818, ../sass/style.scss */
 .hidden {
   display: none !important;
 }
