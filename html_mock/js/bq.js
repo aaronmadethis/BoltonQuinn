@@ -8,6 +8,7 @@
 
   var $document = $(document);
   var $body = $("body");
+  var $bodyHTML = $("body, html");
   var $leadingImages = $(".leading-image");
   var $clients = $(".clients ul");
   var $client = $clients.find("li");
@@ -176,7 +177,7 @@
           mobileOffset = 50;
         }
       }
-      $body.animate({
+      $bodyHTML.animate({
         "scrollTop": $("." + hash.replace(/\#/, "")).offset().top - mobileOffset
       }, 500);
     }
@@ -211,7 +212,7 @@
     }
     var self = $(this);
     if (0 < self.index() < 3) {
-      $body.animate({
+      $bodyHTML.animate({
         "scrollTop": self.parents(".leading-image").next().offset().top
       }, 300);
     }
