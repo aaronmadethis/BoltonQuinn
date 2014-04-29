@@ -1,0 +1,1300 @@
+/*
+Theme Name: Bolton Quinn
+Theme URI: 
+Author: Franklyn Creative
+Author URI: http://quitefranklyn.com
+Description: A WordPress theme for Bolton Quinn
+Version: 0.1
+License: GNU General Public License
+License URI: 
+Tags: 
+*/
+/* line 14, ../sass/_base.scss */
+#mfPreviewBar {
+  display: none;
+}
+
+/* line 15, ../sass/_base.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 20, ../sass/_base.scss */
+html {
+  font-size: 62.5%;
+}
+
+/* line 24, ../sass/_base.scss */
+body {
+  margin: 0 auto;
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 30, ../sass/_base.scss */
+main,
+section,
+article,
+nav,
+header,
+footer,
+aside {
+  display: block;
+}
+
+/* REM Mixin from Hugo Giraudel
+ * http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/ */
+/* Define max widths */
+/* Define the fonts */
+/* Mobile Mixins */
+/* line 7, ../sass/style.scss */
+.nav-mobile-button {
+  display: none;
+}
+
+/* line 11, ../sass/style.scss */
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 80px;
+  height: 8rem;
+  padding: 29px 0 0;
+  padding: 2.9rem 0 0;
+  background: #fff;
+  border-bottom: 1px solid #404041;
+  border-bottom: 1px solid rgba(64, 64, 65, 0.5);
+  z-index: 10;
+}
+
+/* line 24, ../sass/style.scss */
+.header header {
+  margin: 0 auto;
+  padding: 0 100px;
+  padding: 0 10rem;
+  max-width: 1400px;
+  max-width: 140rem;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 31, ../sass/style.scss */
+#top {
+  float: left;
+  outline: none;
+}
+
+/* line 36, ../sass/style.scss */
+.logo {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 201px;
+  width: 20.1rem;
+  height: 28px;
+  height: 2.8rem;
+  background: transparent url(data:image/png;base64,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) center center no-repeat;
+  text-indent: -99999999em;
+  overflow: hidden;
+}
+
+/* line 48, ../sass/style.scss */
+nav {
+  float: right;
+  padding-top: 5px;
+  padding-top: 0.5rem;
+}
+
+/* line 53, ../sass/style.scss */
+nav a {
+  margin-left: 50px;
+  margin-left: 5rem;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  color: #231f20;
+  text-decoration: none;
+}
+
+/* line 59, ../sass/style.scss */
+nav a:hover {
+  color: #ec1c24;
+}
+
+/* line 63, ../sass/style.scss */
+main {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 70, ../sass/style.scss */
+.leading-image {
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding: 0 100px;
+  padding: 0 10rem;
+  width: auto;
+  height: 100%;
+  background: white url(../1_GarageMoscow.jpg) center center no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+/* line 82, ../sass/style.scss */
+.leading-image[data-index="1"] {
+  background-image: url(../2_Rijksmuseum.jpg);
+  z-index: 2;
+}
+
+/* line 87, ../sass/style.scss */
+.leading-image[data-index="2"] {
+  background-image: url(../3_LondonEye.jpg);
+  z-index: 3;
+}
+
+/* line 92, ../sass/style.scss */
+.sticky {
+  position: fixed;
+  top: 79px !important;
+  top: 7.9rem !important;
+  bottom: 0;
+}
+
+/* line 99, ../sass/style.scss */
+.leading-image .opening-text {
+  position: relative;
+  bottom: 65px;
+  bottom: 6.5rem;
+  margin: 0 auto;
+  max-width: 1400px;
+  max-width: 140rem;
+  height: 100%;
+  -moz-transition-property: bottom;
+  -o-transition-property: bottom;
+  -webkit-transition-property: bottom;
+  transition-property: bottom;
+  -moz-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
+  -webkit-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+/* line 110, ../sass/style.scss */
+.opening-text button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35px;
+  height: 34px;
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAiCAQAAAB/jKh3AAABOElEQVR4Ae3UIU4DQRjF8deGNClmVd0ayNpJ6jAoHIbgSIpAEi4APUJ7gmougOgB6gHZpAqBwBBUBSsamj9PQCDNsrPbKpLu5Etm3vf6k1Xs4xQ8Kj/NWKHa14zst8x/ZrbMltlRX0EX+thAuNW0qT31dKfWmkjLv+1pXzQYAWPaqOCU//u1GQMjGsIQQ2DCbj3G/QkwpIG+owE4TGowifswQAj9xH3gnqQik7gLfbTKiBvgkU6ccecB3FcRI66AKZ0I03EHd/UXIy5ZMiMtYVLvl+6pjBHnLj25XMyk3i3dUYwRZyx4JitgMucL71WFEScuv5CtMJmzhXeqyohjcl4Jv5jgd+5cdRhxRM4b4YsJvufOVJcRh8x9rsHjm99ahxEHzHkHz9x3rcuIrgE8XbQJIwIzT6T1CeSMs2JYApeeAAAAAElFTkSuQmCC) left bottom no-repeat;
+  border: none;
+  z-index: 999;
+  cursor: pointer;
+  outline: none;
+}
+
+/* line 123, ../sass/style.scss */
+.leading-image .opening-text.open {
+  bottom: 160px;
+  bottom: 16rem;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+/* line 128, ../sass/style.scss */
+.leading-image section p {
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 62px;
+  margin: 0 0 6.2rem;
+  max-width: 600px;
+  max-width: 60rem;
+  font-family: "ITC Tiffany Demi", Georgia, serif;
+  font-size: 35px;
+  font-size: 3.5rem;
+  line-height: 50px;
+  line-height: 5rem;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  color: #fff;
+}
+
+/* line 137, ../sass/style.scss */
+.leading-image aside {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 105px;
+  height: 10.5rem;
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+/* line 148, ../sass/style.scss */
+.leading-image aside section {
+  position: relative;
+  bottom: 0;
+  margin: 0 auto;
+  padding: 0 100px;
+  padding: 0 10rem;
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  max-width: 160rem;
+}
+
+/* line 158, ../sass/style.scss */
+.leading-image .open-button,
+.leading-image .close-button {
+  position: absolute;
+  top: -6px;
+  top: -0.6rem;
+  right: 100px;
+  right: 10rem;
+  font-family: Georgia, serif;
+  font-size: 11px;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
+  color: #fff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-font-smoothing: auto;
+}
+
+/* line 176, ../sass/style.scss */
+.leading-image section p span,
+.leading-image .open-button span {
+  color: #ec1c24;
+}
+
+/* line 181, ../sass/style.scss */
+.leading-image .open-button.open {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+/* line 185, ../sass/style.scss */
+.leading-image h2,
+.leading-image h3,
+.leading-image cite,
+.leading-image .close-button {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+/* line 195, ../sass/style.scss */
+.leading-image aside.open {
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* line 200, ../sass/style.scss */
+.leading-image .open h2,
+.leading-image .open h3,
+.leading-image .open cite,
+.leading-image .open .close-button {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+
+/* line 207, ../sass/style.scss */
+.leading-image h2 {
+  position: relative;
+  margin: 32px 0 0;
+  margin: 3.2rem 0 0;
+  font-family: Georgia, serif;
+  font-size: 15px;
+  font-size: 1.5rem;
+  letter-spacing: 0.1px;
+  letter-spacing: 0.01rem;
+  font-weight: 700;
+  color: #404041;
+  font-style: italic;
+}
+
+/* line 214, ../sass/style.scss */
+.leading-image h2 span {
+  font-style: normal;
+}
+
+/* line 218, ../sass/style.scss */
+.leading-image h3 {
+  margin: 13px 0 0;
+  margin: 1.3rem 0 0;
+  font-family: Georgia, serif;
+  font-size: 15px;
+  font-size: 1.5rem;
+  letter-spacing: 0.1px;
+  letter-spacing: 0.01rem;
+  font-weight: 400;
+  color: #404041;
+}
+
+/* line 223, ../sass/style.scss */
+.leading-image cite {
+  position: absolute;
+  right: 100px;
+  right: 10rem;
+  top: 34px;
+  top: 3.4rem;
+  font-family: Georgia, serif;
+  font-size: 11px;
+  font-size: 1.1rem;
+  color: #404041;
+  font-style: normal;
+}
+
+/* line 231, ../sass/style.scss */
+.leading-image .close-button {
+  position: absolute;
+  top: -9px;
+  top: -0.9rem;
+  padding: 0;
+  width: 24px;
+  width: 2.4rem;
+  height: 26px;
+  height: 2.6rem;
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAaCAYAAACtv5zzAAAB7klEQVRIx2NgoAH4//8/IxDrA3EFA60A0HA2IBZlGFDwZG4f27d5C6d+rm+Z9EbfrPu1jPJUGP5cWNL1bfb8lWQb/n3xsmokQ//jwGDLvs+Ys4Mkw790980hYDCGRe8DQosmVUsw0sJwhCW+wbn4g2X2nAQyDYdgaeV5P/qnVmM1/MPcmfxvdIw7yDYcgfdiD5rps2dgc/17d5//H5Mz/hMrDsIfK6onYVjwqbSyDqtioCEg8LmwDMXwfx8//v82Zz5WC97qmOzDsOCNlsEGXN4GGQ6zBGb4176JuINJTu3Yv7ZKFhQLgBKH8IUtzBKQ4ci+wYW/LF+qC1TOgWzBYXwaYC5HDy5c+Pu2HVpApfzIQbSTkOEgg5GDC3cQqS77d+SEJFAZH9yC937B7YQMxxYn2PS8UVRvxojkb9391kDJmdhSETaDQGK4IvpjSUU8hgUT5BkY3+iadFKc0eRVS35u2qaPvaiYPB1kwQwKLCj6EJPgiLc8+hCV0ANUuJIcC96o6yUQrmSWTGZ97xeyGqhhCwmGF4MM/7ftIPFV5Jf6ZlBQLSdk+CtppbKPKRmeZNVqX2fP1/jS1dvxzsa5+pW4bC8Ig4NCWqkU5OL3pZWG3+cs4qBK/Xx6TgHT91nzwkH469z5kgzDHkAbX6IAR5wuIf8vsUgAAAAASUVORK5CYII=) center center no-repeat;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+/* line 244, ../sass/style.scss */
+.leading-image .close-button:hover {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAaCAYAAACtv5zzAAAAoUlEQVRIx2NgGAWUAAcHRwUg7gfi80D8Hw2fh8opoOv7//+/GCGDBaCa/xOJQWoFiHW1AA4XE8LnCVpCgeHEWUJisOAMLnwR+p9KWIFo13d0dIAxseI4fYEr7EGGgACyYdjE0OMCmwU4vYxsIBGGgzFJFiBbQozhg88CagURzSOZ5smUthmN5kUFXQo7mhfXdKlwqFFlogB1TS2m0dYHPgAANYGB1iy3OyoAAAAASUVORK5CYII=);
+}
+
+/* line 248, ../sass/style.scss */
+.content {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 100px;
+  padding: 0 10rem;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 4;
+}
+
+/* line 258, ../sass/style.scss */
+.content > section {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+  max-width: 140rem;
+}
+
+/* line 265, ../sass/style.scss */
+.content header {
+  width: 75px;
+  width: 7.5rem;
+  border-bottom: 3px solid #ec1c24;
+}
+
+/* line 270, ../sass/style.scss */
+.content h1 {
+  position: relative;
+  margin: 0;
+  padding: 130px 0 38px;
+  padding: 13rem 0 3.8rem;
+  font-family: "ITC Tiffany Demi", Georgia, serif;
+  font-size: 90px;
+  font-size: 9rem;
+  line-height: 1;
+  font-weight: 400;
+  color: #231f20;
+}
+
+/* line 277, ../sass/style.scss */
+.content.about h1 {
+  margin-left: 6px;
+  margin-left: 0.6rem;
+}
+
+/* line 281, ../sass/style.scss */
+.content p {
+  margin: 43px 0 0;
+  margin: 4.3rem 0 0;
+  padding: 0;
+  width: 60%;
+  font-family: Georgia, serif;
+  font-size: 23px;
+  font-size: 2.3rem;
+  line-height: 1.7;
+  color: #404041;
+}
+
+/* line 288, ../sass/style.scss */
+.content h2 {
+  margin: 45px 0 0;
+  margin: 4.5rem 0 0;
+  font-family: Georgia, serif;
+  font-size: 15.5px;
+  font-size: 1.55rem;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  line-height: 34px;
+  line-height: 3.4rem;
+  color: #ec1c24;
+  text-transform: uppercase;
+}
+
+/* line 294, ../sass/style.scss */
+.content h2 + p,
+.content.about li {
+  margin: 7px 0 0;
+  margin: 0.7rem 0 0;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 2;
+  font-weight: 400;
+  color: #404041;
+}
+
+/* line 300, ../sass/style.scss */
+.content.about ul {
+  margin: 0;
+  padding: 0 0 0 20px;
+  padding: 0 0 0 2rem;
+}
+
+/* line 305, ../sass/style.scss */
+.content.about li {
+  margin: 0;
+}
+
+/* line 309, ../sass/style.scss */
+.content.clients ul {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 42px 0 0;
+  margin: 4.2rem 0 0;
+  padding: 0;
+  width: 400px;
+  width: 40rem;
+  list-style: none;
+}
+
+/* line 319, ../sass/style.scss */
+.content.clients li {
+  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1;
+  font-weight: 400;
+  color: #404041;
+}
+
+/* line 324, ../sass/style.scss */
+.content cite {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 47px 0 0;
+  padding: 4.7rem 0 0;
+  font-size: Georgia, serif;
+  font-size: 10.5px;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  color: #404041;
+  font-style: normal;
+  text-transform: uppercase;
+  clear: both;
+}
+
+/* line 335, ../sass/style.scss */
+.content.contact {
+  padding-bottom: 240px;
+  padding-bottom: 24rem;
+}
+
+/* line 339, ../sass/style.scss */
+.content .org,
+.content .street-address,
+.content .country-name {
+  display: block;
+}
+
+/* line 345, ../sass/style.scss */
+.content a {
+  display: table;
+  margin: 13px 0 5px;
+  margin: 1.3rem 0 0.5rem;
+  padding: 0;
+  font-family: Georgia, serif;
+  font-size: 23px;
+  font-size: 2.3rem;
+  line-height: 1.7;
+  color: #404041;
+  line-height: 1.5;
+  color: #ec1c24;
+  text-decoration: none;
+  border-bottom: 1px solid #ec1c24;
+}
+
+/* line 356, ../sass/style.scss */
+.content a.tel {
+  margin-bottom: 21px;
+  margin-bottom: 2.1rem;
+  color: #404041;
+  border-bottom: none;
+}
+
+/* line 362, ../sass/style.scss */
+.content a:hover {
+  color: #404041;
+  border-color: #404041;
+}
+
+/* line 367, ../sass/style.scss */
+footer {
+  position: relative;
+  padding: 0 100px;
+  padding: 0 10rem;
+  height: 65px;
+  height: 6.5rem;
+  background: #231f20;
+  z-index: 5;
+}
+
+/* line 375, ../sass/style.scss */
+footer p {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 27px;
+  padding-top: 2.7rem;
+  max-width: 1400px;
+  max-width: 140rem;
+  font-size: Georgia, serif;
+  font-size: 10.5px;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  color: #404041;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* Client Listings */
+/* line 386, ../sass/style.scss */
+.client-listing main {
+  padding-top: 79px;
+  padding-top: 7.9rem;
+}
+
+/* line 390, ../sass/style.scss */
+.client-listing aside {
+  position: relative;
+  margin: 0 auto;
+  padding: 55px 100px 0;
+  padding: 5.5rem 10rem 0;
+  width: 100%;
+  max-width: 1600px;
+  max-width: 160rem;
+}
+
+/* line 398, ../sass/style.scss */
+.client-listing aside a {
+  margin-right: 45px;
+  margin-right: 4.5rem;
+}
+
+/* line 402, ../sass/style.scss */
+.client-listing aside a:last-of-type {
+  margin-right: 0;
+}
+
+/* line 406, ../sass/style.scss */
+.client-listing main h1 {
+  padding: 80px 0 40px;
+  padding: 8rem 0 4rem;
+  width: 1000%;
+  font-size: 25px;
+  font-size: 2.5rem;
+  line-height: 45px;
+  line-height: 4.5rem;
+}
+
+/* line 413, ../sass/style.scss */
+.client-listing main h1 span {
+  display: block;
+}
+
+/* line 417, ../sass/style.scss */
+.client-listing main h2 {
+  margin: 40px 0 -3px;
+  margin: 4rem 0 -0.3rem;
+}
+
+/* line 421, ../sass/style.scss */
+.client-listing p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 426, ../sass/style.scss */
+.client-listing .ancillary-p {
+  width: 90%;
+  margin-top: 32px;
+  margin-top: 3.2rem;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 2;
+  font-weight: 400;
+  color: #404041;
+}
+
+/* line 432, ../sass/style.scss */
+.client-listing .content a {
+  margin: 0 0 13px;
+  margin: 0 0 1.3rem;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 2;
+  font-weight: 400;
+  color: #404041;
+  line-height: 1.8;
+  border-bottom: 1px solid #404041;
+}
+
+/* line 439, ../sass/style.scss */
+.client-listing a:hover {
+  color: #ec1c24;
+  border-bottom: 1px solid #ec1c24;
+}
+
+/* line 444, ../sass/style.scss */
+.client-listing a.email {
+  line-height: 1.7;
+  color: #ec1c24;
+  border-bottom: 1px solid #ec1c24;
+}
+
+/* line 450, ../sass/style.scss */
+.client-listing a.email:hover {
+  color: #404041;
+  border-color: #404041;
+}
+
+/* line 455, ../sass/style.scss */
+.client-listing aside a {
+  display: inline-block;
+  width: 200px;
+  width: 20rem;
+  height: 200px;
+  height: 20rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-decoration: none;
+  border: none;
+}
+
+/* line 466, ../sass/style.scss */
+.client-listing aside a:hover {
+  border-bottom: none;
+}
+
+/* line 470, ../sass/style.scss */
+.client-listing footer {
+  margin: 200px 0 0;
+  margin: 20rem 0 0;
+}
+
+/* line 474, ../sass/style.scss */
+.client-listing footer p {
+  margin: 0 auto;
+  padding-top: 27px;
+  padding-top: 2.7rem;
+}
+
+/* End Client Listings */
+/* Tablet Landscape and Lower */
+@media screen and (max-width: 1024px) {
+  /* line 483, ../sass/style.scss */
+  .leading-image {
+    background-image: url(../1_GarageMoscow_1800.jpg);
+  }
+
+  /* line 487, ../sass/style.scss */
+  .leading-image[data-index="1"] {
+    background-image: url(../2_Rijksmuseum_1800.jpg);
+  }
+
+  /* line 491, ../sass/style.scss */
+  .leading-image[data-index="2"] {
+    background-image: url(../3_LondonEye_1800.jpg);
+  }
+}
+/* End Tablet Landscape and Lower */
+/* Mobile Landscape */
+@media screen and (max-width: 900px) {
+  /* line 501, ../sass/style.scss */
+  .nav-mobile-button {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 70px;
+    width: 7rem;
+    height: 50px;
+    height: 5rem;
+    background: transparent;
+    outline: none;
+    border: none;
+    z-index: 99;
+  }
+
+  /* line 515, ../sass/style.scss */
+  .header {
+    padding: 11px 20px 0;
+    padding: 1.1rem 2rem 0;
+    height: 50px;
+    height: 5rem;
+    border-bottom: none;
+  }
+
+  /* line 521, ../sass/style.scss */
+  .header header {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* line 527, ../sass/style.scss */
+  #top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 11px 20px 0;
+    padding: 1.1rem 2rem 0;
+    background: #fff;
+    border-bottom: 1px solid #404041;
+    border-bottom: 1px solid rgba(64, 64, 65, 0.5);
+    z-index: 2;
+  }
+
+  /* line 540, ../sass/style.scss */
+  #top:after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    top: 1.5rem;
+    right: 20px;
+    right: 2rem;
+    width: 29px;
+    width: 2.9rem;
+    height: 20px;
+    height: 2rem;
+    background: white url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAgAQMAAABq77liAAAABlBMVEX////rHCO0ZcAQAAAAAXRSTlMAQObYZgAAABpJREFUeAFjZIAAnLT9ASD5lwUXja5+qJkHABTIGCF3bUsAAAAAAElFTkSuQmCC) center center no-repeat;
+    background-size: contain;
+  }
+
+  /* line 551, ../sass/style.scss */
+  .logo {
+    width: 168px;
+    width: 16.8rem;
+    height: 30px;
+    height: 3rem;
+    background-image: url(data:image/png;base64,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);
+    background-position: -6px center;
+    background-position: -.6rem center;
+    background-size: contain;
+  }
+
+  /* line 560, ../sass/style.scss */
+  nav {
+    float: none;
+    padding-top: 39px;
+    padding-top: 3.9rem;
+    -moz-transform: translateY(-200px);
+    -ms-transform: translateY(-200px);
+    -webkit-transform: translateY(-200px);
+    transform: translateY(-200px);
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    z-index: -1;
+  }
+
+  /* line 570, ../sass/style.scss */
+  nav.reveal-menu {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 574, ../sass/style.scss */
+  nav a {
+    display: block;
+    margin: 0 0 0 -20px;
+    margin: 0 0 0 -2rem;
+    padding: 20px 0 20px 20px;
+    padding: 2rem 0 2rem 2rem;
+    width: 150%;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: .5;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    letter-spacing: 0.03rem;
+    color: #231f20;
+    background: #fff;
+    border-bottom: 1px solid #404041;
+    border-bottom: 1px solid rgba(64, 64, 65, 0.5);
+  }
+
+  /* line 585, ../sass/style.scss */
+  nav a:hover,
+  nav a:active {
+    color: #fff;
+    background-color: #ec1c24;
+  }
+
+  /* line 591, ../sass/style.scss */
+  nav.hidden-nav {
+    display: none;
+  }
+
+  /* line 595, ../sass/style.scss */
+  .leading-image {
+    position: relative;
+    right: 0;
+    left: 0;
+    height: 500px;
+    height: 50rem;
+    padding: 0 20px;
+    padding: 0 2rem;
+  }
+
+  /* line 603, ../sass/style.scss */
+  .sticky {
+    position: relative;
+    top: 0 !important;
+    bottom: auto;
+    margin-top: 268px;
+    margin-top: 26.8rem;
+    height: 500px;
+    height: 50rem;
+  }
+
+  /* line 611, ../sass/style.scss */
+  .leading-image .first-text {
+    position: absolute;
+    top: -218px;
+    top: -21.8rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 218px;
+    height: 21.8rem;
+    background: #000;
+  }
+
+  /* line 621, ../sass/style.scss */
+  .leading-image section p {
+    position: relative;
+    margin-bottom: 60px;
+    margin-bottom: 6rem;
+    padding: 35px 20px 0;
+    padding: 3.5rem 2rem 0;
+    font-family: "ITC Tiffany Demi", Georgia, serif;
+    font-size: 27px;
+    font-size: 2.7rem;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 0;
+    font-size: 35px;
+    font-size: 3.5rem;
+  }
+
+  /* line 629, ../sass/style.scss */
+  .leading-image section button {
+    display: none;
+  }
+
+  /* line 633, ../sass/style.scss */
+  .content {
+    padding: 0 20px;
+    padding: 0 2rem;
+  }
+
+  /* line 637, ../sass/style.scss */
+  .content header {
+    width: 65px;
+    width: 6.5rem;
+  }
+
+  /* line 641, ../sass/style.scss */
+  .content h1 {
+    padding: 50px 0 27px;
+    padding: 5rem 0 2.7rem;
+    font-family: "ITC Tiffany Demi", Georgia, serif;
+    font-size: 55px;
+    font-size: 5.5rem;
+    font-weight: 400;
+    color: #231f20;
+  }
+
+  /* line 646, ../sass/style.scss */
+  .content.about h1 {
+    margin-left: 0;
+  }
+
+  /* line 650, ../sass/style.scss */
+  .content p {
+    margin: 30px 0 0;
+    margin: 3rem 0 0;
+    width: 75%;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 30px;
+    line-height: 3rem;
+    font-weight: 400;
+  }
+
+  /* line 656, ../sass/style.scss */
+  .content h2 {
+    margin-top: 24px;
+    margin-top: 2.4rem;
+    font-family: Georgia, serif;
+    font-size: 14.5px;
+    font-size: 1.45rem;
+    line-height: 24px;
+    line-height: 2.4rem;
+    letter-spacing: 1px;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    color: #ec1c24;
+  }
+
+  /* line 661, ../sass/style.scss */
+  .content.clients {
+    margin-bottom: -7px;
+    margin-bottom: -0.7rem;
+  }
+
+  /* line 665, ../sass/style.scss */
+  .content.clients p {
+    margin-bottom: 28px;
+    margin-bottom: 2.8rem;
+  }
+
+  /* line 669, ../sass/style.scss */
+  .content.clients ul {
+    margin-top: 0;
+    width: 50%;
+  }
+
+  /* line 674, ../sass/style.scss */
+  .content.clients ul:nth-of-type(2) {
+    margin-top: 0;
+  }
+
+  /* line 678, ../sass/style.scss */
+  .content.clients li {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 16px;
+    line-height: 1.6rem;
+    font-weight: 400;
+    color: #404041;
+  }
+
+  /* line 682, ../sass/style.scss */
+  .content cite {
+    padding: 0;
+  }
+
+  /* line 686, ../sass/style.scss */
+  .content.contact {
+    padding-bottom: 480px;
+    padding-bottom: 48rem;
+  }
+
+  /* line 690, ../sass/style.scss */
+  .content.contact h1 {
+    margin-left: -2px;
+    margin-left: -0.2rem;
+  }
+
+  /* line 694, ../sass/style.scss */
+  .content a {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 30px;
+    line-height: 3rem;
+    font-weight: 400;
+    line-height: 29px;
+    line-height: 2.9rem;
+  }
+
+  /* line 699, ../sass/style.scss */
+  footer {
+    padding: 0 20px;
+    padding: 0 2rem;
+    height: 70px;
+    height: 7rem;
+  }
+
+  /* line 704, ../sass/style.scss */
+  footer p {
+    padding-top: 27px;
+    padding-top: 2.7rem;
+    font-family: Georgia, serif;
+    font-size: 8px;
+    font-size: 0.8rem;
+    line-height: 7px;
+    line-height: 0.7rem;
+    letter-spacing: 1px;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    line-height: 17px;
+    line-height: 1.7rem;
+  }
+
+  /* Client Listings */
+  /* line 711, ../sass/style.scss */
+  .client-listing #top:after {
+    display: none;
+  }
+
+  /* line 715, ../sass/style.scss */
+  .client-listing aside {
+    padding: 50px 20px 0;
+    padding: 5rem 2rem 0;
+  }
+
+  /* line 719, ../sass/style.scss */
+  .client-listing aside a {
+    display: block;
+    margin: 0 0 20px;
+    margin: 0 0 2rem;
+  }
+
+  /* line 724, ../sass/style.scss */
+  .client-listing main h1 {
+    padding-top: 50px;
+    padding-top: 5rem;
+    width: 800%;
+    font-size: 20px;
+    font-size: 2rem;
+  }
+
+  /* line 730, ../sass/style.scss */
+  .client-listing main h2 {
+    margin: 40px 0 -3px;
+    margin: 4rem 0 -0.3rem;
+    padding: 0;
+    border: none;
+  }
+
+  /* line 736, ../sass/style.scss */
+  .client-listing p {
+    margin-top: 10px;
+    margin-top: 1rem;
+  }
+
+  /* line 740, ../sass/style.scss */
+  .client-listing footer {
+    position: relative;
+  }
+
+  /* line 744, ../sass/style.scss */
+  .client-listing footer p {
+    padding-top: 27px;
+    padding-top: 2.7rem;
+  }
+
+  /* End Client Listings */
+}
+@media screen and (max-width: 600px) {
+  /* line 753, ../sass/style.scss */
+  .leading-image,
+  .sticky {
+    height: 280px;
+    height: 28rem;
+  }
+
+  /* line 758, ../sass/style.scss */
+  .leading-image section p {
+    padding-top: 36px;
+    padding-top: 3.6rem;
+    font-size: 33px;
+    font-size: 3.3rem;
+  }
+
+  /* line 763, ../sass/style.scss */
+  .content p {
+    width: 100%;
+  }
+
+  /* line 767, ../sass/style.scss */
+  .content.about li {
+    margin: 0 0 9px;
+    margin: 0 0 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* line 772, ../sass/style.scss */
+  .content.about li:first-child {
+    margin-top: 5px;
+    margin-top: 0.5rem;
+  }
+
+  /* line 776, ../sass/style.scss */
+  .content.clients ul {
+    width: 100%;
+  }
+
+  /* line 780, ../sass/style.scss */
+  .content.contact {
+    padding-bottom: 59px;
+    padding-bottom: 5.9rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  /* line 788, ../sass/style.scss */
+  .leading-image {
+    height: 200px;
+    height: 20rem;
+  }
+
+  /* line 792, ../sass/style.scss */
+  .sticky {
+    margin-top: 268px;
+    margin-top: 26.8rem;
+    height: 200px;
+    height: 20rem;
+  }
+
+  /* line 797, ../sass/style.scss */
+  .leading-image .first-text {
+    top: -218px;
+    top: -21.8rem;
+    height: 218px;
+    height: 21.8rem;
+  }
+
+  /* line 802, ../sass/style.scss */
+  .leading-image section p {
+    padding-top: 14px;
+    padding-top: 1.4rem;
+    font-size: 28px;
+    font-size: 2.8rem;
+  }
+
+  /* line 807, ../sass/style.scss */
+  footer p,
+  .client-listing footer p {
+    padding-top: 10px;
+    padding-top: 1rem;
+  }
+
+  /* line 812, ../sass/style.scss */
+  footer p span {
+    display: block;
+  }
+}
+/* line 818, ../sass/style.scss */
+.hidden {
+  display: none !important;
+}
