@@ -88,7 +88,11 @@
 			?>
 			<?php
 				if(get_field('c_list', $clients->ID)){
-					the_field('c_list', $clients->ID);
+					//the_field('c_list', $clients->ID);
+					$the_list = get_field('c_list', $clients->ID);
+					$the_columns = create_columns($the_list);
+					//echo $the_columns;
+					print_r($the_columns);
 				}
 			?>
 			<cite>

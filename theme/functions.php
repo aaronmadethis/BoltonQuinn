@@ -87,6 +87,33 @@ function blog_cats($id){
 	return $html;
 }
 
+
+function create_columns($html){
+	$dom = new DOMDocument;
+	$dom->loadHTML($html);
+	foreach($dom->getElementsByTagName('li') as $node){
+	    $array[] = $dom->saveXml($node);
+	}
+	$result = count($array);
+	$col_length = $result / 3;
+	$col_length = ceil( $col_length );
+	$html='<ul>';
+
+	$counter = 0;
+	foreach ($array as $key => $value) {
+		if($counter == $col_length ){
+			$html .= '</ul>';
+			$html .= '<ul>';
+			$counter = 0;
+		}
+		$html .= $value;
+		++$counter;
+	}
+	$html .= '</ul>';
+
+	//print_r($array);
+	return $html;
+}
 /* ================================================================================
 CUSTOM CSS FOR WYSWYG EDITOR
 ================================================================================ 
