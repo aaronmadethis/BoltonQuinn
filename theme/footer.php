@@ -4,6 +4,7 @@
 ?>
 
 <footer>
+  <p>&copy; 2014 Bolton &amp; Quinn LTD. <span>Company registered in England and Wales number 01790723.</span></p>
 </footer>
 
 
