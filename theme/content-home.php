@@ -17,9 +17,15 @@
 			<?php
 				$image_id = get_sub_field('h_image');
 				$image = wp_get_attachment_image_src( $image_id, 'hero' );
+				$m_image = wp_get_attachment_image_src( $image_id, 'mobile' );
 			?>
-
-			<article class="leading-image <?php if($loop_counter == 0) echo 'sticky'; ?>" data-index="<?php echo $loop_counter; ?>" style="background-image: url('<?php echo $image[0]; ?>');">
+			<style>
+			  .leading-image[data-index="<?php echo $loop_counter; ?>"] { background-image: url(<?php echo $image[0]; ?>); }
+			  @media screen and (max-width: 1024px) {
+			    .leading-image[data-index="<?php echo $loop_counter; ?>"] { background-image: url(<?php echo $m_image[0]; ?>); }
+			  }
+			</style>
+			<article class="leading-image <?php if($loop_counter == 0) echo 'sticky'; ?>" data-index="<?php echo $loop_counter; ?>">
 				<section class="opening-text <?php if($loop_counter == 0) echo 'first-text'; ?>">
 					<?php
 						if(get_field('home_intro', $home->ID) && $loop_counter == 0 ){

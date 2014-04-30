@@ -7,7 +7,8 @@ if ( function_exists( 'add_theme_support' ) ) {
 	set_post_thumbnail_size( 250, 200, true ); // default Post Thumbnail dimensions (cropped)
 }	
 if ( function_exists( 'add_image_size' ) ) { 
-	add_image_size( 'hero', 2880, 1800, false );
+	add_image_size( 'hero', 2880, 1800, true );
+	  add_image_size( 'mobile', 1800, 9999, true);
 }
 
 /* ================================================================================
