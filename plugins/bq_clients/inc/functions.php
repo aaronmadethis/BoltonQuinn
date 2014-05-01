@@ -34,7 +34,7 @@ function bq_wp_clients_regiser_post_types(){
 		'public' => true,
 		'query_var' => 'bq_clients',
 		'rewrite' => array(
-				'slug' => 'client',
+				'slug' => 'press',
 				'with_front' => false
 		),
 		'supports' => array(
@@ -45,8 +45,8 @@ function bq_wp_clients_regiser_post_types(){
 		'labels' => array(
 			'name' => 'Client Pages',
 			'singular_name' => 'Client Page',
-			'add_new' => 'Client Page',
-			'add_new_item' => 'Client Page',
+			'add_new' => 'Add a new Client Page',
+			'add_new_item' => 'Add a new Client Page',
 			'edit_item' => 'Edit Client Page',
 			'new_item' => 'New Client Page',
 			'view_item' => 'View Client Page',
@@ -57,7 +57,7 @@ function bq_wp_clients_regiser_post_types(){
 		'capability_type' => 'page',
 		'hierarchical' => true,
         // 'register_meta_box_cb' => 'add_portfolio_metaboxes',
-        'taxonomies' => array( 'category', 'post_tag' ),
+        'taxonomies' => array( '' ),
         'has_archive'   => true
 	);
 

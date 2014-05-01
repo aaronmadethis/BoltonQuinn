@@ -14,6 +14,9 @@ get_template_part( 'nav' );
 			<?php elseif(  is_page() ) : ?>
 				<?php get_template_part( 'content', 'page' ); ?>
 
+			<?php elseif(  is_single() ) : ?>
+				<?php get_template_part( 'content', get_post_type( $post->ID ) );?>
+
 			<?php else : ?>
 				<section class="container">
 					<div class="row">
