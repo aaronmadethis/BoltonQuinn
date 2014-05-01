@@ -1,4 +1,5 @@
 <?php
+global $post;
 get_header();
 get_template_part( 'nav' );
 
@@ -12,7 +13,7 @@ get_template_part( 'nav' );
 				<?php get_template_part( 'content', 'home' ); ?>
 
 			<?php elseif(  is_page() ) : ?>
-				<?php get_template_part( 'content', 'page' ); ?>
+				<?php get_template_part( 'content', get_post_type( $post->ID ) );?>
 
 			<?php elseif(  is_single() ) : ?>
 				<?php get_template_part( 'content', get_post_type( $post->ID ) );?>
@@ -26,10 +27,6 @@ get_template_part( 'nav' );
 					</div>
 				</section>
 			<?php endif; /*is_home*/ ?>
-
-			<main role="main">
-
-			</main>
 
 
 
