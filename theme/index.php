@@ -28,6 +28,8 @@ get_template_part( 'nav' );
 				</section>
 			<?php endif; /*is_home*/ ?>
 
+	<main role="main">
 
+	</main>
 
 <?php get_footer(); ?>
