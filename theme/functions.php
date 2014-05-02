@@ -7,7 +7,8 @@ if ( function_exists( 'add_theme_support' ) ) {
 	set_post_thumbnail_size( 250, 200, true ); // default Post Thumbnail dimensions (cropped)
 }	
 if ( function_exists( 'add_image_size' ) ) { 
-	//add_image_size( 'blog-full', 269, 9999, false );
+	add_image_size( 'hero', 2880, 1800, true );
+	  add_image_size( 'mobile', 1800, 9999, true);
 }
 
 /* ================================================================================
@@ -87,6 +88,33 @@ function blog_cats($id){
 	return $html;
 }
 
+
+function create_columns($html){
+	$dom = new DOMDocument;
+	$dom->loadHTML($html);
+	foreach($dom->getElementsByTagName('li') as $node){
+	    $array[] = $dom->saveXml($node);
+	}
+	$result = count($array);
+	$col_length = $result / 3;
+	$col_length = ceil( $col_length );
+	$html='<ul>';
+
+	$counter = 0;
+	foreach ($array as $key => $value) {
+		if($counter == $col_length ){
+			$html .= '</ul>';
+			$html .= '<ul>';
+			$counter = 0;
+		}
+		$html .= $value;
+		++$counter;
+	}
+	$html .= '</ul>';
+
+	//print_r($array);
+	return $html;
+}
 /* ================================================================================
 CUSTOM CSS FOR WYSWYG EDITOR
 ================================================================================ 
@@ -156,6 +184,9 @@ add_action( 'template_redirect', 'my_script_enqueuer' );
 function my_script_enqueuer() {
 
 	wp_enqueue_script('jquery');
+
+	$bolton_quinn_js = get_bloginfo('template_directory') . '/js/bq.js';
+	wp_enqueue_script('bolton_quinn', $bolton_quinn_js , array('jquery'), '', true);
 
 }
 
