@@ -51,7 +51,7 @@ nav {
 }
 
 nav a {
-  @include rem(margin-left, 5rem);
+  @include rem(margin-left, 5.3rem);
   @include nav_1;
   text-decoration: none;
 }
@@ -173,8 +173,9 @@ main {
   -webkit-font-smoothing: auto;
 }
 
-.leading-image section p span,
+.leading-image section p strong,
 .leading-image .open-button span {
+  font-weight: 400;
   color: #ec1c24;
 }
 
@@ -208,11 +209,11 @@ main {
   position: relative;
   @include rem(margin, 3.2rem 0 0);
   @include caption_2;
-  font-style: italic;
+  font-style: normal;
 }
 
-.leading-image h2 span {
-  font-style: normal;
+.leading-image h2 em {
+  font-style: italic;
 }
 
 .leading-image h3 {
@@ -342,8 +343,15 @@ main {
   display: block;
 }
 
+.content .vcard {
+  @include rem(margin-top, 4.3rem);
+}
+
+.content.contact p {
+  @include rem(margin, 0 0 1.1rem);
+}
+
 .content a {
-  display: table;
   @include rem(margin, 1.3rem 0 .5rem);
   padding: 0;
   @include body_1;
@@ -357,6 +365,11 @@ main {
   @include rem(margin-bottom, 2.1rem);
   color: #404041;
   border-bottom: none;
+}
+
+.content a.email {
+  @include rem(padding-bottom, .4rem);
+  line-height: 2;
 }
 
 .content a:hover {
@@ -477,24 +490,6 @@ footer p {
 }
 /* End Client Listings */
 
-/* Tablet Landscape and Lower */
-@media screen and (max-width: 1024px) {
-
-  .leading-image {
-    background-image: url(../1_GarageMoscow_1800.jpg);
-  }
-
-  .leading-image[data-index="1"] {
-    background-image: url(../2_Rijksmuseum_1800.jpg);
-  }
-
-  .leading-image[data-index="2"] {
-    background-image: url(../3_LondonEye_1800.jpg);
-  }
-
-}
-/* End Tablet Landscape and Lower */
-
 /* Mobile Landscape */
 @media screen and (max-width: 900px) {
 
@@ -596,8 +591,9 @@ footer p {
     position: relative;
     right: 0;
     left: 0;
-    @include rem(height, 50rem);
+    @include rem(height, 76rem);
     @include rem(padding, 0 2rem);
+    background-position: 50% 75%;
   }
 
   .sticky {
@@ -605,7 +601,7 @@ footer p {
     top: 0 !important;
     bottom: auto;
     @include rem(margin-top, 26.8rem);
-    @include rem(height, 50rem);
+    @include rem(height, 76rem);
   }
 
   .leading-image .first-text {
@@ -687,6 +683,10 @@ footer p {
     @include rem(padding-bottom, 48rem);
   }
 
+  .content .vcard {
+    @include rem(margin-top, 3rem);
+  }
+
   .content.contact h1 {
     @include rem(margin-left, -.2rem);
   }
@@ -694,6 +694,10 @@ footer p {
   .content a {
     @include body_1m;
     @include rem(line-height, 2.9rem);
+  }
+
+  .content a.email {
+    line-height: 2.6;
   }
 
   footer {

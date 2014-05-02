@@ -17,6 +17,10 @@
     document.createElement("header");
     document.createElement("footer");
     document.createElement("aside");
+    var ipad = navigator.userAgent.match(/iPad/i) !== null;
+    if (ipad === true) {
+      document.write("<lin" + "k rel=\"stylesheet\" type=\"text/css\" href=\"css/ipad.css\" />");
+    }
   </script>
 </head>
 <body>
@@ -37,12 +41,12 @@
   <main role="main">
     <article class="leading-image sticky" data-index="0">
       <section class="opening-text first-text">
-        <p><span>Bolton &amp; Quinn</span> is an international public relations consultancy for arts and culture.</p>
+        <p><strong>Bolton &amp; Quinn</strong> is an international public relations consultancy for arts and culture.</p>
         <button type="button" title="Advance to next example"></button>
       </section>
       <aside>
         <section>
-          <h2>Pulse Spiral<span>, Rafael Lozano-Hemmer (2008)</span></h2>
+          <h2><em>Pulse Spiral</em>, Rafael Lozano-Hemmer (2008)</h2>
           <h3>The Opening of the Garage Centre for Contemporary Art, Moscow</h3>
           <cite>Image Courtesy of Haunch of Venison Gallery</cite>
           <button type="button" class="open-button" title="Read the caption"><span>+</span> Caption</button>
@@ -57,7 +61,7 @@
       </section>
       <aside>
         <section>
-          <h2><span>The Opening of the Rijksmuseum (2013)</span></h2>
+          <h2>The Opening of the Rijksmuseum (2013)</h2>
           <h3>Amsterdam, The Netherlands</h3>
           <cite>Copyright: Eric Smits</cite>
           <button type="button" class="open-button" title="Read the caption"><span>+</span> Caption</button>
@@ -72,7 +76,7 @@
       </section>
       <aside>
         <section>
-          <h2>One Extraordinary Day<span>, Streb Extreme Action (2012)</span></h2>
+          <h2><em>One Extraordinary Day</em>, Streb Extreme Action (2012)</h2>
           <h3>The London 2012 Cultural Olympiad</h3>
           <cite>Photograph: Fiona Hanson</cite>
           <button type="button" class="open-button" title="Read the caption"><span>+</span> Caption</button>
@@ -220,7 +224,7 @@
           <h1>Contact</h1>
         </header>
         <section class="vcard">
-          <p class="adr">
+          <!-- <p class="adr">
             <span class="org">Bolton &amp; Quinn Limited</span>
             <span class="street-address">6 Addison Avenue</span>
             <span class="locality">London</span>, <span class="postal-code">W11 4QR</span>
@@ -228,7 +232,15 @@
           </p>
           <a class="tel" href="tel:+4402072215000">T: +44 (0)20 7221 5000</a>
           <a class="email" href="mailto:erica.bolton@boltonquinn.com" title="Email Erica Bolton">E: Erica Bolton</a>
-          <a class="email" href="mailto:jane.quinn@boltonquinn.com" title="Email Jane Quinn">E: Jane Quinn</a>
+          <a class="email" href="mailto:jane.quinn@boltonquinn.com" title="Email Jane Quinn">E: Jane Quinn</a> -->
+          
+        <p>Bolton &amp; Quinn Limited<br />
+          6 Addison Avenue<br />
+          London, W11 4QR<br />
+          United Kingdom</p>
+          <p>T: <a class="tel" title="Call Bolton &#038; Quinn" href="tel:+4402072215000">+44 (0)20 7221 5000</a></p>
+          <p><a class="email" title="Email Erica Bolton" href="mailto:erica.bolton@boltonquinn.com">E: Erica Bolton</a><br />
+          <a class="email" title="Email Jane Quinn" href="mailto:jane.quinn@boltonquinn.com">E: Jane Quinn</a></p>
         </section>
       </section>
     </article>

@@ -238,7 +238,7 @@ $georgia: Georgia, serif;
 
 @mixin body_1m() {
   font-family: $georgia;
-  @include rem(font-size, 1.6rem);
+  @include rem(font-size, 1.7rem);
   @include rem(line-height, 3rem);
   font-weight: 400;
 }

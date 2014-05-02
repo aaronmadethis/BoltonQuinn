@@ -29,7 +29,7 @@
   var setImageHeights = function(mobile) {
     var navOffset = 79;
     var delay = 500;
-    if (!mobile) {
+    if (!mobile && !ipad) {
       $leadingImages.each(function() {
         var self = $(this);
         var index = +self.attr("data-index");
@@ -77,7 +77,7 @@
     * Checks if the next image should be made sticky and fixes it, if so
     */
   var checkForSticky = function() {
-    if ((width >= 900) && ($(window).scrollTop() > 0)) {
+    if ((width >= 900) && ($(window).scrollTop() > 0) && !ipad) {
       $leadingImages.each(function() {
         var self = $(this);
         if (self.attr("data-index") !== 0) {
@@ -100,7 +100,7 @@
     */
   var adjustHeight = function() {
     width = $(window).width();
-    if (width >= 900) {
+    if (width >= 900 && !ipad) {
       mobileView = false;
       height = $(window).height();
       setImageHeights(false);
@@ -169,7 +169,7 @@
     var mobileOffset = 0;
     if (!scrolling) {
       scrolling = true;
-      if (width < 900) {
+      if (width < 900 || ipad) {
         if (self.prop("id") === "top") {
           mobileOffset = 280;
         }
@@ -183,7 +183,7 @@
     }
     setTimeout(function() {
       scrolling = false;
-      if (width < 900) {
+      if (width < 900 || ipad) {
         $nav.removeClass("reveal-menu");
         setTimeout(function() {
           $nav.addClass("hidden-nav");
@@ -223,7 +223,7 @@
     }
   }).on("click.headerClick touchend.headerTouch", ".nav-mobile-button", function(evt) {
     var self = $(this);
-    if (width < 900) {
+    if (width < 900 || ipad) {
       if (evt.preventDefault) {
         evt.preventDefault();
       }
@@ -239,7 +239,7 @@
   });
 
   // Only set the image heights for desktop/tablet
-  if (width >= 900) {
+  if (width >= 900 && !ipad) {
     setImageHeights(false);
   }
 
