@@ -91,9 +91,9 @@ function blog_cats($id){
 
 function create_columns($html){
 	$dom = new DOMDocument;
-	$dom->loadHTML($html);
+	$dom->loadXML($html);
 	foreach($dom->getElementsByTagName('li') as $node){
-	    $array[] = $dom->saveXml($node);
+	    $array[] = $dom->saveXML($node);
 	}
 	$result = count($array);
 	$col_length = $result / 3;
