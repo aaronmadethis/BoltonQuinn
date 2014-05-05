@@ -183,10 +183,11 @@ add_action( 'template_redirect', 'my_script_enqueuer' );
 
 function my_script_enqueuer() {
 
-	wp_enqueue_script('jquery');
+	//wp_enqueue_script('jquery');
+	wp_deregister_script('jquery');
 
 	$bolton_quinn_js = get_bloginfo('template_directory') . '/js/bq.js';
-	wp_enqueue_script('bolton_quinn', $bolton_quinn_js , array('jquery'), '', true);
+	wp_enqueue_script('bolton_quinn', $bolton_quinn_js , array(), '', true);
 
 }
 
