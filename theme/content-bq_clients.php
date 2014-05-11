@@ -22,6 +22,8 @@
 	</aside>
 	<article class="content">
 		<section>
+			<!-- First File Group -->
+
 			<header>
 			<h1><?php the_title(); ?></span></h1>
 			</header>
@@ -46,6 +48,30 @@
 	    			the_field('details');
 	    		}
 	    	?>
+
+	    	<!-- Second File Group -->
+			<?php 
+				if( get_field('file_group_title_two') ){
+					echo '<h2>';
+					the_field('file_group_title_two');
+					echo '</h2>';
+				}
+			?>
+
+			<?php if(get_field('files_two')): ?>
+				<?php while(the_repeater_field('files_two')): ?>
+
+					<p><a href="<?php the_sub_field('single_file'); ?>" title="<?php the_sub_field('file_name'); ?>" target="_blank"><?php the_sub_field('file_name'); ?></a></p>
+
+				<?php endwhile; ?>
+			<?php endif; ?>		
+
+	    	<?php 
+	    		if( get_field('file_group_details_two') ){
+	    			the_field('file_group_details_two');
+	    		}
+	    	?>
+
 	    	<h2>Contact</h2>
 	    	<?php 
 	    		if( get_field('contact_details') ){

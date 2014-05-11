@@ -32,7 +32,7 @@
 							the_field('home_intro', $home->ID);
 						}
 					?>
-					<button type="button" title="Advance to next example"></button>
+					<button type="button" title="Next"></button>
 				</section>
 				<aside>
 					<section>
@@ -46,7 +46,7 @@
 						</h2>
 						<h3><?php echo get_sub_field('i_caption'); ?></h3>
 						<cite><?php echo get_sub_field('i_credit'); ?></cite>
-						<button type="button" class="open-button" title="Read the caption"><span>+</span> Caption</button>
+						<button type="button" class="open-button" title="Caption"><span>+</span> Caption</button>
 						<button type="button" class="close-button" title="Close the caption"></button>
 					</section>
 				</aside>
@@ -94,11 +94,10 @@
 			?>
 			<?php
 				if(get_field('c_list', $clients->ID)){
-					//the_field('c_list', $clients->ID);
 					$the_list = get_field('c_list', $clients->ID);
-					$the_columns = create_columns($the_list);
-					//echo $the_columns;
-					print_r($the_columns);
+					$the_columns = create_columns( $the_list);
+					echo $the_columns;
+					//print_r($the_columns);
 				}
 			?>
 			<cite>
