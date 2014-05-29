@@ -408,11 +408,11 @@ footer p {
   @include rem(max-width, 160rem);
 }
 
-.client-listing aside a {
+.client-listing aside div {
   @include rem(margin-right, 4.5rem);
 }
 
-.client-listing aside a:last-of-type {
+.client-listing aside div:last-of-type {
   margin-right: 0;
 }
 
@@ -429,11 +429,17 @@ footer p {
 
 .client-listing main h2 {
   @include rem(margin, 4rem 0 -.3rem);
+  @include rem(font-size, 2rem);
 }
 
 .client-listing p {
   margin: 0;
   padding: 0;
+  @include rem(font-size, 1.7rem);
+}
+
+.client-listing .material-links + p:not(.material-links) {
+  @include rem(margin-top, 2rem);
 }
 
 .client-listing .ancillary-p {
@@ -465,7 +471,7 @@ footer p {
   border-color: #404041;
 }
 
-.client-listing aside a {
+.client-listing aside div {
   display: inline-block;
   @include rem(width, 20rem);
   @include rem(height, 20rem);
@@ -476,7 +482,7 @@ footer p {
   border: none;
 }
 
-.client-listing aside a:hover {
+.client-listing aside div:hover {
   border-bottom: none;
 }
 
@@ -734,6 +740,7 @@ footer p {
   .client-listing main h2 {
     @include rem(margin, 4rem 0 -0.3rem);
     padding: 0;
+    @include rem(font-size, 2rem);
     border: none;
   }
 

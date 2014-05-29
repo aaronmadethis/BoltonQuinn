@@ -42,7 +42,7 @@
             "height": height - navOffset
           }).attr("data-top", height * index + navOffset + (index * delay));
         }
-      console.log("IMAGE HEIGHTS: " + self.css("top"));
+      //console.log("IMAGE HEIGHTS: " + self.css("top"));
       }).parent().css("padding-top", height * $leadingImages.length + ($leadingImages.length * delay));
     }
     else {

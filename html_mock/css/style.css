@@ -720,13 +720,13 @@ footer p {
 }
 
 /* line 411, ../sass/style.scss */
-.client-listing aside a {
+.client-listing aside div {
   margin-right: 45px;
   margin-right: 4.5rem;
 }
 
 /* line 415, ../sass/style.scss */
-.client-listing aside a:last-of-type {
+.client-listing aside div:last-of-type {
   margin-right: 0;
 }
 
@@ -750,15 +750,25 @@ footer p {
 .client-listing main h2 {
   margin: 40px 0 -3px;
   margin: 4rem 0 -0.3rem;
+  font-size: 20px;
+  font-size: 2rem;
 }
 
-/* line 434, ../sass/style.scss */
+/* line 435, ../sass/style.scss */
 .client-listing p {
   margin: 0;
   padding: 0;
+  font-size: 17px;
+  font-size: 1.7rem;
 }
 
-/* line 439, ../sass/style.scss */
+/* line 441, ../sass/style.scss */
+.client-listing .material-links + p:not(.material-links) {
+  margin-top: 20px;
+  margin-top: 2rem;
+}
+
+/* line 445, ../sass/style.scss */
 .client-listing .ancillary-p {
   width: 90%;
   margin-top: 32px;
@@ -771,7 +781,7 @@ footer p {
   color: #404041;
 }
 
-/* line 445, ../sass/style.scss */
+/* line 451, ../sass/style.scss */
 .client-listing .content a {
   margin: 0 0 13px;
   margin: 0 0 1.3rem;
@@ -785,27 +795,27 @@ footer p {
   border-bottom: 1px solid #404041;
 }
 
-/* line 452, ../sass/style.scss */
+/* line 458, ../sass/style.scss */
 .client-listing a:hover {
   color: #ec1c24;
   border-bottom: 1px solid #ec1c24;
 }
 
-/* line 457, ../sass/style.scss */
+/* line 463, ../sass/style.scss */
 .client-listing a.email {
   line-height: 1.7;
   color: #ec1c24;
   border-bottom: 1px solid #ec1c24;
 }
 
-/* line 463, ../sass/style.scss */
+/* line 469, ../sass/style.scss */
 .client-listing a.email:hover {
   color: #404041;
   border-color: #404041;
 }
 
-/* line 468, ../sass/style.scss */
-.client-listing aside a {
+/* line 474, ../sass/style.scss */
+.client-listing aside div {
   display: inline-block;
   width: 200px;
   width: 20rem;
@@ -818,18 +828,18 @@ footer p {
   border: none;
 }
 
-/* line 479, ../sass/style.scss */
-.client-listing aside a:hover {
+/* line 485, ../sass/style.scss */
+.client-listing aside div:hover {
   border-bottom: none;
 }
 
-/* line 483, ../sass/style.scss */
+/* line 489, ../sass/style.scss */
 .client-listing footer {
   margin: 200px 0 0;
   margin: 20rem 0 0;
 }
 
-/* line 487, ../sass/style.scss */
+/* line 493, ../sass/style.scss */
 .client-listing footer p {
   margin: 0 auto;
   padding-top: 27px;
@@ -839,7 +849,7 @@ footer p {
 /* End Client Listings */
 /* Mobile Landscape */
 @media screen and (max-width: 900px) {
-  /* line 496, ../sass/style.scss */
+  /* line 502, ../sass/style.scss */
   .nav-mobile-button {
     display: block;
     position: absolute;
@@ -856,7 +866,7 @@ footer p {
     z-index: 99;
   }
 
-  /* line 510, ../sass/style.scss */
+  /* line 516, ../sass/style.scss */
   .header {
     padding: 11px 20px 0;
     padding: 1.1rem 2rem 0;
@@ -865,14 +875,14 @@ footer p {
     border-bottom: none;
   }
 
-  /* line 516, ../sass/style.scss */
+  /* line 522, ../sass/style.scss */
   .header header {
     padding: 0;
     width: 100%;
     height: 100%;
   }
 
-  /* line 522, ../sass/style.scss */
+  /* line 528, ../sass/style.scss */
   #top {
     position: absolute;
     top: 0;
@@ -887,7 +897,7 @@ footer p {
     z-index: 2;
   }
 
-  /* line 535, ../sass/style.scss */
+  /* line 541, ../sass/style.scss */
   #top:after {
     content: '';
     position: absolute;
@@ -903,7 +913,7 @@ footer p {
     background-size: contain;
   }
 
-  /* line 546, ../sass/style.scss */
+  /* line 552, ../sass/style.scss */
   .logo {
     width: 168px;
     width: 16.8rem;
@@ -915,7 +925,7 @@ footer p {
     background-size: contain;
   }
 
-  /* line 555, ../sass/style.scss */
+  /* line 561, ../sass/style.scss */
   nav {
     float: none;
     padding-top: 39px;
@@ -939,7 +949,7 @@ footer p {
     z-index: -1;
   }
 
-  /* line 565, ../sass/style.scss */
+  /* line 571, ../sass/style.scss */
   nav.reveal-menu {
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -947,7 +957,7 @@ footer p {
     transform: translateY(0);
   }
 
-  /* line 569, ../sass/style.scss */
+  /* line 575, ../sass/style.scss */
   nav a {
     display: block;
     margin: 0 0 0 -20px;
@@ -968,19 +978,19 @@ footer p {
     border-bottom: 1px solid rgba(64, 64, 65, 0.5);
   }
 
-  /* line 580, ../sass/style.scss */
+  /* line 586, ../sass/style.scss */
   nav a:hover,
   nav a:active {
     color: #fff;
     background-color: #ec1c24;
   }
 
-  /* line 586, ../sass/style.scss */
+  /* line 592, ../sass/style.scss */
   nav.hidden-nav {
     display: none;
   }
 
-  /* line 590, ../sass/style.scss */
+  /* line 596, ../sass/style.scss */
   .leading-image {
     position: relative;
     right: 0;
@@ -992,7 +1002,7 @@ footer p {
     background-position: 50% 75%;
   }
 
-  /* line 599, ../sass/style.scss */
+  /* line 605, ../sass/style.scss */
   .sticky {
     position: relative;
     top: 0 !important;
@@ -1003,7 +1013,7 @@ footer p {
     height: 76rem;
   }
 
-  /* line 607, ../sass/style.scss */
+  /* line 613, ../sass/style.scss */
   .leading-image .first-text {
     position: absolute;
     top: -218px;
@@ -1016,7 +1026,7 @@ footer p {
     background: #000;
   }
 
-  /* line 617, ../sass/style.scss */
+  /* line 623, ../sass/style.scss */
   .leading-image section p {
     position: relative;
     margin-bottom: 60px;
@@ -1033,24 +1043,24 @@ footer p {
     font-size: 3.5rem;
   }
 
-  /* line 625, ../sass/style.scss */
+  /* line 631, ../sass/style.scss */
   .leading-image section button {
     display: none;
   }
 
-  /* line 629, ../sass/style.scss */
+  /* line 635, ../sass/style.scss */
   .content {
     padding: 0 20px;
     padding: 0 2rem;
   }
 
-  /* line 633, ../sass/style.scss */
+  /* line 639, ../sass/style.scss */
   .content header {
     width: 65px;
     width: 6.5rem;
   }
 
-  /* line 637, ../sass/style.scss */
+  /* line 643, ../sass/style.scss */
   .content h1 {
     padding: 50px 0 27px;
     padding: 5rem 0 2.7rem;
@@ -1061,12 +1071,12 @@ footer p {
     color: #231f20;
   }
 
-  /* line 642, ../sass/style.scss */
+  /* line 648, ../sass/style.scss */
   .content.about h1 {
     margin-left: 0;
   }
 
-  /* line 646, ../sass/style.scss */
+  /* line 652, ../sass/style.scss */
   .content p {
     margin: 30px 0 0;
     margin: 3rem 0 0;
@@ -1079,7 +1089,7 @@ footer p {
     font-weight: 400;
   }
 
-  /* line 652, ../sass/style.scss */
+  /* line 658, ../sass/style.scss */
   .content h2 {
     margin-top: 24px;
     margin-top: 2.4rem;
@@ -1094,30 +1104,30 @@ footer p {
     color: #ec1c24;
   }
 
-  /* line 657, ../sass/style.scss */
+  /* line 663, ../sass/style.scss */
   .content.clients {
     margin-bottom: -7px;
     margin-bottom: -0.7rem;
   }
 
-  /* line 661, ../sass/style.scss */
+  /* line 667, ../sass/style.scss */
   .content.clients p {
     margin-bottom: 28px;
     margin-bottom: 2.8rem;
   }
 
-  /* line 665, ../sass/style.scss */
+  /* line 671, ../sass/style.scss */
   .content.clients ul {
     margin-top: 0;
     width: 50%;
   }
 
-  /* line 670, ../sass/style.scss */
+  /* line 676, ../sass/style.scss */
   .content.clients ul:nth-of-type(2) {
     margin-top: 0;
   }
 
-  /* line 674, ../sass/style.scss */
+  /* line 680, ../sass/style.scss */
   .content.clients li {
     font-family: Georgia, serif;
     font-size: 14px;
@@ -1128,30 +1138,30 @@ footer p {
     color: #404041;
   }
 
-  /* line 678, ../sass/style.scss */
+  /* line 684, ../sass/style.scss */
   .content cite {
     padding: 0;
   }
 
-  /* line 682, ../sass/style.scss */
+  /* line 688, ../sass/style.scss */
   .content.contact {
     padding-bottom: 480px;
     padding-bottom: 48rem;
   }
 
-  /* line 686, ../sass/style.scss */
+  /* line 692, ../sass/style.scss */
   .content .vcard {
     margin-top: 30px;
     margin-top: 3rem;
   }
 
-  /* line 690, ../sass/style.scss */
+  /* line 696, ../sass/style.scss */
   .content.contact h1 {
     margin-left: -2px;
     margin-left: -0.2rem;
   }
 
-  /* line 694, ../sass/style.scss */
+  /* line 700, ../sass/style.scss */
   .content a {
     font-family: Georgia, serif;
     font-size: 17px;
@@ -1163,12 +1173,12 @@ footer p {
     line-height: 2.9rem;
   }
 
-  /* line 699, ../sass/style.scss */
+  /* line 705, ../sass/style.scss */
   .content a.email {
     line-height: 2.6;
   }
 
-  /* line 703, ../sass/style.scss */
+  /* line 709, ../sass/style.scss */
   footer {
     padding: 0 20px;
     padding: 0 2rem;
@@ -1176,7 +1186,7 @@ footer p {
     height: 7rem;
   }
 
-  /* line 708, ../sass/style.scss */
+  /* line 714, ../sass/style.scss */
   footer p {
     padding-top: 27px;
     padding-top: 2.7rem;
@@ -1193,25 +1203,25 @@ footer p {
   }
 
   /* Client Listings */
-  /* line 715, ../sass/style.scss */
+  /* line 721, ../sass/style.scss */
   .client-listing #top:after {
     display: none;
   }
 
-  /* line 719, ../sass/style.scss */
+  /* line 725, ../sass/style.scss */
   .client-listing aside {
     padding: 50px 20px 0;
     padding: 5rem 2rem 0;
   }
 
-  /* line 723, ../sass/style.scss */
+  /* line 729, ../sass/style.scss */
   .client-listing aside a {
     display: block;
     margin: 0 0 20px;
     margin: 0 0 2rem;
   }
 
-  /* line 728, ../sass/style.scss */
+  /* line 734, ../sass/style.scss */
   .client-listing main h1 {
     padding-top: 50px;
     padding-top: 5rem;
@@ -1220,26 +1230,28 @@ footer p {
     font-size: 2rem;
   }
 
-  /* line 734, ../sass/style.scss */
+  /* line 740, ../sass/style.scss */
   .client-listing main h2 {
     margin: 40px 0 -3px;
     margin: 4rem 0 -0.3rem;
     padding: 0;
+    font-size: 20px;
+    font-size: 2rem;
     border: none;
   }
 
-  /* line 740, ../sass/style.scss */
+  /* line 747, ../sass/style.scss */
   .client-listing p {
     margin-top: 10px;
     margin-top: 1rem;
   }
 
-  /* line 744, ../sass/style.scss */
+  /* line 751, ../sass/style.scss */
   .client-listing footer {
     position: relative;
   }
 
-  /* line 748, ../sass/style.scss */
+  /* line 755, ../sass/style.scss */
   .client-listing footer p {
     padding-top: 27px;
     padding-top: 2.7rem;
@@ -1248,14 +1260,14 @@ footer p {
   /* End Client Listings */
 }
 @media screen and (max-width: 600px) {
-  /* line 757, ../sass/style.scss */
+  /* line 764, ../sass/style.scss */
   .leading-image,
   .sticky {
     height: 280px;
     height: 28rem;
   }
 
-  /* line 762, ../sass/style.scss */
+  /* line 769, ../sass/style.scss */
   .leading-image section p {
     padding-top: 36px;
     padding-top: 3.6rem;
@@ -1263,43 +1275,43 @@ footer p {
     font-size: 3.3rem;
   }
 
-  /* line 767, ../sass/style.scss */
+  /* line 774, ../sass/style.scss */
   .content p {
     width: 100%;
   }
 
-  /* line 771, ../sass/style.scss */
+  /* line 778, ../sass/style.scss */
   .content.about li {
     margin: 0 0 9px;
     margin: 0 0 0.9rem;
     line-height: 1.5;
   }
 
-  /* line 776, ../sass/style.scss */
+  /* line 783, ../sass/style.scss */
   .content.about li:first-child {
     margin-top: 5px;
     margin-top: 0.5rem;
   }
 
-  /* line 780, ../sass/style.scss */
+  /* line 787, ../sass/style.scss */
   .content.clients ul {
     width: 100%;
   }
 
-  /* line 784, ../sass/style.scss */
+  /* line 791, ../sass/style.scss */
   .content.contact {
     padding-bottom: 59px;
     padding-bottom: 5.9rem;
   }
 }
 @media screen and (max-width: 350px) {
-  /* line 792, ../sass/style.scss */
+  /* line 799, ../sass/style.scss */
   .leading-image {
     height: 200px;
     height: 20rem;
   }
 
-  /* line 796, ../sass/style.scss */
+  /* line 803, ../sass/style.scss */
   .sticky {
     margin-top: 268px;
     margin-top: 26.8rem;
@@ -1307,7 +1319,7 @@ footer p {
     height: 20rem;
   }
 
-  /* line 801, ../sass/style.scss */
+  /* line 808, ../sass/style.scss */
   .leading-image .first-text {
     top: -218px;
     top: -21.8rem;
@@ -1315,7 +1327,7 @@ footer p {
     height: 21.8rem;
   }
 
-  /* line 806, ../sass/style.scss */
+  /* line 813, ../sass/style.scss */
   .leading-image section p {
     padding-top: 14px;
     padding-top: 1.4rem;
@@ -1323,19 +1335,19 @@ footer p {
     font-size: 2.8rem;
   }
 
-  /* line 811, ../sass/style.scss */
+  /* line 818, ../sass/style.scss */
   footer p,
   .client-listing footer p {
     padding-top: 10px;
     padding-top: 1rem;
   }
 
-  /* line 816, ../sass/style.scss */
+  /* line 823, ../sass/style.scss */
   footer p span {
     display: block;
   }
 }
-/* line 822, ../sass/style.scss */
+/* line 829, ../sass/style.scss */
 .hidden {
   display: none !important;
 }
