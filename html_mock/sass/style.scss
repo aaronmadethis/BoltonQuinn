@@ -493,6 +493,7 @@ footer p {
 .client-listing footer p {
   margin: 0 auto;
   @include rem(padding-top, 2.7rem);
+  @include rem(font-size, 1.05rem);
 }
 /* End Client Listings */
 
